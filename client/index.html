@@ -2,75 +2,424 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <base href="/">
-    <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <!-- build:css(client) app/vendor.css -->
-      <!-- bower:css -->
-      <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
-      <!-- endbower -->
-    <!-- endbuild -->
-    <!-- build:css({.tmp,client}) app/app.css -->
-    <link rel="stylesheet" href="app/app.css">
-      <!-- injector:css -->
-      <link rel="stylesheet" href="app/app.css">
-      <link rel="stylesheet" href="app/main/main.css">
-      <link rel="stylesheet" href="components/modal/modal.css">
-      <!-- endinjector -->
-    <!-- endbuild -->
-  </head>
-  <body ng-app="oshi2App">
-    <!--[if lt IE 7]>
+<!--[if gt IE 8]><!-->
+<html class="no-js hide-sidebar ls-bottom-footer-fixed">
+<!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<base href="/">
+	<title>Oshi - Bitcoin Casino</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width">
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<!-- build:css(client) app/vendor.css -->
+	<!-- bower:css -->
+	<link rel="stylesheet"
+		href="bower_components/bootstrap/dist/css/bootstrap.css" />
+	<link rel="stylesheet"
+		href="bower_components/slick-carousel/slick/slick.css" />
+	<link rel="stylesheet"
+		href="bower_components/slick-carousel/slick/slick-theme.css" />
+	<!-- endbower -->
+	<!-- endbuild -->
+	<!-- build:css({.tmp,client}) app/app.css -->
+	<!-- injector:css -->
+	<link rel="stylesheet" href="app/js/vendor/all.css">
+	<link rel="stylesheet" href="app/app.css">
+	<link rel="stylesheet" href="app/css/app.css">
+	<link rel="stylesheet" href="components/modal/modal.css">
+	<!-- endinjector -->
+	<!-- endbuild -->
+</head>
+<body ng-app="oshi2App">
+	<!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <!-- Add your site or application content here -->
-    <div ui-view=""></div>
+	<!-- Fixed navbar -->
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	<nav class="navbar navbar-skin-cover navbar-static-top navbar-absolute-top navbar-size-large" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#main-nav">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
 
-      ga('create', 'UA-XXXXX-X');
-      ga('send', 'pageview');
-    </script>
+				<a class="navbar-brand" href="index.html"><img
+					class="header-logo" src="assets/images/oshi-logo.png"
+					alt="oshi Bitcoin Casino"></a> <a class="navbar-brand"
+					href="index.html"><img class="header-logo-small"
+					src="assets/images/oshi-logo-small.png" alt="oshi Bitcoin Casino"></a>
+			</div>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="main-nav">
+				<ul class="nav navbar-nav">
 
-    <!--[if lt IE 9]>
+
+
+					<li class="dropdown main-nav-dropdown-menu"><a href="#"
+						class="dropdown-toggle" data-toggle="dropdown">Games<span
+							class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="listing-grid.html"><span
+									class="badge pull-right">600+</span>All Games - Grid</a></li>
+							<li><a ui-sref="listing.html"><span
+									class="badge pull-right">600+</span>All Games - List</a></li>
+							<!-- user goes to listing pages with relevant category of game -->
+							<!-- create custom icons for game types  -->
+							<li><a href="discover.listing"><span
+									class="badge pull-right">120+</span>Slots</a></li>
+							<li><a href="discover.listing"><span
+									class="badge pull-right">60+</span>Theme Slots</a></li>
+							<li><a href="discover.listing"><span
+									class="badge pull-right">60+</span>Fruit Slots </a></li>
+							<li><a href="discover.listing"><span
+									class="badge pull-right">30+</span>Table Games</a></li>
+							<li><a href="discover.listing"><span
+									class="badge pull-right">40+</span>Casual Games</a></li>
+							<li><a href="discover.listing"><span
+									class="badge pull-right">60+</span>Video Poker</a></li>
+							<li><a href="discover.listing"><span
+									class="badge pull-right">60+</span>Blackjack</a></li>
+							<li><a href="discover.listing"><span
+									class="badge pull-right">60+</span>Roulette</a></li>
+							<li><a href="discover.listing"><span
+									class="badge pull-right">60+</span>Poker Games</a></li>
+							<li><a href="discover.listing"><span
+									class="badge pull-right">60+</span>Card Games</a></li>
+						</ul></li>
+
+					<li class="dropdown main-nav-dropdown-menu"><a href="#"
+						class="dropdown-toggle" data-toggle="dropdown">Providers<span
+							class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#"><span class="badge pull-right">120+</span>
+									Game Provider 1</a></li>
+							<!-- user goes to listing pages with relevant operator -->
+							<li><a href="discover.listing"><span
+									class="badge pull-right">30+</span> Game Provider 2</a></li>
+							<li><a href="discover.listing"><span
+									class="badge pull-right">40+</span> Game Provider 3</a></li>
+							<li><a href="discover.listing"><span
+									class="badge pull-right">60+</span> Game Provider 4</a></li>
+							<li><a href="discover.listing"><span
+									class="badge pull-right">120+</span> Game Provider 5</a></li>
+							<li><a href="discover.listing"><span
+									class="badge pull-right">30+</span> Game Provider 6</a></li>
+							<li><a href="discover.listing"><span
+									class="badge pull-right">40+</span> Game Provider 7</a></li>
+						</ul></li>
+
+					<li class="dropdown main-nav-dropdown-menu"><a href="#"
+						class="dropdown-toggle" data-toggle="dropdown">Pages<span
+							class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li ng-class="{ 'active': $state.is('page.1') }"><a
+								ui-sref="page.1"><span>Home</span></a></li>
+							<li ng-class="{ 'active': $state.is('page.2') }"><a
+								ui-sref="page.2"><span>Casino Games</span></a></li>
+							<li ng-class="{ 'active': $state.is('page.3') }"><a
+								ui-sref="page.3"><span>Bonuses</span></a></li>
+							<li ng-class="{ 'active': $state.is('page.4') }"><a
+								ui-sref="page.4"><span>About</span></a></li>
+							<li ng-class="{ 'active': $state.is('page.5') }"><a
+								ui-sref="page.5"><span>Help</span></a></li>
+							<li ng-class="{ 'active': $state.is('page.6') }"><a
+								ui-sref="page.6"><span>Blog</span></a></li>
+						</ul></li>
+
+					<li class="dropdown main-nav-dropdown-menu"><a href="#"
+						class="dropdown-toggle" data-toggle="dropdown">Search<span
+							class="caret"></span></a>
+						<ul class="dropdown-menu">
+
+							<!-- Search -->
+							<!--  <form class="navbar-form navbar-left margin-none"> -->
+							<form class="navbar-form margin-none">
+								<div class="search">
+									<div class="input-group">
+										<span class="input-group-addon"><i class="icon-search"></i></span>
+										<input type="text" class="form-control form-control-w-150"
+											placeholder="Search ..">
+									</div>
+								</div>
+							</form>
+							<!-- END/ Search -->
+						</ul></li>
+				</ul>
+
+				<ul class="nav navbar-nav navbar-right">
+					<!-- Login -->
+					<li class="dropdown main-nav-dropdown-menu"><a href="#"
+						class="dropdown-toggle" data-toggle="dropdown"> <i
+							class="fa fa-fw fa-lock"></i> Login
+					</a>
+						<div class="dropdown-menu dropdown-size-280">
+							<form>
+								<div class="form-group">
+									<div class="input-group">
+										<span class="input-group-addon"><i class="fa fa-user"></i></span>
+										<input type="text" class="form-control" placeholder="Username">
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="input-group">
+										<span class="input-group-addon"><i class="fa fa-shield"></i></span>
+										<input type="password" class="form-control"
+											placeholder="Password">
+									</div>
+								</div>
+								<div class="text-center">
+									<button type="submit" class="btn btn-primary">
+										Login <i class="fa fa-sign-in"></i>
+									</button>
+								</div>
+							</form>
+						</div></li>
+					<!-- // END login -->
+
+					<!-- Sign up -->
+					<li class="dropdown main-nav-dropdown-menu"><a href="#"
+						class="dropdown-toggle" data-toggle="dropdown">
+							<button class="btn btn-primary btn-sales">Join Today</button>
+					</a>
+						<div class="dropdown-menu dropdown-size-280">
+							<form>
+								<!-- Sales content -->
+								<div class="row">
+									<div class="col-md-12">
+										<div class="form-group form-control-sales">
+											<div class="text-center">
+												<span class="join-text">In 2 minutes that 2000mBTC
+													signup bonus is yours! </span>
+											</div>
+											<span class="join-notes">No bonus? Just untick the box
+												below. <span class="join-icons"><a href="#"
+													target="_blank"> <i class="fa fa-info-circle"></i><i
+														class="fa fa-external-link"></i></a> </span>
+											</span>
+										</div>
+									</div>
+								</div>
+								<!-- END sales content -->
+								<div class="row">
+									<div class="col-md-12">
+										<div class="form-group form-control-default required">
+											<!--   <label for="exampleInputUserName">User Name</label> -->
+											<input type="text" class="form-control" id="InputUserName1"
+												placeholder="Enter User Name...">
+										</div>
+									</div>
+								</div>
+								<div class="form-group form-control-default required">
+									<!--   <label for="exampleInputEmail1">Email address</label> -->
+									<input type="email" class="form-control" id="InputEmail1"
+										placeholder="Enter Email...">
+								</div>
+								<div class="form-group form-control-default required">
+									<!-- <label for="exampleInputPassword1">Password</label> -->
+									<input type="password" class="form-control" id="InputPassword1"
+										placeholder="Enter Password...">
+								</div>
+								<!-- Checkbox Receive Promos -->
+								<div id="">
+									<label id="ReceivePromos1"> <input type="checkbox"
+										checked placeholder="Receive Promos" id="ReceivePromos1" />
+										Get My 2000 mBTC & Other Bonuses <sup></sup>
+									</label>
+								</div>
+								<!-- Checkbox Receive Newsletters -->
+								<div id="">
+									<label id="ReceiveNewsletters1"> <input type="checkbox"
+										placeholder="Receive Newsletters" id="ReceiveNewsletters1" />
+										Receive Newsletters <sup></sup>
+									</label>
+								</div>
+								<!-- Checkbox Over 18 -->
+								<div id="">
+									<label id="CheckboxOver18"> <input type="checkbox"
+										id="CheckboxOver18"
+										placeholder="I confirm that I am over years old"
+										id="CheckboxOver18" required /> <span id=""> I confirm
+											that I am over 18 years old </span><sup>*</sup>
+									</label>
+								</div>
+								<!-- Checkbox Terms and Conditions -->
+								<div id="DIV_49">
+									<label id="LABEL_50"> <input type="checkbox"
+										placeholder="I agree to Terms Conditions" id="INPUT_51"
+										required /> <span id="">I agree to Terms and
+											Conditions</span><sup>*</sup>
+									</label>
+								</div>
+								<!-- END/ Join Opt In / Out  -->
+								<div class="text-center">
+									<button type="submit" class="btn btn-primary">All set?
+										Click here to join Oshi</button>
+								</div>
+							</form>
+						</div></li>
+					<!-- // END sign up -->
+
+				</ul>
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+	</nav>
+
+	<div ui-view=""></div>
+
+	<section class="footer-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-6 col-md-2">
+					<h4>Corporate</h4>
+					<ul class="list-unstyled">
+						<li><a href="">About the company</a></li>
+						<li><a href="">Company offices</a></li>
+						<li><a href="">Agents</a></li>
+						<li><a href="">Partners</a></li>
+						<li><a href="">Terms of use</a></li>
+						<li><a href="">Privacy</a></li>
+					</ul>
+				</div>
+				<div class="col-xs-6 col-md-2">
+					<h4>Explore</h4>
+					<ul class="list-unstyled">
+						<li><a href="">Properties listing</a></li>
+						<li><a href="">List a property</a></li>
+						<li><a href="">Become a member</a></li>
+						<li><a href="">Become a partner</a></li>
+						<li><a href="">Sign Up</a></li>
+					</ul>
+				</div>
+				<div class="col-xs-12 col-md-4 text-center">
+					<h4>Newsletter</h4>
+					<div class="panel bg-transparent margin-none">
+						<div class="panel-body">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+								Assumenda autem dolor, ea eaque laboriosam modi quam repellat
+								sunt tenetur voluptatum! Ad cumque deleniti deserunt eaque
+								labore molestiae nostrum odit quibusdam?</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-4">
+					<div class="panel bg-transparent margin-none">
+						<div class="panel-body">
+							<div class="form-group form-control-default">
+								<label for="email">Email:</label> <input id="email"
+									class="form-control" type="text"
+									placeholder="Your email address .." />
+							</div>
+							<div class="form-group">
+								<button class="btn btn-pink-500">Subscribe</button>
+							</div>
+
+							<small class="help-block">* We will never sell your email</small>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- // END #content -->
+
+	<div id="DIV_1">
+		<a href="#" id="A_2"></a><a href="#" id="A_3"></a><a href="#" id="A_4"></a><a
+			href="#" id="A_5"></a><a href="#" id="A_6"></a>
+	</div>
+
+	<!-- Footer -->
+	<footer class="footer">
+		Oshi Bitcoin Casino</strong>&copy;2015
+	</footer>
+	<!-- // Footer -->
+
+
+	<!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+	<script>
+		(function(i, s, o, g, r, a, m) {
+			i['GoogleAnalyticsObject'] = r;
+			i[r] = i[r] || function() {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date();
+			a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+			a.async = 1;
+			a.src = g;
+			m.parentNode.insertBefore(a, m)
+		})(window, document, 'script',
+				'//www.google-analytics.com/analytics.js', 'ga');
+
+		ga('create', 'UA-XXXXX-X');
+		ga('send', 'pageview');
+	</script>
+
+	<!--[if lt IE 9]>
     <script src="bower_components/es5-shim/es5-shim.js"></script>
     <script src="bower_components/json3/lib/json3.min.js"></script>
     <![endif]-->
-    <!-- build:js({client,node_modules}) app/vendor.js -->
-      <!-- bower:js -->
-      <script src="bower_components/jquery/dist/jquery.js"></script>
-      <script src="bower_components/angular/angular.js"></script>
-      <script src="bower_components/angular-resource/angular-resource.js"></script>
-      <script src="bower_components/angular-cookies/angular-cookies.js"></script>
-      <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-      <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
-      <script src="bower_components/lodash/dist/lodash.compat.js"></script>
-      <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-      <!-- endbower -->
-    <!-- endbuild -->
+	<!-- build:js({client,node_modules}) app/vendor.js -->
+	<!-- bower:js -->
+	<script src="bower_components/jquery/dist/jquery.js"></script>
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="bower_components/angular-resource/angular-resource.js"></script>
+	<script src="bower_components/angular-cookies/angular-cookies.js"></script>
+	<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+	<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+	<script src="bower_components/lodash/dist/lodash.compat.js"></script>
+	<script
+		src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+	<script src="bower_components/slick-carousel/slick/slick.min.js"></script>
+	<script src="bower_components/angular-slick/dist/slick.js"></script>
+	<!-- endbower -->
+	<!-- endbuild -->
 
-        
-        <!-- build:js({.tmp,client}) app/app.js -->
-        
-        <script src="app/app.js"></script>
-          <!-- injector:js -->
-          <script src="app/main/main.controller.js"></script>
-          <script src="app/main/main.js"></script>
-          <script src="components/modal/modal.service.js"></script>
-          <script src="components/navbar/navbar.controller.js"></script>
-          <!-- endinjector -->
-        <!-- endbuild -->
+
+	<!-- build:js({.tmp,client}) app/app.js -->
+
+	<script src="app/app.js"></script>
+	<!-- injector:js -->
+	<script src="app/js/vendor/core/bootstrap.js"></script>
+	<script src="app/js/vendor/core/breakpoints.js"></script>
+	<script src="app/js/vendor/core/handlebars.js"></script>
+	<script src="app/js/vendor/core/holder.js"></script>
+	<script src="app/js/vendor/core/isotope.pkgd.js"></script>
+	<script src="app/js/vendor/core/jquery-ui.custom.js"></script>
+	<script src="app/js/vendor/core/jquery-ui/core.js"></script>
+	<script src="app/js/vendor/core/jquery-ui/draggable.js"></script>
+	<script src="app/js/vendor/core/jquery-ui/droppable.js"></script>
+	<script src="app/js/vendor/core/jquery-ui/mouse.js"></script>
+	<script src="app/js/vendor/core/jquery-ui/position.js"></script>
+	<script src="app/js/vendor/core/jquery-ui/resizable.js"></script>
+	<script src="app/js/vendor/core/jquery-ui/selectable.js"></script>
+	<script src="app/js/vendor/core/jquery-ui/sortable.js"></script>
+	<script src="app/js/vendor/core/jquery-ui/widget.js"></script>
+	<script src="app/js/vendor/core/jquery.cookie.js"></script>
+	<script src="app/js/vendor/core/jquery.debouncedresize.js"></script>
+	<script src="app/js/vendor/core/jquery.grid-a-licious.js"></script>
+	<script src="app/js/vendor/core/jquery.hotkeys.js"></script>
+	<script src="app/js/vendor/core/jquery.nicescroll.js"></script>
+	<script src="app/js/vendor/core/load_image.js"></script>
+	<script src="app/js/vendor/core/packery-mode.pkgd.js"></script>
+	<script src="app/js/vendor/forms/bootstrap-datepicker.js"></script>
+	<script src="app/js/vendor/forms/bootstrap-select.js"></script>
+	<script src="app/js/vendor/forms/bootstrap-slider.js"></script>
+	<script src="app/js/vendor/forms/bootstrap-switch.js"></script>
+	<script src="app/js/vendor/forms/daterangepicker.js"></script>
+	<script src="app/js/vendor/forms/jquery.bootstrap-touchspin.js"></script>
+	<script src="app/js/vendor/forms/jquery.minicolors.js"></script>
+	<script src="app/js/vendor/forms/moment.min.js"></script>
+	<script src="app/js/vendor/forms/select2.js"></script>
+	<script src="app/main/main.controller.js"></script>
+	<script src="app/main/main.js"></script>
+	<script src="components/modal/modal.service.js"></script>
+	<script src="components/navbar/navbar.controller.js"></script>
+	<!-- endinjector -->
+	<!-- endbuild -->
 </body>
 </html>

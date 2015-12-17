@@ -1,28 +1,403 @@
-<div ng-include="'components/navbar/navbar.html'"></div>
-
-<header class="hero-unit" id="banner">
+<div id="content-home">
+  <div class="bg-black home-page-top-padding"> 
   <div class="container">
-    <h1>'Allo, 'Allo!</h1>
-    <p class="lead">Kick-start your next web app with Angular Fullstack</p>
-    <img src="assets/images/yeoman.png" alt="I'm Yeoman">
-  </div>
-</header>
 
-<div class="container">
-  <div class="row">
-    <div class="col-lg-12">
-      <h1 class="page-header">Features:</h1>
-      <ul class="nav nav-tabs nav-stacked col-md-4 col-lg-4 col-sm-6" ng-repeat="thing in awesomeThings">
-        <li><a href="#" tooltip="{{thing.info}}">{{thing.name}}</a></li>
-      </ul>
-    </div>
-  </div>
+ <input class="toggle-box" id="header1" type="checkbox" checked="checked" >
+<label for="header1">Hide/Open The Join Today Panel</label>
+<div class="toggle-box-area">
+<div class="panel-body">
+
+<!--  Call to Action Row -->  
+<div class="row">
+
+ 
+  <div class="col-md-8">
+            <div class="media">
+              <div class="media-body">
+                <img src="assets/images/promo-images/sales-asset-760x380.jpg" alt="location" class="img-responsive" />
+              </div>
+            </div>
+          </div>
+          <!-- Right Side Column -->
+          <div class="col-md-4">
+             
+             
+                
+         <!-- Sign up -->
+        <div class="homepage-join dropdown-size-280">
+          <form>
+            <!-- Sales content -->
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group form-control-sales">
+                  <div class="text-center"> <span class="join-text">In 2 minutes you have a huge 2000mBTC signup bonus! </span></div> 
+                  <span class="join-notes">No bonus? Just untick the box below. <span class="join-icons"><a href="#" target="_blank"> <i class="fa fa-info-circle"></i><i class="fa fa-external-link"></i></a> </span></span>
+                 </div>
+              </div>
+            </div>
+            <!-- END sales content -->
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group form-control-default required">
+                  <!--   <label for="exampleInputUserName">User Name</label> -->
+                  <input type="text" class="form-control" id="InputUserName1" placeholder="Enter User Name...">
+                </div>
+              </div>
+            </div>
+            <div class="form-group form-control-default required">
+              <!--   <label for="exampleInputEmail1">Email address</label> -->
+              <input type="email" class="form-control" id="InputEmail1" placeholder="Enter Email...">
+            </div>
+            <div class="form-group form-control-default required">
+              <!-- <label for="exampleInputPassword1">Password</label> -->
+              <input type="password" class="form-control" id="InputPassword1" placeholder="Enter Password...">
+            </div>
+
+    
+     
+            <!-- Checkbox Receive Promos -->
+              <div id="">
+                <label id="ReceivePromos1">
+                <input type="checkbox" checked placeholder="Receive Promos" id="ReceivePromos1" />
+                Get My 2000 mBTC & Other Bonuses <sup></sup> </label>
+             </div>
+             
+              <!-- Checkbox Receive Newsletters -->
+              <div id="">
+                <label id="ReceiveNewsletters1">
+                <input type="checkbox" placeholder="Receive Newsletters" id="ReceiveNewsletters1" />
+                Receive Newsletters <sup></sup> </label>
+               </div>
+            
+            <!-- Checkbox Over 18 -->
+              <div id="">
+                <label id="CheckboxOver18">
+                <input type="checkbox" id="CheckboxOver18" placeholder="I confirm that I am over years old" id="CheckboxOver18" required />
+              <span id="">  I confirm that I am over 18 years old </span><sup>*</sup> </label>
+              </div>
+             
+              <!-- Checkbox Terms and Conditions -->
+              <div id="DIV_49">
+                <label id="LABEL_50">
+                <input type="checkbox" placeholder="I agree to Terms Conditions" id="INPUT_51" required />
+                <span id="">I agree to Terms and Conditions</span><sup>*</sup> </label>
+              </div>
+            
+       <!-- END/ Join Opt In / Out  -->
+ 
+          
+            <div class="text-center">
+             <button type="submit" class="btn btn-primary">All set? Click here to join Oshi</button>
+            </div>
+          </form>
+        </div>
+ <!-- // END sign up -->
+        
+    
 </div>
+<!-- END/ Right Side Column -->
+                
+</div>
+<!-- END/ Call to Action Row -->
+          
 
-<footer class="footer">
-  <div class="container">
-      <p>Angular Fullstack v2.1.1 |
-        <a href="https://twitter.com/tyhenkel">@tyhenkel</a> |
-         <a href="https://github.com/DaftMonk/generator-angular-fullstack/issues?state=open">Issues</a></p>
+<!-- END / Expand collapse  -->
+</div></div>
+   
+   
+ 
+   <hr>       
+      
+
+
+<!-- Page section 1 -->
+<div class="home-page-section">
+<div class="text-left">
+  <p class="lead-home">Games Category 1</p>
+</div>
+<!-- Carousel -->
+ 
+<!-- <div class="slick-basic slick-slider" data-items="6" data-items-lg="3" data-items-md="2" data-items-sm="2" data-items-xs="1">-->
+ <slick class="slider single-item" slides-to-show=5 slides-to-scroll=1 mobileFirst=true responsive="breakpoints">
+  <!-- Master grid panel -->
+<div class="item">
+  <div class="panel panel-default relative">
+    <div class="cover hover overlay margin-none"> 
+    <img src="assets/images/slots1.png" alt="location" class="img-responsive" /> 
+    <a ui-sref="front.property" class="overlay overlay-full overlay-bg-black overlay-hover"> <span class="v-center"> <span class="btn btn-play btn-lg"><i class="fa fa-play"></i></span> </span> </a> </div>
+    
+    <div class="panel-body">
+      <h4 class="margin-v-0-5">Paco and the Popping Peppers &nbsp;<span class="font-size-18"><i class="fa fa-info-circle" data-toggle="tooltip" data-title="
+    try this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit.try 
+    this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit 
+    "></i></span> </h4>
+      <span class="label label-grey-100">Ezugi</span>&nbsp; <i class="fa fa-btc" data-toggle="tooltip" data-title="Bitcoin"  style="color: grey;"></i>&nbsp; <i class="fa fa-thumbs-o-up"  style="color: grey;" data-toggle="tooltip" data-title="Provably Fair"></i> <a ui-sref="#" class="btn btn-primary btn-star"><i class="fa fa-star"></i> </a> </div>
+    <div class="text-center">
+      <button type="submit" class="btn btn-primary btn-playnow">Play Now</button>
+      </a>
+      <button type="submit" class="btn btn-primary btn-practiceplay">Practice</button>
+      </a> </div>
   </div>
-</footer>
+    </div>
+  <!-- END/ Master grid panel -->
+  
+
+  <div class="item">
+  <div class="panel panel-default relative">
+    <div class="cover hover overlay margin-none"> <img src="assets/images/slots2.png" alt="location" class="img-responsive" /> <a ui-sref="front.property" class="overlay overlay-full overlay-bg-black overlay-hover"> <span class="v-center"> <span class="btn btn-play btn-lg"><i class="fa fa-play"></i></span> </span> </a> </div>
+    <div class="panel-body">
+      <h4 class="margin-v-0-5">Paco and the Popping Peppers &nbsp;<span class="font-size-18"><i class="fa fa-info-circle" data-toggle="tooltip" data-title="
+    try this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit.try 
+    this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit 
+    "></i></span> </h4>
+      <span class="label label-grey-100">Ezugi</span>&nbsp; <i class="fa fa-btc" data-toggle="tooltip" data-title="Bitcoin"  style="color: grey;"></i>&nbsp; <i class="fa fa-thumbs-o-up"  style="color: grey;" data-toggle="tooltip" data-title="Provably Fair"></i> <a ui-sref="#" class="btn btn-primary btn-star"><i class="fa fa-star"></i> </a> </div>
+    <div class="text-center">
+      <button type="submit" class="btn btn-primary btn-playnow">Play Now</button>
+      </a>
+      <button type="submit" class="btn btn-primary btn-practiceplay">Practice</button>
+      </a> </div>
+  </div>
+   </div>
+   
+  <div class="item">
+  <div class="panel panel-default relative">
+    <div class="cover hover overlay margin-none"> <img src="assets/images/slots3.png" alt="location" class="img-responsive" /> <a ui-sref="front.property" class="overlay overlay-full overlay-bg-black overlay-hover"> <span class="v-center"> <span class="btn btn-play btn-lg"><i class="fa fa-play"></i></span> </span> </a> </div>
+    <div class="panel-body">
+      <h4 class="margin-v-0-5">Paco and the Popping Peppers &nbsp;<span class="font-size-18"><i class="fa fa-info-circle" data-toggle="tooltip" data-title="
+    try this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit.try 
+    this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit 
+    "></i></span> </h4>
+      <span class="label label-grey-100">Ezugi</span>&nbsp; <i class="fa fa-btc" data-toggle="tooltip" data-title="Bitcoin"  style="color: grey;"></i>&nbsp; <i class="fa fa-thumbs-o-up"  style="color: grey;" data-toggle="tooltip" data-title="Provably Fair"></i> <a ui-sref="#" class="btn btn-primary btn-star"><i class="fa fa-star"></i> </a> </div>
+    <div class="text-center">
+      <button type="submit" class="btn btn-primary btn-playnow">Play Now</button>
+      </a>
+      <button type="submit" class="btn btn-primary btn-practiceplay">Practice</button>
+      </a> </div>
+  </div>
+    </div>
+    
+    <div class="item">  
+  <div class="panel panel-default relative">
+    <div class="cover hover overlay margin-none"> <img src="assets/images/slots4.png" alt="location" class="img-responsive" /> <a ui-sref="front.property" class="overlay overlay-full overlay-bg-black overlay-hover"> <span class="v-center"> <span class="btn btn-play btn-lg"><i class="fa fa-play"></i></span> </span> </a> </div>
+    <div class="panel-body">
+      <h4 class="margin-v-0-5">Paco and the Popping Peppers &nbsp;<span class="font-size-18"><i class="fa fa-info-circle" data-toggle="tooltip" data-title="
+    try this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit.try 
+    this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit 
+    "></i></span> </h4>
+      <span class="label label-grey-100">Ezugi</span>&nbsp; <i class="fa fa-btc" data-toggle="tooltip" data-title="Bitcoin"  style="color: grey;"></i>&nbsp; <i class="fa fa-thumbs-o-up"  style="color: grey;" data-toggle="tooltip" data-title="Provably Fair"></i> <a ui-sref="#" class="btn btn-primary btn-star"><i class="fa fa-star"></i> </a> </div>
+    <div class="text-center">
+      <button type="submit" class="btn btn-primary btn-playnow">Play Now</button>
+      </a>
+      <button type="submit" class="btn btn-primary btn-practiceplay">Practice</button>
+      </a> </div>
+  </div>
+    </div>
+        
+ <div class="item">  
+  <div class="panel panel-default relative">
+    <div class="cover hover overlay margin-none"> <img src="assets/images/slots5.png" alt="location" class="img-responsive" /> <a ui-sref="front.property" class="overlay overlay-full overlay-bg-black overlay-hover"> <span class="v-center"> <span class="btn btn-play btn-lg"><i class="fa fa-play"></i></span> </span> </a> </div>
+    <div class="panel-body">
+      <h4 class="margin-v-0-5">Paco and the Popping Peppers &nbsp;<span class="font-size-18"><i class="fa fa-info-circle" data-toggle="tooltip" data-title="
+    try this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit.try 
+    this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit 
+    "></i></span> </h4>
+      <span class="label label-grey-100">Ezugi</span>&nbsp; <i class="fa fa-btc" data-toggle="tooltip" data-title="Bitcoin"  style="color: grey;"></i>&nbsp; <i class="fa fa-thumbs-o-up"  style="color: grey;" data-toggle="tooltip" data-title="Provably Fair"></i> <a ui-sref="#" class="btn btn-primary btn-star"><i class="fa fa-star"></i> </a> </div>
+    <div class="text-center">
+      <button type="submit" class="btn btn-primary btn-playnow">Play Now</button>
+      </a>
+      <button type="submit" class="btn btn-primary btn-practiceplay">Practice</button>
+      </a> </div>
+  </div>
+    </div>
+    <div class="item">  
+  <div class="panel panel-default relative">
+      <div class="cover hover overlay margin-none"> <img src="assets/images/slots6.png" alt="location" class="img-responsive" /> <a ui-sref="front.property" class="overlay overlay-full overlay-bg-black overlay-hover"> <span class="v-center"> <span class="btn btn-play btn-lg"><i class="fa fa-play"></i></span> </span> </a> </div>
+    <div class="panel-body">
+      <h4 class="margin-v-0-5">Paco and the Popping Peppers &nbsp;<span class="font-size-18"><i class="fa fa-info-circle" data-toggle="tooltip" data-title="
+    try this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit.try 
+    this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit 
+    "></i></span> </h4>
+      <span class="label label-grey-100">Ezugi</span>&nbsp; <i class="fa fa-btc" data-toggle="tooltip" data-title="Bitcoin"  style="color: grey;"></i>&nbsp; <i class="fa fa-thumbs-o-up"  style="color: grey;" data-toggle="tooltip" data-title="Provably Fair"></i> <a ui-sref="#" class="btn btn-primary btn-star"><i class="fa fa-star"></i> </a> </div>
+    <div class="text-center">
+      <button type="submit" class="btn btn-primary btn-playnow">Play Now</button>
+      </a>
+      <button type="submit" class="btn btn-primary btn-practiceplay">Practice</button>
+      </a> </div>
+  </div>
+     </div>
+         <div class="item">  
+  <div class="panel panel-default relative">
+    <div class="cover hover overlay margin-none"> <img src="assets/images/slots7.png" alt="location" class="img-responsive" /> <a ui-sref="front.property" class="overlay overlay-full overlay-bg-black overlay-hover"> <span class="v-center"> <span class="btn btn-play btn-lg"><i class="fa fa-play"></i></span> </span> </a> </div>
+    <div class="panel-body">
+      <h4 class="margin-v-0-5">Paco and the Popping Peppers &nbsp;<span class="font-size-18"><i class="fa fa-info-circle" data-toggle="tooltip" data-title="
+    try this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit.try 
+    this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit 
+    "></i></span> </h4>
+      <span class="label label-grey-100">Ezugi</span>&nbsp; <i class="fa fa-btc" data-toggle="tooltip" data-title="Bitcoin"  style="color: grey;"></i>&nbsp; <i class="fa fa-thumbs-o-up"  style="color: grey;" data-toggle="tooltip" data-title="Provably Fair"></i> <a ui-sref="#" class="btn btn-primary btn-star"><i class="fa fa-star"></i> </a> </div>
+    <div class="text-center">
+      <button type="submit" class="btn btn-primary btn-playnow">Play Now</button>
+      </a>
+      <button type="submit" class="btn btn-primary btn-practiceplay">Practice</button>
+      </a> 
+      </div>
+  </div>
+   </div>
+  <!-- END/ Carousel -->
+  
+</slick> 
+ 
+    
+<!-- </div> --><!-- END / Page section 1 -->
+
+        
+ <!-- Page section 2 -->
+<div class="home-page-section">
+<div class="text-left">
+  <p class="lead-home">Games Category 2</p>
+</div>
+<!-- Carousel -->
+ 
+ <slick class="slider single-item" slides-to-show=5 slides-to-scroll=1 mobileFirst=true responsive="breakpoints">
+ 
+  <!-- Master grid panel -->
+<div class="item">
+  <div class="panel panel-default relative">
+    <div class="cover hover overlay margin-none"> 
+    <img src="assets/images/slots1.png" alt="location" class="img-responsive" /> 
+    <a ui-sref="front.property" class="overlay overlay-full overlay-bg-black overlay-hover"> <span class="v-center"> <span class="btn btn-play btn-lg"><i class="fa fa-play"></i></span> </span> </a> </div>
+    
+    <div class="panel-body">
+      <h4 class="margin-v-0-5">Paco and the Popping Peppers &nbsp;<span class="font-size-18"><i class="fa fa-info-circle" data-toggle="tooltip" data-title="
+    try this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit.try 
+    this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit 
+    "></i></span> </h4>
+      <span class="label label-grey-100">Ezugi</span>&nbsp; <i class="fa fa-btc" data-toggle="tooltip" data-title="Bitcoin"  style="color: grey;"></i>&nbsp; <i class="fa fa-thumbs-o-up"  style="color: grey;" data-toggle="tooltip" data-title="Provably Fair"></i> <a ui-sref="#" class="btn btn-primary btn-star"><i class="fa fa-star"></i> </a> </div>
+    <div class="text-center">
+      <button type="submit" class="btn btn-primary btn-playnow">Play Now</button>
+      </a>
+      <button type="submit" class="btn btn-primary btn-practiceplay">Practice</button>
+      </a> </div>
+  </div>
+    </div>
+  <!-- END/ Master grid panel -->
+  
+
+  <div class="item">
+  <div class="panel panel-default relative">
+    <div class="cover hover overlay margin-none"> <img src="assets/images/slots2.png" alt="location" class="img-responsive" /> <a ui-sref="front.property" class="overlay overlay-full overlay-bg-black overlay-hover"> <span class="v-center"> <span class="btn btn-play btn-lg"><i class="fa fa-play"></i></span> </span> </a> </div>
+    <div class="panel-body">
+      <h4 class="margin-v-0-5">Paco and the Popping Peppers &nbsp;<span class="font-size-18"><i class="fa fa-info-circle" data-toggle="tooltip" data-title="
+    try this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit.try 
+    this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit 
+    "></i></span> </h4>
+      <span class="label label-grey-100">Ezugi</span>&nbsp; <i class="fa fa-btc" data-toggle="tooltip" data-title="Bitcoin"  style="color: grey;"></i>&nbsp; <i class="fa fa-thumbs-o-up"  style="color: grey;" data-toggle="tooltip" data-title="Provably Fair"></i> <a ui-sref="#" class="btn btn-primary btn-star"><i class="fa fa-star"></i> </a> </div>
+    <div class="text-center">
+      <button type="submit" class="btn btn-primary btn-playnow">Play Now</button>
+      </a>
+      <button type="submit" class="btn btn-primary btn-practiceplay">Practice</button>
+      </a> </div>
+  </div>
+   </div>
+   
+  <div class="item">
+  <div class="panel panel-default relative">
+    <div class="cover hover overlay margin-none"> <img src="assets/images/slots3.png" alt="location" class="img-responsive" /> <a ui-sref="front.property" class="overlay overlay-full overlay-bg-black overlay-hover"> <span class="v-center"> <span class="btn btn-play btn-lg"><i class="fa fa-play"></i></span> </span> </a> </div>
+    <div class="panel-body">
+      <h4 class="margin-v-0-5">Paco and the Popping Peppers &nbsp;<span class="font-size-18"><i class="fa fa-info-circle" data-toggle="tooltip" data-title="
+    try this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit.try 
+    this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit 
+    "></i></span> </h4>
+      <span class="label label-grey-100">Ezugi</span>&nbsp; <i class="fa fa-btc" data-toggle="tooltip" data-title="Bitcoin"  style="color: grey;"></i>&nbsp; <i class="fa fa-thumbs-o-up"  style="color: grey;" data-toggle="tooltip" data-title="Provably Fair"></i> <a ui-sref="#" class="btn btn-primary btn-star"><i class="fa fa-star"></i> </a> </div>
+    <div class="text-center">
+      <button type="submit" class="btn btn-primary btn-playnow">Play Now</button>
+      </a>
+      <button type="submit" class="btn btn-primary btn-practiceplay">Practice</button>
+      </a> </div>
+  </div>
+    </div>
+    
+    <div class="item">  
+  <div class="panel panel-default relative">
+    <div class="cover hover overlay margin-none"> <img src="assets/images/slots4.png" alt="location" class="img-responsive" /> <a ui-sref="front.property" class="overlay overlay-full overlay-bg-black overlay-hover"> <span class="v-center"> <span class="btn btn-play btn-lg"><i class="fa fa-play"></i></span> </span> </a> </div>
+    <div class="panel-body">
+      <h4 class="margin-v-0-5">Paco and the Popping Peppers &nbsp;<span class="font-size-18"><i class="fa fa-info-circle" data-toggle="tooltip" data-title="
+    try this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit.try 
+    this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit 
+    "></i></span> </h4>
+      <span class="label label-grey-100">Ezugi</span>&nbsp; <i class="fa fa-btc" data-toggle="tooltip" data-title="Bitcoin"  style="color: grey;"></i>&nbsp; <i class="fa fa-thumbs-o-up"  style="color: grey;" data-toggle="tooltip" data-title="Provably Fair"></i> <a ui-sref="#" class="btn btn-primary btn-star"><i class="fa fa-star"></i> </a> </div>
+    <div class="text-center">
+      <button type="submit" class="btn btn-primary btn-playnow">Play Now</button>
+      </a>
+      <button type="submit" class="btn btn-primary btn-practiceplay">Practice</button>
+      </a> </div>
+  </div>
+    </div>
+        
+ <div class="item">  
+  <div class="panel panel-default relative">
+    <div class="cover hover overlay margin-none"> <img src="assets/images/slots5.png" alt="location" class="img-responsive" /> <a ui-sref="front.property" class="overlay overlay-full overlay-bg-black overlay-hover"> <span class="v-center"> <span class="btn btn-play btn-lg"><i class="fa fa-play"></i></span> </span> </a> </div>
+    <div class="panel-body">
+      <h4 class="margin-v-0-5">Paco and the Popping Peppers &nbsp;<span class="font-size-18"><i class="fa fa-info-circle" data-toggle="tooltip" data-title="
+    try this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit.try 
+    this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit 
+    "></i></span> </h4>
+      <span class="label label-grey-100">Ezugi</span>&nbsp; <i class="fa fa-btc" data-toggle="tooltip" data-title="Bitcoin"  style="color: grey;"></i>&nbsp; <i class="fa fa-thumbs-o-up"  style="color: grey;" data-toggle="tooltip" data-title="Provably Fair"></i> <a ui-sref="#" class="btn btn-primary btn-star"><i class="fa fa-star"></i> </a> </div>
+    <div class="text-center">
+      <button type="submit" class="btn btn-primary btn-playnow">Play Now</button>
+      </a>
+      <button type="submit" class="btn btn-primary btn-practiceplay">Practice</button>
+      </a> </div>
+  </div>
+    </div>
+    <div class="item">  
+  <div class="panel panel-default relative">
+      <div class="cover hover overlay margin-none"> <img src="assets/images/slots6.png" alt="location" class="img-responsive" /> <a ui-sref="front.property" class="overlay overlay-full overlay-bg-black overlay-hover"> <span class="v-center"> <span class="btn btn-play btn-lg"><i class="fa fa-play"></i></span> </span> </a> </div>
+    <div class="panel-body">
+      <h4 class="margin-v-0-5">Paco and the Popping Peppers &nbsp;<span class="font-size-18"><i class="fa fa-info-circle" data-toggle="tooltip" data-title="
+    try this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit.try 
+    this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit 
+    "></i></span> </h4>
+      <span class="label label-grey-100">Ezugi</span>&nbsp; <i class="fa fa-btc" data-toggle="tooltip" data-title="Bitcoin"  style="color: grey;"></i>&nbsp; <i class="fa fa-thumbs-o-up"  style="color: grey;" data-toggle="tooltip" data-title="Provably Fair"></i> <a ui-sref="#" class="btn btn-primary btn-star"><i class="fa fa-star"></i> </a> </div>
+    <div class="text-center">
+      <button type="submit" class="btn btn-primary btn-playnow">Play Now</button>
+      </a>
+      <button type="submit" class="btn btn-primary btn-practiceplay">Practice</button>
+      </a> </div>
+  </div>
+     </div>
+         <div class="item">  
+  <div class="panel panel-default relative">
+    <div class="cover hover overlay margin-none"> <img src="assets/images/slots7.png" alt="location" class="img-responsive" /> <a ui-sref="front.property" class="overlay overlay-full overlay-bg-black overlay-hover"> <span class="v-center"> <span class="btn btn-play btn-lg"><i class="fa fa-play"></i></span> </span> </a> </div>
+    <div class="panel-body">
+      <h4 class="margin-v-0-5">Paco and the Popping Peppers &nbsp;<span class="font-size-18"><i class="fa fa-info-circle" data-toggle="tooltip" data-title="
+    try this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit.try 
+    this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit 
+    "></i></span> </h4>
+      <span class="label label-grey-100">Ezugi</span>&nbsp; <i class="fa fa-btc" data-toggle="tooltip" data-title="Bitcoin"  style="color: grey;"></i>&nbsp; <i class="fa fa-thumbs-o-up"  style="color: grey;" data-toggle="tooltip" data-title="Provably Fair"></i> <a ui-sref="#" class="btn btn-primary btn-star"><i class="fa fa-star"></i> </a> </div>
+    <div class="text-center">
+      <button type="submit" class="btn btn-primary btn-playnow">Play Now</button>
+      </a>
+      <button type="submit" class="btn btn-primary btn-practiceplay">Practice</button>
+      </a> 
+      </div>
+  </div>
+   </div>
+  <!-- END/ Carousel -->
+  
+  <!-- buttons from main slider test  
+   <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+    <!-- buttons from main slider test -->
+    
+</slick>
+<!-- END / Page section 2 -->
+ 
+  </div>
+
+        <br/>

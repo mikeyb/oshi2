@@ -1,4 +1,4 @@
-// Generated on 2015-12-07 using generator-angular-fullstack 2.1.1
+// Generated on 2015-12-16 using generator-angular-fullstack 2.1.1
 'use strict';
 
 module.exports = function (grunt) {
