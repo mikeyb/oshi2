@@ -256,6 +256,11 @@ module.exports = function (grunt) {
         patterns: {
           js: [
             [/(assets\/images\/.*?\.(?:gif|jpeg|jpg|png|webp|svg))/gm, 'Update the JS to reference our revved images']
+          ],
+          css: [
+                [/(..\/fonts\/)/g, 'Fix webfonts path', function(match) {
+                   return match.replace('../fonts/', '../assets/fonts/');
+               }]
           ]
         }
       }
@@ -343,12 +348,28 @@ module.exports = function (grunt) {
           src: [
             '*.{ico,png,txt}',
             '.htaccess',
-            'bower_components/**/*',
+//            'bower_components/**/*',
             'assets/images/{,*/}*.{webp}',
             'assets/fonts/**/*',
             'index.html'
           ]
         }, {
+    	    // include font-awesome webfonts
+    	    //
+    	    expand: true,
+    	    dot: true,
+    	    cwd: '<%= yeoman.client %>/bower_components/font-awesome',
+    	    src: ['fonts/*.*'],
+    	    dest: '<%= yeoman.dist %>/public/assets'
+    	}, {
+    	    // include bootstrap webfonts
+    	    //
+    	    expand: true,
+    	    dot: true,
+    	    cwd: '<%= yeoman.client %>/bower_components/bootstrap/dist',
+    	    src: ['fonts/*.*'],
+    	    dest: '<%= yeoman.dist %>/public/assets'
+    	}, {
           expand: true,
           cwd: '.tmp/images',
           dest: '<%= yeoman.dist %>/public/assets/images',
@@ -360,6 +381,16 @@ module.exports = function (grunt) {
             'package.json',
             'server/**/*'
           ]
+        }]
+      },
+      serve: {
+        files: [{
+          // include font-awesome webfonts
+          expand: true,
+          dot: true,
+          cwd: '<%= yeoman.client %>/bower_components/font-awesome',
+          src: ['fonts/*.*'],
+          dest: '<%= yeoman.client %>/assets'
         }]
       },
       styles: {
@@ -493,7 +524,8 @@ module.exports = function (grunt) {
         },
         files: {
           '<%= yeoman.client %>/index.html': [
-            '<%= yeoman.client %>/{app,components}/**/*.css'
+            '<%= yeoman.client %>/{app,components}/**/*.css',
+            '!<%= yeoman.client %>/app/app.css'
           ]
         }
       }

@@ -6,14 +6,31 @@
 <html class="no-js hide-sidebar ls-bottom-footer-fixed">
 <!--<![endif]-->
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
 	<base href="/">
 	<title>Oshi - Bitcoin Casino</title>
-	<meta name="description" content="">
-	<meta name="viewport" content="width=device-width">
-	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-	<!-- build:css(client) app/vendor.css -->
+    <link rel="alternate" href="https://www.oshi.io/" hreflang="en">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+   
+   	<!-- build:css(client) app/vendor.css -->
 	<!-- bower:css -->
 	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
 	<link rel="stylesheet" href="bower_components/slick-carousel/slick/slick.css" />
@@ -45,297 +62,292 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-	<!-- Fixed navbar -->
-
-	<nav class="navbar navbar-skin-cover navbar-static-top navbar-absolute-top navbar-size-large" role="navigation">
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed"
-					data-toggle="collapse" data-target="#main-nav">
-					<span class="sr-only">Toggle navigation</span> <span
-						class="icon-bar"></span> <span class="icon-bar"></span> <span
-						class="icon-bar"></span>
-				</button>
-
-				<a class="navbar-brand" href="index.html"><img
-					class="header-logo" src="assets/images/oshi-logo.png"
-					alt="oshi Bitcoin Casino"></a> <a class="navbar-brand"
-					href="index.html"><img class="header-logo-small"
-					src="assets/images/oshi-logo-small.png" alt="oshi Bitcoin Casino"></a>
+        <!-- Fixed navbar -->
+		<nav class="navbar navbar-skin-cover navbar-static-top navbar-absolute-top main-nav" role="navigation">
+			<div class="container-fluid">
+			  <div class="navbar-header">
+			    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+			    <a  class="navbar-brand" href="index.html"><img   src="assets/images/oshi-logo-xsmall.png"   alt="oshi Bitcoin Casino" ></a>     
+			 </div> 
+			  <div class="collapse navbar-collapse" id="main-nav">
+			    <!-- Left Nav -->
+			    <ul class="nav navbar-nav">
+			    
+			    <!--Games-->
+			      <li class="dropdown main-nav-dropdown-menu"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Games<span class="caret"></span></a>
+			
+			 
+			      <ul class="dropdown-menu">
+			    <li><a href="listing-grid.html"><span class="badge pull-right">600+</span>All Games - Grid</a></li>
+			          <li><a href="listing.html"><span class="badge pull-right">600+</span>All Games - List</a></li>
+			          <!-- user goes to listing pages with relevant category of game -->
+			  
+			          <!-- create custom icons for game types  -->
+			          <li ><a href="#"><span class="badge pull-right">120+</span>Slots</a></li>
+			          <li ><a href="#"><span class="badge pull-right">60+</span>Theme Slots</a> </li>
+			          <li ><a href="#"><span class="badge pull-right">60+</span>Fruit Slots </a></li>
+			          <li ><a href="#"><span class="badge pull-right">30+</span>Table Games</a></li>
+			          <li ><a href="#"><span class="badge pull-right">40+</span>Casual Games</a></li>
+			          <li ><a href="#"><span class="badge pull-right">60+</span>Video Poker</a></li>
+			          <li ><a href="#"><span class="badge pull-right">60+</span>Blackjack</a></li>
+			          <li ><a href="#"><span class="badge pull-right">60+</span>Roulette</a></li>
+			          <li ><a href="#"><span class="badge pull-right">60+</span>Poker Games</a></li>
+			          <li ><a href="#"><span class="badge pull-right">60+</span>Card Games</a></li>
+			        </ul>
+			      </li>
+			<!--END / Games-->
+			
+			   <!-- Providers -->
+			 <li class="dropdown main-nav-dropdown-menu"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Providers<span class="caret"></span></a>
+			
+			
+			        <ul class="dropdown-menu">
+			          <li ><a href="#"><span class="badge pull-right">120+</span> Game Provider 1</a></li>
+			          <!-- user goes to listing pages with relevant operator -->
+			          <li ><a href="#"><span class="badge pull-right">30+</span> Game Provider 2</a></li>
+			          <li ><a href="#"><span class="badge pull-right">40+</span> Game Provider 3</a></li>
+			          <li ><a href="#"><span class="badge pull-right">60+</span> Game Provider 4</a></li>
+			          <li ><a href="#"><span class="badge pull-right">120+</span> Game Provider 5</a></li>
+			          <li ><a href="#"><span class="badge pull-right">30+</span> Game Provider 6</a></li>
+			          <li ><a href="#"><span class="badge pull-right">40+</span> Game Provider 7</a></li>
+			        </ul>
+			      </li>
+			      <!-- END/ Providers -->
+			     
+			    <!-- Bonuses -->
+			      <li class="dropdown main-nav-dropdown-menu"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Bonuses<span class="caret"></span></a>
+			        <ul class="dropdown-menu">
+			          <li ng-class="{ 'active': $state.is('page.1') }"><a ui-sref="page.1"><span>How Bonuses Work</span></a></li>
+			          <li ng-class="{ 'active': $state.is('page.2') }"><a ui-sref="page.2"><span>Latest Bouses!</span></a></li>
+			        </ul>
+			      </li>
+			    <!-- END / About -->
+			    
+			
+			    
+			    <!-- Help -->
+			      <li class="dropdown main-nav-dropdown-menu"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Help!<span class="caret"></span></a>
+			        <ul class="dropdown-menu">
+			          <li ng-class="{ 'active': $state.is('page.1') }"><a ui-sref="page.1"><span>Support/Contact</span></a></li>
+			          <li ng-class="{ 'active': $state.is('page.2') }"><a ui-sref="page.2"><span>Payment Methods</span></a></li>
+			          <li ng-class="{ 'active': $state.is('page.3') }"><a ui-sref="page.3"><span>Bitcoin Gambling Guide</span></a></li>
+			          <li ng-class="{ 'active': $state.is('page.4') }"><a ui-sref="page.4"><span>Responsible Gambling</span></a></li>
+			          <li ng-class="{ 'active': $state.is('page.5') }"><a ui-sref="page.5"><span>Terms & Conditions</span></a></li>
+			    <li ng-class="{ 'active': $state.is('page.6') }"><a ui-sref="page.6"><span>Privacy </span></a></li>
+			    <li ng-class="{ 'active': $state.is('page.6') }"><a ui-sref="page.6"><span>Tor Friendly</span></a></li>
+			        </ul>
+			      </li>
+			    <!-- END / About -->
+			    
+			     <!-- About -->
+			      <li class="dropdown main-nav-dropdown-menu"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">About<span class="caret"></span></a>
+			        <ul class="dropdown-menu">
+			          <li ng-class="{ 'active': $state.is('page.1') }"><a ui-sref="page.1"><span>Gambling Licence</span></a></li>
+			          <li ng-class="{ 'active': $state.is('page.2') }"><a ui-sref="page.2"><span>Provably Fair</span></a></li>
+			          <li ng-class="{ 'active': $state.is('page.3') }"><a ui-sref="page.3"><span>Founders</span></a></li>
+			          <li ng-class="{ 'active': $state.is('page.4') }"><a ui-sref="page.4"><span>Who is Oshi?</span></a></li>
+			          <li ng-class="{ 'active': $state.is('page.5') }"><a ui-sref="page.5"><span>Philosophy</span></a></li>
+			          <li ng-class="{ 'active': $state.is('page.6') }"><a ui-sref="page.6"><span>Blog</span></a></li>
+			        </ul>
+			      </li>
+			    <!-- END / About -->
+			    
+			    <!-- Search  
+			      <li class="dropdown main-nav-dropdown-menu"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Search<span class="caret"></span></a>
+			        <ul class="dropdown-menu">       
+			          <form class="navbar-form margin-none">
+			            <div class="search">
+			              <div class="input-group"> <span class="input-group-addon"><i class="icon-search"></i></span>
+			                <input type="text" class="form-control form-control-w-150" placeholder="Search ..">
+			              </div>
+			            </div>
+			          </form>
+			        </ul>
+			      </li>
+			    <!-- END/ Search -->
+			    
+			    </ul>
+			    <!-- END/ Left Nav -->
+			
+			    <!-- Right Nav -->
+			    <ul class="nav navbar-nav navbar-right">
+			    <!-- Login -->
+			      <li class="dropdown main-nav-dropdown-menu"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-fw fa-lock"></i> Login </a>
+			        <div class="dropdown-menu dropdown-size-280">
+			          <form>
+			            <div class="form-group">
+			              <div class="input-group"> <span class="input-group-addon"><i class="fa fa-user"></i></span>
+			                <input type="text" class="form-control" placeholder="Username">
+			              </div>
+			            </div>
+			            <div class="form-group">
+			              <div class="input-group"> <span class="input-group-addon"><i class="fa fa-shield"></i></span>
+			                <input type="password" class="form-control" placeholder="Password">
+			              </div>
+			            </div>
+			            <div class="text-center">
+			              <button type="submit" class="btn btn-primary">Login <i class="fa fa-sign-in"></i></button>
+			            </div>
+			          </form>
+			        </div>
+			      </li>
+			      <!-- // END login -->
+			      <!-- Sign up -->
+			      <li class="dropdown main-nav-dropdown-menu"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+			        <button  class="btn btn-primary btn-sales"> Join Today </button>
+			        </a>
+			        <div class="dropdown-menu dropdown-size-280">
+			          <form>
+			            <!-- Sales content -->
+			            <div class="row">
+			              <div class="col-md-12">
+			                <div class="form-group form-control-sales">
+			                  <div class="text-center"> <span class="join-text">In 2 minutes that 2000mBTC signup bonus is yours! </span></div>
+			                  <span class="join-notes">No bonus? Just untick the box below. <span class="join-icons"><a href="#" target="_blank"> <i class="fa fa-info-circle"></i><i class="fa fa-external-link"></i></a> </span></span> </div>
+			              </div>
+			            </div>
+			            <!-- END sales content -->
+			            <div class="row">
+			              <div class="col-md-12">
+			                <div class="form-group form-control-default required">
+			                  <!--   <label for="exampleInputUserName">User Name</label> -->
+			                  <input type="text" class="form-control" id="InputUserName1" placeholder="Enter User Name...">
+			                </div>
+			              </div>
+			            </div>
+			            <div class="form-group form-control-default required">
+			              <!--   <label for="exampleInputEmail1">Email address</label> -->
+			              <input type="email" class="form-control" id="InputEmail1" placeholder="Enter Email...">
+			            </div>
+			            <div class="form-group form-control-default required">
+			              <!-- <label for="exampleInputPassword1">Password</label> -->
+			              <input type="password" class="form-control" id="InputPassword1" placeholder="Enter Password...">
+			            </div>
+			            <!-- Checkbox Receive Promos -->
+			            <div id="">
+			              <label id="ReceivePromos1">
+			              <input type="checkbox" checked placeholder="Receive Promos" id="ReceivePromos1" />
+			              Get My 2000 mBTC & Other Bonuses <sup></sup> </label>
+			            </div>
+			            <!-- Checkbox Receive Newsletters -->
+			            <div id="">
+			              <label id="ReceiveNewsletters1">
+			              <input type="checkbox" placeholder="Receive Newsletters" id="ReceiveNewsletters1" />
+			              Receive Newsletters <sup></sup> </label>
+			            </div>
+			            <!-- Checkbox Over 18 -->
+			            <div id="">
+			              <label id="CheckboxOver18">
+			              <input type="checkbox" id="CheckboxOver18" placeholder="I confirm that I am over years old" id="CheckboxOver18" required />
+			              <span id=""> I confirm that I am over 18 years old </span><sup>*</sup> </label>
+			            </div>
+			            <!-- Checkbox Terms and Conditions -->
+			            <div id="DIV_49">
+			              <label id="LABEL_50">
+			              <input type="checkbox" placeholder="I agree to Terms Conditions" id="INPUT_51" required />
+			              <span id="">I agree to Terms and Conditions</span><sup>*</sup> </label>
+			            </div>
+			            <!-- END/ Join Opt In / Out  -->
+			            <div class="text-center">
+			              <button type="submit" class="btn btn-primary">All set? Click here to join Oshi</button>
+			            </div>
+			          </form>
+			        </div>
+			      </li>
+			      <!-- // END sign up -->
+			    </ul>
+			    <!-- END Right Nav -->
+			  </div>
+			  <!-- /.navbar-collapse -->
 			</div>
-			<!-- Collect the nav links, forms, and other content for toggling -->
-			<div class="collapse navbar-collapse" id="main-nav">
-				<ul class="nav navbar-nav">
-
-
-
-					<li class="dropdown main-nav-dropdown-menu"><a href="#"
-						class="dropdown-toggle" data-toggle="dropdown">Games<span
-							class="caret"></span></a>
-						<ul class="dropdown-menu">
-							<li><a href="listing-grid.html"><span
-									class="badge pull-right">600+</span>All Games - Grid</a></li>
-							<li><a ui-sref="listing.html"><span
-									class="badge pull-right">600+</span>All Games - List</a></li>
-							<!-- user goes to listing pages with relevant category of game -->
-							<!-- create custom icons for game types  -->
-							<li><a href="discover.listing"><span
-									class="badge pull-right">120+</span>Slots</a></li>
-							<li><a href="discover.listing"><span
-									class="badge pull-right">60+</span>Theme Slots</a></li>
-							<li><a href="discover.listing"><span
-									class="badge pull-right">60+</span>Fruit Slots </a></li>
-							<li><a href="discover.listing"><span
-									class="badge pull-right">30+</span>Table Games</a></li>
-							<li><a href="discover.listing"><span
-									class="badge pull-right">40+</span>Casual Games</a></li>
-							<li><a href="discover.listing"><span
-									class="badge pull-right">60+</span>Video Poker</a></li>
-							<li><a href="discover.listing"><span
-									class="badge pull-right">60+</span>Blackjack</a></li>
-							<li><a href="discover.listing"><span
-									class="badge pull-right">60+</span>Roulette</a></li>
-							<li><a href="discover.listing"><span
-									class="badge pull-right">60+</span>Poker Games</a></li>
-							<li><a href="discover.listing"><span
-									class="badge pull-right">60+</span>Card Games</a></li>
-						</ul></li>
-
-					<li class="dropdown main-nav-dropdown-menu"><a href="#"
-						class="dropdown-toggle" data-toggle="dropdown">Providers<span
-							class="caret"></span></a>
-						<ul class="dropdown-menu">
-							<li><a href="#"><span class="badge pull-right">120+</span>
-									Game Provider 1</a></li>
-							<!-- user goes to listing pages with relevant operator -->
-							<li><a href="discover.listing"><span
-									class="badge pull-right">30+</span> Game Provider 2</a></li>
-							<li><a href="discover.listing"><span
-									class="badge pull-right">40+</span> Game Provider 3</a></li>
-							<li><a href="discover.listing"><span
-									class="badge pull-right">60+</span> Game Provider 4</a></li>
-							<li><a href="discover.listing"><span
-									class="badge pull-right">120+</span> Game Provider 5</a></li>
-							<li><a href="discover.listing"><span
-									class="badge pull-right">30+</span> Game Provider 6</a></li>
-							<li><a href="discover.listing"><span
-									class="badge pull-right">40+</span> Game Provider 7</a></li>
-						</ul></li>
-
-					<li class="dropdown main-nav-dropdown-menu"><a href="#"
-						class="dropdown-toggle" data-toggle="dropdown">Pages<span
-							class="caret"></span></a>
-						<ul class="dropdown-menu">
-							<li ng-class="{ 'active': $state.is('page.1') }"><a
-								ui-sref="page.1"><span>Home</span></a></li>
-							<li ng-class="{ 'active': $state.is('page.2') }"><a
-								ui-sref="page.2"><span>Casino Games</span></a></li>
-							<li ng-class="{ 'active': $state.is('page.3') }"><a
-								ui-sref="page.3"><span>Bonuses</span></a></li>
-							<li ng-class="{ 'active': $state.is('page.4') }"><a
-								ui-sref="page.4"><span>About</span></a></li>
-							<li ng-class="{ 'active': $state.is('page.5') }"><a
-								ui-sref="page.5"><span>Help</span></a></li>
-							<li ng-class="{ 'active': $state.is('page.6') }"><a
-								ui-sref="page.6"><span>Blog</span></a></li>
-						</ul></li>
-
-					<li class="dropdown main-nav-dropdown-menu"><a href="#"
-						class="dropdown-toggle" data-toggle="dropdown">Search<span
-							class="caret"></span></a>
-						<ul class="dropdown-menu">
-
-							<!-- Search -->
-							<!--  <form class="navbar-form navbar-left margin-none"> -->
-							<form class="navbar-form margin-none">
-								<div class="search">
-									<div class="input-group">
-										<span class="input-group-addon"><i class="icon-search"></i></span>
-										<input type="text" class="form-control form-control-w-150"
-											placeholder="Search ..">
-									</div>
-								</div>
-							</form>
-							<!-- END/ Search -->
-						</ul></li>
-				</ul>
-
-				<ul class="nav navbar-nav navbar-right">
-					<!-- Login -->
-					<li class="dropdown main-nav-dropdown-menu"><a href="#"
-						class="dropdown-toggle" data-toggle="dropdown"> <i
-							class="fa fa-fw fa-lock"></i> Login
-					</a>
-						<div class="dropdown-menu dropdown-size-280">
-							<form>
-								<div class="form-group">
-									<div class="input-group">
-										<span class="input-group-addon"><i class="fa fa-user"></i></span>
-										<input type="text" class="form-control" placeholder="Username">
-									</div>
-								</div>
-								<div class="form-group">
-									<div class="input-group">
-										<span class="input-group-addon"><i class="fa fa-shield"></i></span>
-										<input type="password" class="form-control"
-											placeholder="Password">
-									</div>
-								</div>
-								<div class="text-center">
-									<button type="submit" class="btn btn-primary">
-										Login <i class="fa fa-sign-in"></i>
-									</button>
-								</div>
-							</form>
-						</div></li>
-					<!-- // END login -->
-
-					<!-- Sign up -->
-					<li class="dropdown main-nav-dropdown-menu"><a href="#"
-						class="dropdown-toggle" data-toggle="dropdown">
-							<button class="btn btn-primary btn-sales">Join Today</button>
-					</a>
-						<div class="dropdown-menu dropdown-size-280">
-							<form>
-								<!-- Sales content -->
-								<div class="row">
-									<div class="col-md-12">
-										<div class="form-group form-control-sales">
-											<div class="text-center">
-												<span class="join-text">In 2 minutes that 2000mBTC
-													signup bonus is yours! </span>
-											</div>
-											<span class="join-notes">No bonus? Just untick the box
-												below. <span class="join-icons"><a href="#"
-													target="_blank"> <i class="fa fa-info-circle"></i><i
-														class="fa fa-external-link"></i></a> </span>
-											</span>
-										</div>
-									</div>
-								</div>
-								<!-- END sales content -->
-								<div class="row">
-									<div class="col-md-12">
-										<div class="form-group form-control-default required">
-											<!--   <label for="exampleInputUserName">User Name</label> -->
-											<input type="text" class="form-control" id="InputUserName1"
-												placeholder="Enter User Name...">
-										</div>
-									</div>
-								</div>
-								<div class="form-group form-control-default required">
-									<!--   <label for="exampleInputEmail1">Email address</label> -->
-									<input type="email" class="form-control" id="InputEmail1"
-										placeholder="Enter Email...">
-								</div>
-								<div class="form-group form-control-default required">
-									<!-- <label for="exampleInputPassword1">Password</label> -->
-									<input type="password" class="form-control" id="InputPassword1"
-										placeholder="Enter Password...">
-								</div>
-								<!-- Checkbox Receive Promos -->
-								<div id="">
-									<label id="ReceivePromos1"> <input type="checkbox"
-										checked placeholder="Receive Promos" id="ReceivePromos1" />
-										Get My 2000 mBTC & Other Bonuses <sup></sup>
-									</label>
-								</div>
-								<!-- Checkbox Receive Newsletters -->
-								<div id="">
-									<label id="ReceiveNewsletters1"> <input type="checkbox"
-										placeholder="Receive Newsletters" id="ReceiveNewsletters1" />
-										Receive Newsletters <sup></sup>
-									</label>
-								</div>
-								<!-- Checkbox Over 18 -->
-								<div id="">
-									<label id="CheckboxOver18"> <input type="checkbox"
-										id="CheckboxOver18"
-										placeholder="I confirm that I am over years old"
-										id="CheckboxOver18" required /> <span id=""> I confirm
-											that I am over 18 years old </span><sup>*</sup>
-									</label>
-								</div>
-								<!-- Checkbox Terms and Conditions -->
-								<div id="DIV_49">
-									<label id="LABEL_50"> <input type="checkbox"
-										placeholder="I agree to Terms Conditions" id="INPUT_51"
-										required /> <span id="">I agree to Terms and
-											Conditions</span><sup>*</sup>
-									</label>
-								</div>
-								<!-- END/ Join Opt In / Out  -->
-								<div class="text-center">
-									<button type="submit" class="btn btn-primary">All set?
-										Click here to join Oshi</button>
-								</div>
-							</form>
-						</div></li>
-					<!-- // END sign up -->
-
-				</ul>
-			</div>
-			<!-- /.navbar-collapse -->
-		</div>
-	</nav>
+		</nav>
 
 	<div ui-view=""></div>
 
-	<section class="footer-section">
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-6 col-md-2">
-					<h4>Corporate</h4>
-					<ul class="list-unstyled">
-						<li><a href="">About the company</a></li>
-						<li><a href="">Company offices</a></li>
-						<li><a href="">Agents</a></li>
-						<li><a href="">Partners</a></li>
-						<li><a href="">Terms of use</a></li>
-						<li><a href="">Privacy</a></li>
-					</ul>
-				</div>
-				<div class="col-xs-6 col-md-2">
-					<h4>Explore</h4>
-					<ul class="list-unstyled">
-						<li><a href="">Properties listing</a></li>
-						<li><a href="">List a property</a></li>
-						<li><a href="">Become a member</a></li>
-						<li><a href="">Become a partner</a></li>
-						<li><a href="">Sign Up</a></li>
-					</ul>
-				</div>
-				<div class="col-xs-12 col-md-4 text-center">
-					<h4>Newsletter</h4>
-					<div class="panel bg-transparent margin-none">
-						<div class="panel-body">
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-								Assumenda autem dolor, ea eaque laboriosam modi quam repellat
-								sunt tenetur voluptatum! Ad cumque deleniti deserunt eaque
-								labore molestiae nostrum odit quibusdam?</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-xs-12 col-md-4">
-					<div class="panel bg-transparent margin-none">
-						<div class="panel-body">
-							<div class="form-group form-control-default">
-								<label for="email">Email:</label> <input id="email"
-									class="form-control" type="text"
-									placeholder="Your email address .." />
-							</div>
-							<div class="form-group">
-								<button class="btn btn-pink-500">Subscribe</button>
-							</div>
 
-							<small class="help-block">* We will never sell your email</small>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- // END #content -->
+<!-- Footer -->
+<div class="footer-hide">
+<section class="footer-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6 col-md-2">
+                <h4>Corporate</h4>
+                <ul class="list-unstyled">
+                    <li><a href="#" " target="_blank ">About Oshi</a></li>
+                    <li><a href=" "" target="_blank">Contact</a>
+                    </li>
+                    <li><a href="" " target="_blank ">Terms & Conditions</a></li>
+                    <li><a href=" "" target="_blank">Privacy</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-xs-6 col-md-2">
+                <h4>Explore</h4>
+                <ul class="list-unstyled">
+                    <li>
+                    <li><a href="#">Games Explorer</a>
+                    </li>
+                    <li><a href="#">Slots</a>
+                    </li>
+                    <li><a href="#">Table Games</a>
+                    </li>
+                    <li><a href="#">Casual Games</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-xs-12 col-md-4 text-center">
+                <h4>Latest Blog Posts</h4>
+                <div class="panel bg-transparent margin-none">
+                    <div class="panel-body rss-blogposts">
+                        <!-- RSS Feed from  http://blog.oshi.io/ here -->
+                        <p>
+                            <a href="#">
+                                <i class="fa fa-arrow-right"> </i> Lorem ipsum dolor sit amet, consectetur...  
+                        </p>
+                        <p><a href="#"><i class="fa fa-arrow-right"> </i> nteger vel odio maximus leo rutrum ultricies...   </p>
+                        <p><a href="#"><i class="fa fa-arrow-right"> </i> Aliquam mattis metus orci, at commodo...</p>
+                        <p><a href="#"><i class="fa fa-arrow-right"> </i> Pellentesque nec egestas risus, ut dapibus ...</p>
+                        <p><a href="#"><i class="fa fa-arrow-right"> </i> Curabitur quis malesuada dui...  </p>
+                        <p><a href="#"><i class="fa fa-arrow-right"> </i> Suspendisse posuere cursus dui et venenatis....</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-4">
+            <h4>Latest Winners</h4>
+            <div class="panel bg-transparent margin-none">
+            <div class="panel-body">
+            <!-- example winners -->
+            <div>- &nbsp;<span ng-bind="game.nickname" class="ng-binding">tomfin1</span> just won </div>
+            <div> <strong  >1.5 mBTC</strong> <span>in</span> <a>Lucky Lady's Clover</a> </div>
+            <div>- &nbsp;<span ng-bind="game.nickname" class="ng-binding">tomfin1</span> just won </div>
+            <div> <strong>1.5 mBTC</strong> <span>in</span> <a>Lucky Lady's Clover</a> </div>
+            <div>- &nbsp;<span ng-bind="game.nickname" class="ng-binding">tomfin1</span> just won </div>
+            <div> <strong>1.5 mBTC</strong> <span>in</span> <a>Lucky Lady's Clover</a> </div>
+            <div>- &nbsp;<span ng-bind="game.nickname" class="ng-binding">tomfin1</span> just won </div>
+            <div> <strong>1.5 mBTC</strong> <span>in</span> <a>Lucky Lady's Clover</a> </div>
+            <div>- &nbsp;<span ng-bind="game.nickname" class="ng-binding">tomfin1</span> just won </div>
+            <div> <strong>1.5 mBTC</strong> <span>in</span> <a>Lucky Lady's Clover</a> </div>
+            <!-- END / example winners -->
+            </div>
+            </div>
+            </div>
+        </div>
+        <div class="footer_out_links">
+            <img src="assets/images/18.png" data-toggle="tooltip" data-title="Over 18 Only">
+            <a href="http://www.softswiss.com" target="_blank"> <img src="assets/images/softswiss.png" data-toggle="tooltip" data-title="Softswiss Bitcoin casino platform">
+            </a>
+            <a href="#<!-- page with licence -->" target="_blank"> <img src="assets/images/curaco37px_high_v2.png" data-toggle="tooltip" data-title="Curacao Licence">
+            <a href="#<!--Page with iTech test certificate -->" target="_blank"><img src="assets/images/itech.png" data-toggle="tooltip" data-title="Rated as Provably Fair by iTech, an independent testing company.">
+            <a href="#<!-- page about our security -->" target="_blank"><img src="assets/images/100safe.png" data-toggle="tooltip" data-title="We're 100% secure (because we only use Bitcoin)">
+            <a href="#<!--Page with itech certificate and explanation of in game fairness testing.-->" target="_blank"><img src="assets/images/provable_fair.png" data-toggle="tooltip" data-title="Provably Fair: Itech Labs testing & in Game testing for Softswiss Games.">
+            <a href="#<!--Page on responsible gambling -->" target="_blank">
+                <img src="assets/images/responsible_gamble.png" data-toggle="tooltip" data-title="We take Resposnsible Gambling very seriously. Why? We want happy customers.">
+        </div>
+    </div>
+</section>
+<!-- END upper Footer -->
+<!-- // END #content -->
+<!-- Lower Footer -->
 
 	<div id="DIV_1">
 		<a href="#" id="A_2"></a><a href="#" id="A_3"></a><a href="#" id="A_4"></a><a
