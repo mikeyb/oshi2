@@ -73,85 +73,99 @@
 			    <!-- Left Nav -->
 			    <ul class="nav navbar-nav">
 			    
-			    <!--Games-->
-               <li class="dropdown main-nav-dropdown-menu">
-                <span uib-dropdown on-toggle="toggled(open)">
-                    <a href id="simple-dropdown" uib-dropdown-toggle>
-                        Games<span class="caret"></span>
-                    </a>
-                    <ul class="uib-dropdown-menu dropdown-menu" aria-labelledby="simple-dropdown">
-                          <li role="menuitem"><a href="#"><span class="badge pull-right">120+</span>Slots</a></li>
-                          <li role="menuitem"><a href="#"><span class="badge pull-right">60+</span>Theme Slots</a></li>
-                          <li role="menuitem"><a href="#"><span class="badge pull-right">60+</span>Fruit Slots </a></li>
-                          <li role="menuitem"><a href="#"><span class="badge pull-right">30+</span>Table Games</a></li>
-                          <li role="menuitem"><a href="#"><span class="badge pull-right">40+</span>Casual Games</a></li>
-                          <li role="menuitem"><a href="#"><span class="badge pull-right">60+</span>Video Poker</a></li>
-                          <li role="menuitem"><a href="#"><span class="badge pull-right">60+</span>Blackjack</a></li>
-                          <li role="menuitem"><a href="#"><span class="badge pull-right">60+</span>Roulette</a></li>
-                          <li role="menuitem"><a href="#"><span class="badge pull-right">60+</span>Poker Games</a></li>
-                          <li role="menuitem"><a href="#"><span class="badge pull-right">60+</span>Card Games</a></li>
-                    </ul>
-                </span> 
-                </li>          
-			<!--END / Games-->
+				    <!--Games-->
+	                <li class="dropdown main-nav-dropdown-menu">
+	                    <div uib-dropdown>
+	                        <button id="single-button" type="button" class="" uib-dropdown-toggle ng-disabled="disabled">
+	                            Games <span class="caret"></span>
+	                        </button>
+	                        <ul class="uib-dropdown-menu dropdown-menu" aria-labelledby="simple-dropdown">
+		                        <li role="menuitem" ng-class="{ 'active': $state.is('page.1') }"><a href="#"><span class="badge pull-right">120+</span>Slots</a></li>
+		                        <li role="menuitem" ng-class="{ 'active': $state.is('page.1') }"><a href="#"><span class="badge pull-right">60+</span>Theme Slots</a></li>
+		                        <li role="menuitem" ng-class="{ 'active': $state.is('page.1') }"><a href="#"><span class="badge pull-right">60+</span>Fruit Slots </a></li>
+		                        <li role="menuitem" ng-class="{ 'active': $state.is('page.1') }"><a href="#"><span class="badge pull-right">30+</span>Table Games</a></li>
+		                        <li role="menuitem" ng-class="{ 'active': $state.is('page.1') }"><a href="#"><span class="badge pull-right">40+</span>Casual Games</a></li>
+		                        <li role="menuitem" ng-class="{ 'active': $state.is('page.1') }"><a href="#"><span class="badge pull-right">60+</span>Video Poker</a></li>
+		                        <li role="menuitem" ng-class="{ 'active': $state.is('page.1') }"><a href="#"><span class="badge pull-right">60+</span>Blackjack</a></li>
+		                        <li role="menuitem" ng-class="{ 'active': $state.is('page.1') }"><a href="#"><span class="badge pull-right">60+</span>Roulette</a></li>
+		                        <li role="menuitem" ng-class="{ 'active': $state.is('page.1') }"><a href="#"><span class="badge pull-right">60+</span>Poker Games</a></li>
+		                        <li role="menuitem" ng-class="{ 'active': $state.is('page.1') }"><a href="#"><span class="badge pull-right">60+</span>Card Games</a></li>
+	                        </ul>
+	                    </div> 
+	                </li>          
+				    <!--END / Games-->
 			
-			   <!-- Providers -->
-			   <li class="dropdown main-nav-dropdown-menu">
-			    <span uib-dropdown on-toggle="toggled(open)">
-			        <a href id="simple-dropdown" uib-dropdown-toggle>
-			            Providers<span class="caret"></span>
-			        </a>
-			        <ul class="uib-dropdown-menu dropdown-menu" aria-labelledby="simple-dropdown">
-	                    <li ng-class="{ 'active': $state.is('page.1') }"><a href="#"><span class="badge pull-right">120+</span> Game Provider 1</a></li>
-	                    <!-- user goes to listing pages with relevant operator -->
-	                    <li ng-class="{ 'active': $state.is('page.2') }"><a href="#"><span class="badge pull-right">30+</span> Game Provider 2</a></li>
-	                    <li ng-class="{ 'active': $state.is('page.3') }"><a href="#"><span class="badge pull-right">40+</span> Game Provider 3</a></li>
-	                    <li ng-class="{ 'active': $state.is('page.4') }"><a href="#"><span class="badge pull-right">60+</span> Game Provider 4</a></li>
-	                    <li ng-class="{ 'active': $state.is('page.5') }"><a href="#"><span class="badge pull-right">120+</span> Game Provider 5</a></li>
-	                    <li ng-class="{ 'active': $state.is('page.6') }"><a href="#"><span class="badge pull-right">30+</span> Game Provider 6</a></li>
-	                    <li ng-class="{ 'active': $state.is('page.7') }"><a href="#"><span class="badge pull-right">40+</span> Game Provider 7</a></li>
-                    </ul>
-			    </span>	
-			    </li>		   
-			    <!-- END/ Providers -->
+			        <!-- Providers -->
+                    <li class="dropdown main-nav-dropdown-menu">
+                        <div uib-dropdown>
+                            <button id="single-button" type="button" class="" uib-dropdown-toggle ng-disabled="disabled">
+                                Providers <span class="caret"></span>
+                            </button>
+                            <ul class="uib-dropdown-menu dropdown-menu" aria-labelledby="simple-dropdown">
+		                        <li role="menuitem" ng-class="{ 'active': $state.is('page.1') }"><a href="#"><span class="badge pull-right">120+</span> Game Provider 1</a></li>
+		                        <li role="menuitem" ng-class="{ 'active': $state.is('page.2') }"><a href="#"><span class="badge pull-right">30+</span> Game Provider 2</a></li>
+		                        <li role="menuitem" ng-class="{ 'active': $state.is('page.3') }"><a href="#"><span class="badge pull-right">40+</span> Game Provider 3</a></li>
+		                        <li role="menuitem" ng-class="{ 'active': $state.is('page.4') }"><a href="#"><span class="badge pull-right">60+</span> Game Provider 4</a></li>
+		                        <li role="menuitem" ng-class="{ 'active': $state.is('page.5') }"><a href="#"><span class="badge pull-right">120+</span> Game Provider 5</a></li>
+		                        <li role="menuitem" ng-class="{ 'active': $state.is('page.6') }"><a href="#"><span class="badge pull-right">30+</span> Game Provider 6</a></li>
+		                        <li role="menuitem" ng-class="{ 'active': $state.is('page.7') }"><a href="#"><span class="badge pull-right">40+</span> Game Provider 7</a></li>
+                            </ul>
+                        </div> 
+                    </li>          
+    			    <!-- END/ Providers -->
 			     
-			    <!-- Bonuses -->
-			      <li class="dropdown main-nav-dropdown-menu"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Bonuses<span class="caret"></span></a>
-			        <ul class="dropdown-menu">
-			          <li ng-class="{ 'active': $state.is('page.1') }"><a ui-sref="page.1"><span>How Bonuses Work</span></a></li>
-			          <li ng-class="{ 'active': $state.is('page.2') }"><a ui-sref="page.2"><span>Latest Bouses!</span></a></li>
-			        </ul>
-			      </li>
-			    <!-- END / About -->
+    			    <!-- Bonuses -->
+                    <li class="dropdown main-nav-dropdown-menu">
+                        <div uib-dropdown>
+                            <button id="single-button" type="button" class="" uib-dropdown-toggle ng-disabled="disabled">
+                                Bonuses <span class="caret"></span>
+                            </button>
+                            <ul class="uib-dropdown-menu dropdown-menu" aria-labelledby="simple-dropdown">
+                                <li role="menuitem" ng-class="{ 'active': $state.is('page.1') }"><a ui-sref="page.1"><span>How Bonuses Work</span></a></li>
+			                    <li role="menuitem" ng-class="{ 'active': $state.is('page.2') }"><a ui-sref="page.2"><span>Latest Bouses!</span></a></li>
+                            </ul>
+                        </div> 
+                    </li>          
+    			    <!-- END / Bonuses -->
 			    
 			
 			    
-			    <!-- Help -->
-			      <li class="dropdown main-nav-dropdown-menu"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Help!<span class="caret"></span></a>
-			        <ul class="dropdown-menu">
-			          <li ng-class="{ 'active': $state.is('page.1') }"><a ui-sref="page.1"><span>Support/Contact</span></a></li>
-			          <li ng-class="{ 'active': $state.is('page.2') }"><a ui-sref="page.2"><span>Payment Methods</span></a></li>
-			          <li ng-class="{ 'active': $state.is('page.3') }"><a ui-sref="page.3"><span>Bitcoin Gambling Guide</span></a></li>
-			          <li ng-class="{ 'active': $state.is('page.4') }"><a ui-sref="page.4"><span>Responsible Gambling</span></a></li>
-			          <li ng-class="{ 'active': $state.is('page.5') }"><a ui-sref="page.5"><span>Terms & Conditions</span></a></li>
-			    <li ng-class="{ 'active': $state.is('page.6') }"><a ui-sref="page.6"><span>Privacy </span></a></li>
-			    <li ng-class="{ 'active': $state.is('page.6') }"><a ui-sref="page.6"><span>Tor Friendly</span></a></li>
-			        </ul>
-			      </li>
-			    <!-- END / About -->
+    			    <!-- Help -->
+                    <li class="dropdown main-nav-dropdown-menu">
+                        <div uib-dropdown>
+                            <button id="single-button" type="button" class="" uib-dropdown-toggle ng-disabled="disabled">
+                                Help <span class="caret"></span>
+                            </button>
+                            <ul class="uib-dropdown-menu dropdown-menu" aria-labelledby="simple-dropdown">
+			                    <li role="menuitem" ng-class="{ 'active': $state.is('page.1') }"><a ui-sref="page.1"><span>Support/Contact</span></a></li>
+			                    <li role="menuitem" ng-class="{ 'active': $state.is('page.2') }"><a ui-sref="page.2"><span>Payment Methods</span></a></li>
+			                    <li role="menuitem" ng-class="{ 'active': $state.is('page.3') }"><a ui-sref="page.3"><span>Bitcoin Gambling Guide</span></a></li>
+			                    <li role="menuitem" ng-class="{ 'active': $state.is('page.4') }"><a ui-sref="page.4"><span>Responsible Gambling</span></a></li>
+			                    <li role="menuitem" ng-class="{ 'active': $state.is('page.5') }"><a ui-sref="page.5"><span>Terms & Conditions</span></a></li>
+				                <li role="menuitem" ng-class="{ 'active': $state.is('page.6') }"><a ui-sref="page.6"><span>Privacy </span></a></li>
+				                <li role="menuitem" ng-class="{ 'active': $state.is('page.6') }"><a ui-sref="page.6"><span>Tor Friendly</span></a></li>
+                            </ul>
+                        </div> 
+                    </li>          
+    			    <!-- END / Help -->
 			    
-			     <!-- About -->
-			      <li class="dropdown main-nav-dropdown-menu"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">About<span class="caret"></span></a>
-			        <ul class="dropdown-menu">
-			          <li ng-class="{ 'active': $state.is('page.1') }"><a ui-sref="page.1"><span>Gambling Licence</span></a></li>
-			          <li ng-class="{ 'active': $state.is('page.2') }"><a ui-sref="page.2"><span>Provably Fair</span></a></li>
-			          <li ng-class="{ 'active': $state.is('page.3') }"><a ui-sref="page.3"><span>Founders</span></a></li>
-			          <li ng-class="{ 'active': $state.is('page.4') }"><a ui-sref="page.4"><span>Who is Oshi?</span></a></li>
-			          <li ng-class="{ 'active': $state.is('page.5') }"><a ui-sref="page.5"><span>Philosophy</span></a></li>
-			          <li ng-class="{ 'active': $state.is('page.6') }"><a ui-sref="page.6"><span>Blog</span></a></li>
-			        </ul>
-			      </li>
-			    <!-- END / About -->
+    		        <!-- About -->
+                    <li class="dropdown main-nav-dropdown-menu">
+                        <div uib-dropdown>
+                            <button id="single-button" type="button" class="" uib-dropdown-toggle ng-disabled="disabled">
+                                About <span class="caret"></span>
+                            </button>
+                            <ul class="uib-dropdown-menu dropdown-menu" aria-labelledby="simple-dropdown">
+			                    <li role="menuitem" ng-class="{ 'active': $state.is('page.1') }"><a ui-sref="page.1"><span>Gambling Licence</span></a></li>
+			                    <li role="menuitem" ng-class="{ 'active': $state.is('page.2') }"><a ui-sref="page.2"><span>Provably Fair</span></a></li>
+			                    <li role="menuitem" ng-class="{ 'active': $state.is('page.3') }"><a ui-sref="page.3"><span>Founders</span></a></li>
+			                    <li role="menuitem" ng-class="{ 'active': $state.is('page.4') }"><a ui-sref="page.4"><span>Who is Oshi?</span></a></li>
+			                    <li role="menuitem" ng-class="{ 'active': $state.is('page.5') }"><a ui-sref="page.5"><span>Philosophy</span></a></li>
+			                    <li role="menuitem" ng-class="{ 'active': $state.is('page.6') }"><a ui-sref="page.6"><span>Blog</span></a></li>
+                            </ul>
+                        </div> 
+                    </li>         
+    			    <!-- END / About -->
 			    
 			    <!-- Search  
 			      <li class="dropdown main-nav-dropdown-menu"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Search<span class="caret"></span></a>
