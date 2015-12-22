@@ -225,8 +225,8 @@ module.exports = function (grunt) {
           src: [
             '<%= yeoman.dist %>/public/{,*/}*.js',
             '<%= yeoman.dist %>/public/{,*/}*.css',
-            '<%= yeoman.dist %>/public/assets/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
-            '<%= yeoman.dist %>/public/assets/fonts/*'
+            '<%= yeoman.dist %>/public/assets/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
+//            '<%= yeoman.dist %>/public/assets/fonts/*'
           ]
         }
       }
@@ -350,9 +350,15 @@ module.exports = function (grunt) {
             '.htaccess',
 //            'bower_components/**/*',
             'assets/images/{,*/}*.{webp}',
-            'assets/fonts/**/*',
+            'assets/fonts/**/*', 
             'index.html'
           ]
+        }, {
+        	expand: true,
+        	dot: true,
+        	cwd: '<%= yeoman.client %>/app',
+        	src: ['fonts/*.*'],
+        	dest: '<%= yeoman.dist %>/public/assets'
         }, {
     	    // include font-awesome webfonts
     	    //
@@ -360,7 +366,13 @@ module.exports = function (grunt) {
     	    dot: true,
     	    cwd: '<%= yeoman.client %>/bower_components/font-awesome',
     	    src: ['fonts/*.*'],
-    	    dest: '<%= yeoman.dist %>/public/assets'
+    	    dest: '<%= yeoman.dist %>/public/app'
+        }, {
+    	    expand: true,
+    	    dot: true,
+    	    cwd: '<%= yeoman.client %>/bower_components/slick-carousel/slick',
+    	    src: ['fonts/*.*'],
+    	    dest: '<%= yeoman.dist %>/public/app'
     	}, {
     	    // include bootstrap webfonts
     	    //

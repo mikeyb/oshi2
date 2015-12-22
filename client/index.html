@@ -37,9 +37,9 @@
 	<link rel="stylesheet" href="bower_components/slick-carousel/slick/slick-theme.css" />
 	<!-- endbower -->
 	<!-- endbuild -->
-	<!-- 
-	<link rel="stylesheet" href="app/css/essentials.css">
-	 -->
+	<!-- build:css app/css/fontawesome.css -->
+	<link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+	<!-- endbuild -->
 	<!-- build:css({.tmp,client}) app/app.css -->
 	<!-- injector:css -->
 	<link rel="stylesheet" href="app/css/app.css">
@@ -74,45 +74,46 @@
 			    <ul class="nav navbar-nav">
 			    
 			    <!--Games-->
-			      <li class="dropdown main-nav-dropdown-menu"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Games<span class="caret"></span></a>
-			
-			 
-			      <ul class="dropdown-menu">
-			    <li><a href="listing-grid.html"><span class="badge pull-right">600+</span>All Games - Grid</a></li>
-			          <li><a href="listing.html"><span class="badge pull-right">600+</span>All Games - List</a></li>
-			          <!-- user goes to listing pages with relevant category of game -->
-			  
-			          <!-- create custom icons for game types  -->
-			          <li ><a href="#"><span class="badge pull-right">120+</span>Slots</a></li>
-			          <li ><a href="#"><span class="badge pull-right">60+</span>Theme Slots</a> </li>
-			          <li ><a href="#"><span class="badge pull-right">60+</span>Fruit Slots </a></li>
-			          <li ><a href="#"><span class="badge pull-right">30+</span>Table Games</a></li>
-			          <li ><a href="#"><span class="badge pull-right">40+</span>Casual Games</a></li>
-			          <li ><a href="#"><span class="badge pull-right">60+</span>Video Poker</a></li>
-			          <li ><a href="#"><span class="badge pull-right">60+</span>Blackjack</a></li>
-			          <li ><a href="#"><span class="badge pull-right">60+</span>Roulette</a></li>
-			          <li ><a href="#"><span class="badge pull-right">60+</span>Poker Games</a></li>
-			          <li ><a href="#"><span class="badge pull-right">60+</span>Card Games</a></li>
-			        </ul>
-			      </li>
+               <li class="dropdown main-nav-dropdown-menu">
+                <span uib-dropdown on-toggle="toggled(open)">
+                    <a href id="simple-dropdown" uib-dropdown-toggle>
+                        Games<span class="caret"></span>
+                    </a>
+                    <ul class="uib-dropdown-menu dropdown-menu" aria-labelledby="simple-dropdown">
+                          <li role="menuitem"><a href="#"><span class="badge pull-right">120+</span>Slots</a></li>
+                          <li role="menuitem"><a href="#"><span class="badge pull-right">60+</span>Theme Slots</a></li>
+                          <li role="menuitem"><a href="#"><span class="badge pull-right">60+</span>Fruit Slots </a></li>
+                          <li role="menuitem"><a href="#"><span class="badge pull-right">30+</span>Table Games</a></li>
+                          <li role="menuitem"><a href="#"><span class="badge pull-right">40+</span>Casual Games</a></li>
+                          <li role="menuitem"><a href="#"><span class="badge pull-right">60+</span>Video Poker</a></li>
+                          <li role="menuitem"><a href="#"><span class="badge pull-right">60+</span>Blackjack</a></li>
+                          <li role="menuitem"><a href="#"><span class="badge pull-right">60+</span>Roulette</a></li>
+                          <li role="menuitem"><a href="#"><span class="badge pull-right">60+</span>Poker Games</a></li>
+                          <li role="menuitem"><a href="#"><span class="badge pull-right">60+</span>Card Games</a></li>
+                    </ul>
+                </span> 
+                </li>          
 			<!--END / Games-->
 			
 			   <!-- Providers -->
-			 <li class="dropdown main-nav-dropdown-menu"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Providers<span class="caret"></span></a>
-			
-			
-			        <ul class="dropdown-menu">
-			          <li ><a href="#"><span class="badge pull-right">120+</span> Game Provider 1</a></li>
-			          <!-- user goes to listing pages with relevant operator -->
-			          <li ><a href="#"><span class="badge pull-right">30+</span> Game Provider 2</a></li>
-			          <li ><a href="#"><span class="badge pull-right">40+</span> Game Provider 3</a></li>
-			          <li ><a href="#"><span class="badge pull-right">60+</span> Game Provider 4</a></li>
-			          <li ><a href="#"><span class="badge pull-right">120+</span> Game Provider 5</a></li>
-			          <li ><a href="#"><span class="badge pull-right">30+</span> Game Provider 6</a></li>
-			          <li ><a href="#"><span class="badge pull-right">40+</span> Game Provider 7</a></li>
-			        </ul>
-			      </li>
-			      <!-- END/ Providers -->
+			   <li class="dropdown main-nav-dropdown-menu">
+			    <span uib-dropdown on-toggle="toggled(open)">
+			        <a href id="simple-dropdown" uib-dropdown-toggle>
+			            Providers<span class="caret"></span>
+			        </a>
+			        <ul class="uib-dropdown-menu dropdown-menu" aria-labelledby="simple-dropdown">
+	                    <li ng-class="{ 'active': $state.is('page.1') }"><a href="#"><span class="badge pull-right">120+</span> Game Provider 1</a></li>
+	                    <!-- user goes to listing pages with relevant operator -->
+	                    <li ng-class="{ 'active': $state.is('page.2') }"><a href="#"><span class="badge pull-right">30+</span> Game Provider 2</a></li>
+	                    <li ng-class="{ 'active': $state.is('page.3') }"><a href="#"><span class="badge pull-right">40+</span> Game Provider 3</a></li>
+	                    <li ng-class="{ 'active': $state.is('page.4') }"><a href="#"><span class="badge pull-right">60+</span> Game Provider 4</a></li>
+	                    <li ng-class="{ 'active': $state.is('page.5') }"><a href="#"><span class="badge pull-right">120+</span> Game Provider 5</a></li>
+	                    <li ng-class="{ 'active': $state.is('page.6') }"><a href="#"><span class="badge pull-right">30+</span> Game Provider 6</a></li>
+	                    <li ng-class="{ 'active': $state.is('page.7') }"><a href="#"><span class="badge pull-right">40+</span> Game Provider 7</a></li>
+                    </ul>
+			    </span>	
+			    </li>		   
+			    <!-- END/ Providers -->
 			     
 			    <!-- Bonuses -->
 			      <li class="dropdown main-nav-dropdown-menu"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Bonuses<span class="caret"></span></a>
