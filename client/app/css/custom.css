@@ -1333,13 +1333,14 @@ label {
 .form-group {
     margin-bottom: 10px;
 }
-.btn-primary {
+#signup-button {
+}
+.btn-primary, #signup-button {
     color: #000;
     background-color: #FF9915;
     border-color: #FF9915;
    /* font-size: 16px; */
-
-    }
+}
 .btn-search {
     color: #757575;
     background-color: #141414;

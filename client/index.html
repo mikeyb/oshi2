@@ -37,9 +37,6 @@
 	<link rel="stylesheet" href="bower_components/slick-carousel/slick/slick-theme.css" />
 	<!-- endbower -->
 	<!-- endbuild -->
-	<!-- build:css app/css/fontawesome.css -->
-	<link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
-	<!-- endbuild -->
 	<!-- build:css({.tmp,client}) app/app.css -->
 	<!-- injector:css -->
 	<link rel="stylesheet" href="app/css/app.css">
@@ -186,89 +183,97 @@
 			
 			    <!-- Right Nav -->
 			    <ul class="nav navbar-nav navbar-right">
-			    <!-- Login -->
-			      <li class="dropdown main-nav-dropdown-menu"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-fw fa-lock"></i> Login </a>
-			        <div class="dropdown-menu dropdown-size-280">
-			          <form>
-			            <div class="form-group">
-			              <div class="input-group"> <span class="input-group-addon"><i class="fa fa-user"></i></span>
-			                <input type="text" class="form-control" placeholder="Username">
-			              </div>
-			            </div>
-			            <div class="form-group">
-			              <div class="input-group"> <span class="input-group-addon"><i class="fa fa-shield"></i></span>
-			                <input type="password" class="form-control" placeholder="Password">
-			              </div>
-			            </div>
-			            <div class="text-center">
-			              <button type="submit" class="btn btn-primary">Login <i class="fa fa-sign-in"></i></button>
-			            </div>
-			          </form>
-			        </div>
-			      </li>
-			      <!-- // END login -->
-			      <!-- Sign up -->
-			      <li class="dropdown main-nav-dropdown-menu"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-			        <button  class="btn btn-primary btn-sales"> Join Today </button>
-			        </a>
-			        <div class="dropdown-menu dropdown-size-280">
-			          <form>
-			            <!-- Sales content -->
-			            <div class="row">
-			              <div class="col-md-12">
-			                <div class="form-group form-control-sales">
-			                  <div class="text-center"> <span class="join-text">In 2 minutes that 2000mBTC signup bonus is yours! </span></div>
-			                  <span class="join-notes">No bonus? Just untick the box below. <span class="join-icons"><a href="#" target="_blank"> <i class="fa fa-info-circle"></i><i class="fa fa-external-link"></i></a> </span></span> </div>
-			              </div>
-			            </div>
-			            <!-- END sales content -->
-			            <div class="row">
-			              <div class="col-md-12">
-			                <div class="form-group form-control-default required">
-			                  <!--   <label for="exampleInputUserName">User Name</label> -->
-			                  <input type="text" class="form-control" id="InputUserName1" placeholder="Enter User Name...">
-			                </div>
-			              </div>
-			            </div>
-			            <div class="form-group form-control-default required">
-			              <!--   <label for="exampleInputEmail1">Email address</label> -->
-			              <input type="email" class="form-control" id="InputEmail1" placeholder="Enter Email...">
-			            </div>
-			            <div class="form-group form-control-default required">
-			              <!-- <label for="exampleInputPassword1">Password</label> -->
-			              <input type="password" class="form-control" id="InputPassword1" placeholder="Enter Password...">
-			            </div>
-			            <!-- Checkbox Receive Promos -->
-			            <div id="">
-			              <label id="ReceivePromos1">
-			              <input type="checkbox" checked placeholder="Receive Promos" id="ReceivePromos1" />
-			              Get My 2000 mBTC & Other Bonuses <sup></sup> </label>
-			            </div>
-			            <!-- Checkbox Receive Newsletters -->
-			            <div id="">
-			              <label id="ReceiveNewsletters1">
-			              <input type="checkbox" placeholder="Receive Newsletters" id="ReceiveNewsletters1" />
-			              Receive Newsletters <sup></sup> </label>
-			            </div>
-			            <!-- Checkbox Over 18 -->
-			            <div id="">
-			              <label id="CheckboxOver18">
-			              <input type="checkbox" id="CheckboxOver18" placeholder="I confirm that I am over years old" id="CheckboxOver18" required />
-			              <span id=""> I confirm that I am over 18 years old </span><sup>*</sup> </label>
-			            </div>
-			            <!-- Checkbox Terms and Conditions -->
-			            <div id="DIV_49">
-			              <label id="LABEL_50">
-			              <input type="checkbox" placeholder="I agree to Terms Conditions" id="INPUT_51" required />
-			              <span id="">I agree to Terms and Conditions</span><sup>*</sup> </label>
-			            </div>
-			            <!-- END/ Join Opt In / Out  -->
-			            <div class="text-center">
-			              <button type="submit" class="btn btn-primary">All set? Click here to join Oshi</button>
-			            </div>
-			          </form>
-			        </div>
-			      </li>
+			        <!-- Login -->
+                    <li class="dropdown main-nav-dropdown-menu">
+                        <div uib-dropdown>
+                            <button id="single-button" type="button" class="" uib-dropdown-toggle ng-disabled="disabled">
+                                <i class="fa fa-fw fa-lock"></i> Login
+                            </button>
+					        <div class="dropdown-menu dropdown-size-280">
+					            <form>
+						            <div class="form-group">
+						                <div class="input-group"> <span class="input-group-addon"><i class="fa fa-user"></i></span>
+						                    <input type="text" class="form-control" placeholder="Username">
+						                </div>
+						            </div>
+						            <div class="form-group">
+						                <div class="input-group"> <span class="input-group-addon"><i class="fa fa-shield"></i></span>
+						                    <input type="password" class="form-control" placeholder="Password">
+						                </div>
+						            </div>
+						            <div class="text-center">
+						                <button type="submit" class="btn btn-primary">Login <i class="fa fa-sign-in"></i></button>
+						            </div>
+					            </form>
+					        </div>
+                        </div>
+                    </li>
+			        <!-- // END login -->
+			        <!-- Sign up -->
+                    <li class="dropdown main-nav-dropdown-menu">
+                        <div uib-dropdown>
+                            <button id="signup-button" type="button" class="btn btn-primary btn-sales" uib-dropdown-toggle>
+                                Join Today
+                            </button>
+					        <div class="dropdown-menu dropdown-size-280">
+					            <form>
+						            <!-- Sales content -->
+						            <div class="row">
+						              <div class="col-md-12">
+						                <div class="form-group form-control-sales">
+						                  <div class="text-center"> <span class="join-text">In 2 minutes that 2000mBTC signup bonus is yours! </span></div>
+						                  <span class="join-notes">No bonus? Just untick the box below. <span class="join-icons"><a href="#" target="_blank"> <i class="fa fa-info-circle"></i><i class="fa fa-external-link"></i></a> </span></span> </div>
+						              </div>
+						            </div>
+						            <!-- END sales content -->
+						            <div class="row">
+						                <div class="col-md-12">
+						                    <div class="form-group form-control-default required">
+						                        <!--   <label for="exampleInputUserName">User Name</label> -->
+						                        <input type="text" class="form-control" id="InputUserName1" placeholder="Enter User Name...">
+						                    </div>
+						                </div>
+						            </div>
+						            <div class="form-group form-control-default required">
+						                <!--   <label for="exampleInputEmail1">Email address</label> -->
+						                <input type="email" class="form-control" id="InputEmail1" placeholder="Enter Email...">
+						            </div>
+						            <div class="form-group form-control-default required">
+						                <!-- <label for="exampleInputPassword1">Password</label> -->
+						                <input type="password" class="form-control" id="InputPassword1" placeholder="Enter Password...">
+						            </div>
+						            <!-- Checkbox Receive Promos -->
+						            <div id="">
+						                <label id="ReceivePromos1">
+						                <input type="checkbox" checked placeholder="Receive Promos" id="ReceivePromos1" />
+						                Get My 2000 mBTC & Other Bonuses <sup></sup> </label>
+						            </div>
+						            <!-- Checkbox Receive Newsletters -->
+						            <div id="">
+						                <label id="ReceiveNewsletters1">
+						                <input type="checkbox" placeholder="Receive Newsletters" id="ReceiveNewsletters1" />
+						                Receive Newsletters <sup></sup> </label>
+						            </div>
+						            <!-- Checkbox Over 18 -->
+						            <div id="">
+						                <label id="CheckboxOver18">
+						                <input type="checkbox" id="CheckboxOver18" placeholder="I confirm that I am over years old" id="CheckboxOver18" required />
+						                <span id=""> I confirm that I am over 18 years old </span><sup>*</sup> </label>
+						            </div>
+						            <!-- Checkbox Terms and Conditions -->
+						            <div id="DIV_49">
+						                <label id="LABEL_50">
+						                <input type="checkbox" placeholder="I agree to Terms Conditions" id="INPUT_51" required />
+						                <span id="">I agree to Terms and Conditions</span><sup>*</sup> </label>
+						            </div>
+						            <!-- END/ Join Opt In / Out  -->
+						            <div class="text-center">
+						                <button type="submit" class="btn btn-primary">All set? Click here to join Oshi</button>
+						            </div>
+					             </form>
+					         </div>
+					     </div>
+		             </li>
 			      <!-- // END sign up -->
 			    </ul>
 			    <!-- END Right Nav -->
