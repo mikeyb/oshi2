@@ -3,7 +3,7 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html class="no-js hide-sidebar ls-bottom-footer-fixed">
+<html class="no-js st-layout ls-top-navbar ls-bottom-footer-fixed show-sidebar sidebar-l-sum-13">
 <!--<![endif]-->
 <head>
     <meta charset="utf-8">
@@ -58,6 +58,8 @@
 	<!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
+    
+    <div class="st-container1">
 
         <!-- Fixed navbar -->
 		<nav class="navbar navbar-skin-cover navbar-static-top navbar-absolute-top main-nav" role="navigation">
@@ -77,8 +79,8 @@
 	                            Games <span class="caret"></span>
 	                        </button>
 	                        <ul class="uib-dropdown-menu dropdown-menu" aria-labelledby="simple-dropdown">
-		                        <li role="menuitem" ng-class="{ 'active': $state.is('page.1') }"><a href="#"><span class="badge pull-right">120+</span>Slots</a></li>
-		                        <li role="menuitem" ng-class="{ 'active': $state.is('page.1') }"><a href="#"><span class="badge pull-right">60+</span>Theme Slots</a></li>
+		                        <li role="menuitem" ng-class="{ 'active': $state.is('list') }"><a ui-sref="list"><span class="badge pull-right">120+</span>Slots</a></li>
+		                        <li role="menuitem" ng-class="{ 'active': $state.is('grid') }"><a ui-sref="grid"><span class="badge pull-right">60+</span>Theme Slots</a></li>
 		                        <li role="menuitem" ng-class="{ 'active': $state.is('page.1') }"><a href="#"><span class="badge pull-right">60+</span>Fruit Slots </a></li>
 		                        <li role="menuitem" ng-class="{ 'active': $state.is('page.1') }"><a href="#"><span class="badge pull-right">30+</span>Table Games</a></li>
 		                        <li role="menuitem" ng-class="{ 'active': $state.is('page.1') }"><a href="#"><span class="badge pull-right">40+</span>Casual Games</a></li>
@@ -380,6 +382,7 @@
 	</footer>
 	<!-- // Footer -->
 
+    </div>
 
 	<!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
 	<script>
@@ -424,6 +427,10 @@
 
 	<script src="app/app.js"></script>
 	<!-- injector:js -->
+	<script src="app/grid/grid.controller.js"></script>
+	<script src="app/grid/grid.js"></script>
+	<script src="app/list/list.controller.js"></script>
+	<script src="app/list/list.js"></script>
 	<script src="app/main/main.controller.js"></script>
 	<script src="app/main/main.js"></script>
 	<script src="components/modal/modal.service.js"></script>
