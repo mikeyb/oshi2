@@ -1,0 +1,1938 @@
+		<!-- Sidebar component with st-effect-1 (set on the toggle button within the navbar) -->
+		<aside
+			class="sidebar left sidebar-size-2 sidebar-offset-1 sidebar-skin-dark sidebar-visible-desktop"
+			id="sidebar-filter">
+			<div tabindex="0"
+				style="overflow-y: hidden; outline: none;">
+				<!--
+<div class="sidebar-block equal-padding">
+  <div class="form-group input-group">
+    <input type="text" class="form-control" placeholder="Search">
+    <span class="input-group-btn">
+    <button class="btn btn-search" type="button"><i class="fa fa-search"></i></button>
+    </span> </div>
+</div>
+-->
+				<div class="category">Narrow by:</div>
+				<div class="sidebar-block">
+					<ul class="list-group list-group-menu">
+						<li class="list-group-item"><a href="#"><span
+								class="badge pull-right">660+</span> All Games</a></li>
+						<li class="list-group-item"><a href="#"><span
+								class="badge pull-right">120+</span> Slots</a></li>
+						<li class="list-group-item"><a href="#"><span
+								class="badge pull-right">60+</span> Theme Slots</a></li>
+						<li class="list-group-item"><a href="#"><span
+								class="badge pull-right">60+</span> Fruit Slots</a></li>
+						<li class="list-group-item active"><a href="#"><span
+								class="badge pull-right">30+</span> Table Games</a></li>
+						<li class="list-group-item"><a href="#"><span
+								class="badge pull-right">40+</span> Casual Games</a></li>
+						<li class="list-group-item"><a href="#"><span
+								class="badge pull-right">60+</span> Video Poker</a></li>
+						<li class="list-group-item"><a href="#"><span
+								class="badge pull-right">60+</span> Blackjack</a></li>
+						<li class="list-group-item"><a href="#"><span
+								class="badge pull-right">60+</span> Roulette</a></li>
+						<li class="list-group-item"><a href="#"><span
+								class="badge pull-right">60+</span> Poker Games</a></li>
+						<li class="list-group-item"><a href="#"><span
+								class="badge pull-right">60+</span> Card Games</a></li>
+					</ul>
+					<div class="category">Narrow by:</div>
+					<ul class="list-group list-group-menu">
+						<li class="list-group-item"><a href="#"><span
+								class="badge pull-right">120+</span> Game Provider 1</a></li>
+						<li class="list-group-item active"><a href="#"><span
+								class="badge pull-right">30+</span> Game Provider 2</a></li>
+						<li class="list-group-item"><a href="#"><span
+								class="badge pull-right">40+</span> Game Prov 3</a></li>
+						<li class="list-group-item"><a href="#"><span
+								class="badge pull-right">60+</span> Game Provider 4</a></li>
+						<li class="list-group-item"><a href="#"><span
+								class="badge pull-right">120+</span> Game Provider 5</a></li>
+						<li class="list-group-item"><a href="#"><span
+								class="badge pull-right">30+</span> Game Provider 6</a></li>
+						<li class="list-group-item"><a href="#"><span
+								class="badge pull-right">40+</span> Game Provider 7</a></li>
+						<!--  <li class="list-group-item"><a href="#"><span class="badge pull-right">60+</span> Tennessee</a></li> -->
+					</ul>
+				</div>
+			</div>
+			<div id="ascrail2000" class="nicescroll-rails"
+				style="width: 5px; z-index: 2; cursor: default; position: absolute; top: 0px; left: 194px; height: 332px; opacity: 0;">
+				<div
+					style="position: relative; top: 0px; float: right; width: 5px; height: 136px; border: 0px; border-radius: 5px; background-color: rgb(22, 174, 159); background-clip: padding-box;"></div>
+			</div>
+		</aside>
+
+
+		<!-- Sidebar component with st-effect-1 (set on the toggle button within the navbar) -->
+		<aside
+			class="sidebar left sidebar-size-1 sidebar-mini-reveal sidebar-offset-0 sidebar-skin-dark sidebar-visible-desktop"
+			id="sidebar-menu" data-type="collapse">
+			<div tabindex="1"
+				style="overflow-y: hidden; outline: none;">
+				<ul class="sidebar-menu sm-bordered sm-icons-block sm-icons-right">
+
+
+
+					<!--  Grid or list -->
+					<li class="hasSubmenu"
+						ng-class="{ 'open active': $state.includes('discover') }"><a
+						href="#discover" data-toggle="collapse" class="collapsed"
+						aria-expanded="false"><i class="fa fa-sliders fa-rotate-90"></i><span>Show
+								as...</span></a>
+						<ul id="discover" ng-class="{ 'in': $state.includes('discover') }"
+							class="collapse" aria-expanded="false">
+							<li ng-class="{ 'active': $state.is('discover.listing') }"><a
+								ui-sref="discover.listing"><i class="fa fa-list"></i><span>Listing
+										- List</span></a></li>
+							<li ng-class="{ 'active': $state.is('discover.listing-grid') }"><a
+								ui-sref="discover.listing-grid"><i class="fa fa-th"></i><span>Listing
+										- Grid</span></a></li>
+							<!--  <li ng-class="{ 'active': $state.is('discover.listing-map') }"><a ui-sref="discover.listing-map"><i class="fa fa-map-marker"></i><span>Listing - Map</span></a></li>-->
+						</ul></li>
+
+					<!--  END/ Grid or list -->
+
+
+					<!-- Pages -->
+					<li class="hasSubmenu"
+						ng-class="{ 'open active': $state.includes('pages') }"><a
+						href="#pages" data-toggle="collapse" class="collapsed"
+						aria-expanded="false"><i class="fa fa-file-o"></i><span>Pages</span></a>
+						<ul id="pages" ng-class="{ 'in': $state.includes('pages') }"
+							class="collapse" aria-expanded="false">
+							<li ng-class="{ 'active': $state.is('page.1') }"><a
+								ui-sref="page.1"><span>Home</span></a></li>
+							<li ng-class="{ 'active': $state.is('page.2') }"><a
+								ui-sref="page.2"><span>Casino Games</span></a></li>
+							<li ng-class="{ 'active': $state.is('page.3') }"><a
+								ui-sref="page.3"><span>Bonuses</span></a></li>
+							<li ng-class="{ 'active': $state.is('page.4') }"><a
+								ui-sref="page.4"><span>About</span></a></li>
+							<li ng-class="{ 'active': $state.is('page.5') }"><a
+								ui-sref="page.5"><span>Help</span></a></li>
+							<li ng-class="{ 'active': $state.is('page.6') }"><a
+								ui-sref="page.6"><span>Blog</span></a></li>
+
+						</ul></li>
+					<!-- END/ Pages -->
+
+
+
+					<!-- Last Played sidebar -->
+					<li class="hasSubmenu"
+						ng-class="{ 'open active': $state.includes('gameprovider') }">
+						<a href="#last-played" data-toggle="collapse" class="collapsed"
+						aria-expanded="false"><i class="fa fa-question"></i><span>Last
+								Played</span></a>
+						<ul id="last-played"
+							ng-class="{ 'in': $state.includes('last-played') }"
+							class="winners no-main ng-isolate-scope collapse"
+							name="last-played" template="latest_winners_game" limit="8"
+							aria-expanded="false">
+
+							<div class="winners-box-sidebar">
+								<div class="winners-image">
+									<div class="cover hover overlay margin-none">
+										<img src="images/slots3.png" alt="location"
+											class="media-object"> <a href="game-page.html"
+											class="overlay overlay-full overlay-bg-black overlay-hover">
+											<span class="v-center"> <span class="btn btn-play  "><i
+													class="fa fa-play"></i> </span>
+										</span>
+										</a>
+									</div>
+								</div>
+								<div class="winners-content">
+									<div class="winners-game">
+										<a href="game-page.html">Platinum Lightning</a>
+									</div>
+								</div>
+							</div>
+
+							<div class="winners-box-sidebar">
+								<div class="winners-image">
+									<div class="cover hover overlay margin-none">
+										<img src="images/slots3.png" alt="location"
+											class="media-object"> <a href="game-page.html"
+											class="overlay overlay-full overlay-bg-black overlay-hover">
+											<span class="v-center"> <span class="btn btn-play  "><i
+													class="fa fa-play"></i> </span>
+										</span>
+										</a>
+									</div>
+								</div>
+								<div class="winners-content">
+									<div class="winners-game">
+										<a href="game-page.html">Platinum Lightning</a>
+									</div>
+								</div>
+							</div>
+
+							<div class="winners-box-sidebar">
+								<div class="winners-image">
+									<div class="cover hover overlay margin-none">
+										<img src="images/slots3.png" alt="location"
+											class="media-object"> <a href="game-page.html"
+											class="overlay overlay-full overlay-bg-black overlay-hover">
+											<span class="v-center"> <span class="btn btn-play  "><i
+													class="fa fa-play"></i> </span>
+										</span>
+										</a>
+									</div>
+								</div>
+								<div class="winners-content">
+									<div class="winners-game">
+										<a href="game-page.html">Platinum Lightning</a>
+									</div>
+								</div>
+							</div>
+
+							<div class="winners-box-sidebar">
+								<div class="winners-image">
+									<div class="cover hover overlay margin-none">
+										<img src="images/slots3.png" alt="location"
+											class="media-object"> <a href="game-page.html"
+											class="overlay overlay-full overlay-bg-black overlay-hover">
+											<span class="v-center"> <span class="btn btn-play  "><i
+													class="fa fa-play"></i> </span>
+										</span>
+										</a>
+									</div>
+								</div>
+								<div class="winners-content">
+									<div class="winners-game">
+										<a href="game-page.html">Platinum Lightning</a>
+									</div>
+								</div>
+							</div>
+
+							<div class="winners-box-sidebar">
+								<div class="winners-image">
+									<div class="cover hover overlay margin-none">
+										<img src="images/slots3.png" alt="location"
+											class="media-object"> <a href="game-page.html"
+											class="overlay overlay-full overlay-bg-black overlay-hover">
+											<span class="v-center"> <span class="btn btn-play  "><i
+													class="fa fa-play"></i> </span>
+										</span>
+										</a>
+									</div>
+								</div>
+								<div class="winners-content">
+									<div class="winners-game">
+										<a href="game-page.html">Platinum Lightning</a>
+									</div>
+								</div>
+							</div>
+
+							<div class="winners-box-sidebar">
+								<div class="winners-image">
+									<div class="cover hover overlay margin-none">
+										<img src="images/slots3.png" alt="location"
+											class="media-object"> <a href="game-page.html"
+											class="overlay overlay-full overlay-bg-black overlay-hover">
+											<span class="v-center"> <span class="btn btn-play  "><i
+													class="fa fa-play"></i> </span>
+										</span>
+										</a>
+									</div>
+								</div>
+								<div class="winners-content">
+									<div class="winners-game">
+										<a href="game-page.html">Platinum Lightning</a>
+									</div>
+								</div>
+							</div>
+
+							<div class="winners-box-sidebar">
+								<div class="winners-image">
+									<div class="cover hover overlay margin-none">
+										<img src="images/slots3.png" alt="location"
+											class="media-object"> <a href="game-page.html"
+											class="overlay overlay-full overlay-bg-black overlay-hover">
+											<span class="v-center"> <span class="btn btn-play  "><i
+													class="fa fa-play"></i> </span>
+										</span>
+										</a>
+									</div>
+								</div>
+								<div class="winners-content">
+									<div class="winners-game">
+										<a href="game-page.html">Platinum Lightning</a>
+									</div>
+								</div>
+							</div>
+
+							<div class="winners-box-sidebar">
+								<div class="winners-image">
+									<div class="cover hover overlay margin-none">
+										<img src="images/slots3.png" alt="location"
+											class="media-object"> <a href="game-page.html"
+											class="overlay overlay-full overlay-bg-black overlay-hover">
+											<span class="v-center"> <span class="btn btn-play  "><i
+													class="fa fa-play"></i> </span>
+										</span>
+										</a>
+									</div>
+								</div>
+								<div class="winners-content">
+									<div class="winners-game">
+										<a href="game-page.html">Platinum Lightning</a>
+									</div>
+								</div>
+							</div>
+
+
+						</ul> <!-- END / Last Played sidebar --> <!-- top winners sidebar -->
+					</li>
+					<li class="hasSubmenu"
+						ng-class="{ 'open active': $state.includes('gameprovider') }">
+						<a href="#topwinners" data-toggle="collapse" class="collapsed"
+						aria-expanded="false"><i class="fa fa-trophy"></i><span>Top
+								Winners</span></a>
+						<ul id="topwinners"
+							ng-class="{ 'in': $state.includes('topwinners') }"
+							class="winners no-main ng-isolate-scope collapse"
+							name="latest_winners" template="latest_winners_game" limit="8"
+							aria-expanded="false">
+
+							<div class="winners-box-sidebar">
+								<div class="winners-image">
+									<div class="cover hover overlay margin-none">
+										<img src="images/slots3.png" alt="location"
+											class="media-object"> <a href="game-page.html"
+											class="overlay overlay-full overlay-bg-black overlay-hover">
+											<span class="v-center"> <span class="btn btn-play  "><i
+													class="fa fa-play"></i> </span>
+										</span>
+										</a>
+									</div>
+								</div>
+								<div class="winners-content">
+									<div class="winners-name">
+										<span>andy.barabash</span> just won
+									</div>
+									<div class="winners-money">
+										4 mBTC <span>in</span>
+									</div>
+									<div class="winners-game">
+										<a href="game-page.html">Platinum Lightning</a>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="winners-box-sidebar">
+								<div class="winners-image">
+									<div class="cover hover overlay margin-none">
+										<img src="images/slots3.png" alt="location"
+											class="media-object"> <a href="game-page.html"
+											class="overlay overlay-full overlay-bg-black overlay-hover">
+											<span class="v-center"> <span class="btn btn-play  "><i
+													class="fa fa-play"></i> </span>
+										</span>
+										</a>
+									</div>
+								</div>
+								<div class="winners-content">
+									<div class="winners-name">
+										<span>andy.barabash</span> just won
+									</div>
+									<div class="winners-money">
+										4 mBTC <span>in</span>
+									</div>
+									<div class="winners-game">
+										<a href="game-page.html">Platinum Lightning</a>
+									</div>
+								</div>
+							</div>
+
+							<div class="winners-box-sidebar">
+								<div class="winners-image">
+									<div class="cover hover overlay margin-none">
+										<img src="images/slots3.png" alt="location"
+											class="media-object"> <a href="game-page.html"
+											class="overlay overlay-full overlay-bg-black overlay-hover">
+											<span class="v-center"> <span class="btn btn-play  "><i
+													class="fa fa-play"></i> </span>
+										</span>
+										</a>
+									</div>
+								</div>
+								<div class="winners-content">
+									<div class="winners-name">
+										<span>andy.barabash</span> just won
+									</div>
+									<div class="winners-money">
+										4 mBTC <span>in</span>
+									</div>
+									<div class="winners-game">
+										<a href="game-page.html">Platinum Lightning</a>
+									</div>
+								</div>
+							</div>
+
+							<div class="winners-box-sidebar">
+								<div class="winners-image">
+									<div class="cover hover overlay margin-none">
+										<img src="images/slots3.png" alt="location"
+											class="media-object"> <a href="game-page.html"
+											class="overlay overlay-full overlay-bg-black overlay-hover">
+											<span class="v-center"> <span class="btn btn-play  "><i
+													class="fa fa-play"></i> </span>
+										</span>
+										</a>
+									</div>
+								</div>
+								<div class="winners-content">
+									<div class="winners-name">
+										<span>andy.barabash</span> just won
+									</div>
+									<div class="winners-money">
+										4 mBTC <span>in</span>
+									</div>
+									<div class="winners-game">
+										<a href="game-page.html">Platinum Lightning</a>
+									</div>
+								</div>
+							</div>
+
+							<div class="winners-box-sidebar">
+								<div class="winners-image">
+									<div class="cover hover overlay margin-none">
+										<img src="images/slots3.png" alt="location"
+											class="media-object"> <a href="game-page.html"
+											class="overlay overlay-full overlay-bg-black overlay-hover">
+											<span class="v-center"> <span class="btn btn-play  "><i
+													class="fa fa-play"></i> </span>
+										</span>
+										</a>
+									</div>
+								</div>
+								<div class="winners-content">
+									<div class="winners-name">
+										<span>andy.barabash</span> just won
+									</div>
+									<div class="winners-money">
+										4 mBTC <span>in</span>
+									</div>
+									<div class="winners-game">
+										<a href="game-page.html">Platinum Lightning</a>
+									</div>
+								</div>
+							</div>
+
+							<div class="winners-box-sidebar">
+								<div class="winners-image">
+									<div class="cover hover overlay margin-none">
+										<img src="images/slots3.png" alt="location"
+											class="media-object"> <a href="game-page.html"
+											class="overlay overlay-full overlay-bg-black overlay-hover">
+											<span class="v-center"> <span class="btn btn-play  "><i
+													class="fa fa-play"></i> </span>
+										</span>
+										</a>
+									</div>
+								</div>
+								<div class="winners-content">
+									<div class="winners-name">
+										<span>andy.barabash</span> just won
+									</div>
+									<div class="winners-money">
+										4 mBTC <span>in</span>
+									</div>
+									<div class="winners-game">
+										<a href="game-page.html">Platinum Lightning</a>
+									</div>
+								</div>
+							</div>
+
+							<div class="winners-box-sidebar">
+								<div class="winners-image">
+									<div class="cover hover overlay margin-none">
+										<img src="images/slots3.png" alt="location"
+											class="media-object"> <a href="game-page.html"
+											class="overlay overlay-full overlay-bg-black overlay-hover">
+											<span class="v-center"> <span class="btn btn-play  "><i
+													class="fa fa-play"></i> </span>
+										</span>
+										</a>
+									</div>
+								</div>
+								<div class="winners-content">
+									<div class="winners-name">
+										<span>andy.barabash</span> just won
+									</div>
+									<div class="winners-money">
+										4 mBTC <span>in</span>
+									</div>
+									<div class="winners-game">
+										<a href="game-page.html">Platinum Lightning</a>
+									</div>
+								</div>
+							</div>
+
+							<div class="winners-box-sidebar">
+								<div class="winners-image">
+									<div class="cover hover overlay margin-none">
+										<img src="images/slots3.png" alt="location"
+											class="media-object"> <a href="game-page.html"
+											class="overlay overlay-full overlay-bg-black overlay-hover">
+											<span class="v-center"> <span class="btn btn-play  "><i
+													class="fa fa-play"></i> </span>
+										</span>
+										</a>
+									</div>
+								</div>
+								<div class="winners-content">
+									<div class="winners-name">
+										<span>andy.barabash</span> just won
+									</div>
+									<div class="winners-money">
+										4 mBTC <span>in</span>
+									</div>
+									<div class="winners-game">
+										<a href="game-page.html">Platinum Lightning</a>
+									</div>
+								</div>
+							</div>
+
+							<div class="winners-box-sidebar">
+								<div class="winners-image">
+									<div class="cover hover overlay margin-none">
+										<img src="images/slots3.png" alt="location"
+											class="media-object"> <a href="game-page.html"
+											class="overlay overlay-full overlay-bg-black overlay-hover">
+											<span class="v-center"> <span class="btn btn-play  "><i
+													class="fa fa-play"></i> </span>
+										</span>
+										</a>
+									</div>
+								</div>
+								<div class="winners-content">
+									<div class="winners-name">
+										<span>andy.barabash</span> just won
+									</div>
+									<div class="winners-money">
+										4 mBTC <span>in</span>
+									</div>
+									<div class="winners-game">
+										<a href="game-page.html">Platinum Lightning</a>
+									</div>
+								</div>
+							</div>
+
+							<div class="winners-box-sidebar">
+								<div class="winners-image">
+									<div class="cover hover overlay margin-none">
+										<img src="images/slots3.png" alt="location"
+											class="media-object"> <a href="game-page.html"
+											class="overlay overlay-full overlay-bg-black overlay-hover">
+											<span class="v-center"> <span class="btn btn-play  "><i
+													class="fa fa-play"></i> </span>
+										</span>
+										</a>
+									</div>
+								</div>
+								<div class="winners-content">
+									<div class="winners-name">
+										<span>andy.barabash</span> just won
+									</div>
+									<div class="winners-money">
+										4 mBTC <span>in</span>
+									</div>
+									<div class="winners-game">
+										<a href="game-page.html">Platinum Lightning</a>
+									</div>
+								</div>
+							</div>
+
+						</ul> <!-- END / top winners sidebar --> <!-- winners sidebar -->
+					</li>
+					<li class="hasSubmenu"
+						ng-class="{ 'open active': $state.includes('gameprovider') }">
+						<a href="#gamewinners" data-toggle="collapse" class="collapsed"
+						aria-expanded="false"><i class="fa fa-btc"></i><span>Winners</span></a>
+						<ul id="gamewinners"
+							ng-class="{ 'in': $state.includes('gamewinners') }"
+							class="winners no-main ng-isolate-scope collapse"
+							name="latest_winners" template="latest_winners_game" limit="8"
+							aria-expanded="false">
+
+							<div class="winners-box-sidebar">
+								<div class="winners-image">
+									<div class="cover hover overlay margin-none">
+										<img src="images/slots3.png" alt="location"
+											class="media-object"> <a href="game-page.html"
+											class="overlay overlay-full overlay-bg-black overlay-hover">
+											<span class="v-center"> <span class="btn btn-play  "><i
+													class="fa fa-play"></i> </span>
+										</span>
+										</a>
+									</div>
+								</div>
+								<div class="winners-content">
+									<div class="winners-name">
+										<span>andy.barabash</span> just won
+									</div>
+									<div class="winners-money">
+										4 mBTC <span>in</span>
+									</div>
+									<div class="winners-game">
+										<a href="game-page.html">Platinum Lightning</a>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="winners-box-sidebar">
+								<div class="winners-image">
+									<div class="cover hover overlay margin-none">
+										<img src="images/slots3.png" alt="location"
+											class="media-object"> <a href="game-page.html"
+											class="overlay overlay-full overlay-bg-black overlay-hover">
+											<span class="v-center"> <span class="btn btn-play  "><i
+													class="fa fa-play"></i> </span>
+										</span>
+										</a>
+									</div>
+								</div>
+								<div class="winners-content">
+									<div class="winners-name">
+										<span>andy.barabash</span> just won
+									</div>
+									<div class="winners-money">
+										4 mBTC <span>in</span>
+									</div>
+									<div class="winners-game">
+										<a href="game-page.html">Platinum Lightning</a>
+									</div>
+								</div>
+							</div>
+
+							<div class="winners-box-sidebar">
+								<div class="winners-image">
+									<div class="cover hover overlay margin-none">
+										<img src="images/slots3.png" alt="location"
+											class="media-object"> <a href="game-page.html"
+											class="overlay overlay-full overlay-bg-black overlay-hover">
+											<span class="v-center"> <span class="btn btn-play  "><i
+													class="fa fa-play"></i> </span>
+										</span>
+										</a>
+									</div>
+								</div>
+								<div class="winners-content">
+									<div class="winners-name">
+										<span>andy.barabash</span> just won
+									</div>
+									<div class="winners-money">
+										4 mBTC <span>in</span>
+									</div>
+									<div class="winners-game">
+										<a href="game-page.html">Platinum Lightning</a>
+									</div>
+								</div>
+							</div>
+
+							<div class="winners-box-sidebar">
+								<div class="winners-image">
+									<div class="cover hover overlay margin-none">
+										<img src="images/slots3.png" alt="location"
+											class="media-object"> <a href="game-page.html"
+											class="overlay overlay-full overlay-bg-black overlay-hover">
+											<span class="v-center"> <span class="btn btn-play  "><i
+													class="fa fa-play"></i> </span>
+										</span>
+										</a>
+									</div>
+								</div>
+								<div class="winners-content">
+									<div class="winners-name">
+										<span>andy.barabash</span> just won
+									</div>
+									<div class="winners-money">
+										4 mBTC <span>in</span>
+									</div>
+									<div class="winners-game">
+										<a href="game-page.html">Platinum Lightning</a>
+									</div>
+								</div>
+							</div>
+
+							<div class="winners-box-sidebar">
+								<div class="winners-image">
+									<div class="cover hover overlay margin-none">
+										<img src="images/slots3.png" alt="location"
+											class="media-object"> <a href="game-page.html"
+											class="overlay overlay-full overlay-bg-black overlay-hover">
+											<span class="v-center"> <span class="btn btn-play  "><i
+													class="fa fa-play"></i> </span>
+										</span>
+										</a>
+									</div>
+								</div>
+								<div class="winners-content">
+									<div class="winners-name">
+										<span>andy.barabash</span> just won
+									</div>
+									<div class="winners-money">
+										4 mBTC <span>in</span>
+									</div>
+									<div class="winners-game">
+										<a href="game-page.html">Platinum Lightning</a>
+									</div>
+								</div>
+							</div>
+
+							<div class="winners-box-sidebar">
+								<div class="winners-image">
+									<div class="cover hover overlay margin-none">
+										<img src="images/slots3.png" alt="location"
+											class="media-object"> <a href="game-page.html"
+											class="overlay overlay-full overlay-bg-black overlay-hover">
+											<span class="v-center"> <span class="btn btn-play  "><i
+													class="fa fa-play"></i> </span>
+										</span>
+										</a>
+									</div>
+								</div>
+								<div class="winners-content">
+									<div class="winners-name">
+										<span>andy.barabash</span> just won
+									</div>
+									<div class="winners-money">
+										4 mBTC <span>in</span>
+									</div>
+									<div class="winners-game">
+										<a href="game-page.html">Platinum Lightning</a>
+									</div>
+								</div>
+							</div>
+
+							<div class="winners-box-sidebar">
+								<div class="winners-image">
+									<div class="cover hover overlay margin-none">
+										<img src="images/slots3.png" alt="location"
+											class="media-object"> <a href="game-page.html"
+											class="overlay overlay-full overlay-bg-black overlay-hover">
+											<span class="v-center"> <span class="btn btn-play  "><i
+													class="fa fa-play"></i> </span>
+										</span>
+										</a>
+									</div>
+								</div>
+								<div class="winners-content">
+									<div class="winners-name">
+										<span>andy.barabash</span> just won
+									</div>
+									<div class="winners-money">
+										4 mBTC <span>in</span>
+									</div>
+									<div class="winners-game">
+										<a href="game-page.html">Platinum Lightning</a>
+									</div>
+								</div>
+							</div>
+
+							<div class="winners-box-sidebar">
+								<div class="winners-image">
+									<div class="cover hover overlay margin-none">
+										<img src="images/slots3.png" alt="location"
+											class="media-object"> <a href="game-page.html"
+											class="overlay overlay-full overlay-bg-black overlay-hover">
+											<span class="v-center"> <span class="btn btn-play  "><i
+													class="fa fa-play"></i> </span>
+										</span>
+										</a>
+									</div>
+								</div>
+								<div class="winners-content">
+									<div class="winners-name">
+										<span>andy.barabash</span> just won
+									</div>
+									<div class="winners-money">
+										4 mBTC <span>in</span>
+									</div>
+									<div class="winners-game">
+										<a href="game-page.html">Platinum Lightning</a>
+									</div>
+								</div>
+							</div>
+
+							<div class="winners-box-sidebar">
+								<div class="winners-image">
+									<div class="cover hover overlay margin-none">
+										<img src="images/slots3.png" alt="location"
+											class="media-object"> <a href="game-page.html"
+											class="overlay overlay-full overlay-bg-black overlay-hover">
+											<span class="v-center"> <span class="btn btn-play  "><i
+													class="fa fa-play"></i> </span>
+										</span>
+										</a>
+									</div>
+								</div>
+								<div class="winners-content">
+									<div class="winners-name">
+										<span>andy.barabash</span> just won
+									</div>
+									<div class="winners-money">
+										4 mBTC <span>in</span>
+									</div>
+									<div class="winners-game">
+										<a href="game-page.html">Platinum Lightning</a>
+									</div>
+								</div>
+							</div>
+
+							<div class="winners-box-sidebar">
+								<div class="winners-image">
+									<div class="cover hover overlay margin-none">
+										<img src="images/slots3.png" alt="location"
+											class="media-object"> <a href="game-page.html"
+											class="overlay overlay-full overlay-bg-black overlay-hover">
+											<span class="v-center"> <span class="btn btn-play  "><i
+													class="fa fa-play"></i> </span>
+										</span>
+										</a>
+									</div>
+								</div>
+								<div class="winners-content">
+									<div class="winners-name">
+										<span>andy.barabash</span> just won
+									</div>
+									<div class="winners-money">
+										4 mBTC <span>in</span>
+									</div>
+									<div class="winners-game">
+										<a href="game-page.html">Platinum Lightning</a>
+									</div>
+								</div>
+							</div>
+
+						</ul> <!-- END / winners sidebar -->
+
+
+
+					</li>
+				</ul>
+			</div>
+			<div id="ascrail2001" class="nicescroll-rails"
+				style="width: 5px; z-index: 2; cursor: default; position: absolute; top: 0px; left: 194px; height: 662px; display: none;">
+				<div
+					style="position: relative; top: 0px; float: right; width: 5px; height: 0px; border: 0px; border-radius: 5px; background-color: rgb(22, 174, 159); background-clip: padding-box;"></div>
+			</div>
+		</aside>
+		<!-- END / Sidebar -->
+
+
+
+		<!-- content push wrapper -->
+
+		<div class="st-pusher grid-list-container">
+			<!-- this is the wrapper for the content -->
+			<div class="st-content">
+
+				<!-- extra div for emulating position:fixed of the menu -->
+				<div class="st-content-inner padding-top-none" id="content"
+					tabindex="2"
+					style="overflow-y: hidden; outline: none;">
+
+					<!-- Change view - sort by -->
+					<div ng-hide="$state.is('discover.listing-map')">
+						<nav class="navbar-default navbar-static-top">
+							<div class="container-fluid">
+								<div class="navbar-header">
+									<a class="toggle pull-right margin-none visible-xs"
+										data-toggle="collapse" href="#navbar"><i
+										class="fa fa-sliders fa-rotate-90"></i></a>
+								</div>
+								<div id="navbar" class="navbar-collapse collapse">
+									<ul class="nav navbar-nav navbar-left-m">
+										<li ng-class="{ 'active': $state.is('discover.listing') }"><a
+												href="listing.html"><i class="fa fa-list fa-fw"></i>
+													List</a></li>
+										<li
+											ng-class="{ 'active': $state.is('discover.listing-grid') }"><a
+												href="listing-grid.html"><i class="fa fa-th fa-fw"></i>
+													Grid</a></li>
+									</ul>
+									<div class="grid-navbar navbar-right navbar-right-sort">
+										<div class="navbar-text">Sort by:</div>
+										<ul class="nav navbar-nav navbar-nav-right">
+											<li class="dropdown"><a href="#" class="dropdown-toggle"
+												data-toggle="dropdown"> Most Popular<span class="caret"></span>
+													<span class="sr-only">(current)</span>
+											</a>
+												<ul class="dropdown-menu">
+													<li class="active"><a href="#">Most Popular</a></li>
+													<li><a href="#">Latest</a></li>
+												</ul></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</nav>
+					</div>
+					<!-- END Change view - sort by -->
+
+					<!-- Grid view -->
+					<div class="container-fluid">
+						<h1 class="text-h3">{Category name of listing}</h1>
+						<div class="row gridalicious" data-toggle="gridalicious"
+							data-width="200">
+
+
+							<!-- Master grid panel -->
+
+							<!-- END/ Master grid panel -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+							<div class="galcolumn" id="item0Thlav"
+								style="width: 19.7479%; padding-left: 15px; padding-bottom: 15px; float: left; box-sizing: border-box;">
+								<div class="panel panel-default relative panel-grid"
+									style="margin-bottom: 15px; zoom: 1; opacity: 1;">
+									<div class="cover hover overlay margin-none"
+										style="height: 102px;">
+										<img src="images/slots1.png" alt="location"
+											class="img-responsive"
+											style="width: 100%; height: auto; display: block; margin-left: auto; margin-right: auto;">
+										<a ui-sref="property.map"
+											class="overlay overlay-full overlay-bg-black overlay-hover"
+											style="height: 102px;"> <span class="v-center"> <span
+												class="btn btn-play btn-lg"><i class="fa fa-play"></i></span>
+										</span>
+										</a>
+									</div>
+									<div class="panel-body">
+										<a href="game-page.html"><h4 class="margin-v-0-5">Paco
+												and the Popping Peppers</h4></a>
+										<div class="panel-body-icons">
+											<span class="label label-grey-100">Ezugi</span>&nbsp; <i
+												class="fa fa-btc" data-toggle="tooltip" data-title="Bitcoin"
+												style="color: grey;"></i>&nbsp; <i class="fa fa-thumbs-o-up"
+												style="color: grey;" data-toggle="tooltip"
+												data-title="Provably Fair"></i>&nbsp; <span
+												class="font-size-18"><i class="fa fa-info-circle"
+												data-toggle="tooltip"
+												data-title="try this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit.try 
+                this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit"></i></span>&nbsp;
+											<a href="#" class="btn-primary btn-star"><i
+												class="fa fa-star"></i> </a>
+										</div>
+									</div>
+									<div class="text-center">
+										<a href="game-page.html">
+											<button class="btn btn-primary btn-playnow">Play Now</button>
+										</a> <a href="game-page.html">
+											<button class="btn btn-primary btn-practiceplay">Practice</button>
+										</a>
+
+									</div>
+								</div>
+								<div class="panel panel-default relative panel-grid"
+									style="margin-bottom: 15px; zoom: 1; opacity: 1;">
+									<div class="cover hover overlay margin-none"
+										style="height: 102px;">
+										<img src="images/slots6.png" alt="location"
+											class="img-responsive"
+											style="width: 100%; height: auto; display: block; margin-left: auto; margin-right: auto;">
+										<a ui-sref="property.map"
+											class="overlay overlay-full overlay-bg-black overlay-hover"
+											style="height: 102px;"> <span class="v-center"> <span
+												class="btn btn-play btn-lg"><i class="fa fa-play"></i></span>
+										</span>
+										</a>
+									</div>
+									<div class="panel-body">
+										<a href="game-page.html"><h4 class="margin-v-0-5">Paco
+												and the Popping Peppers</h4></a>
+										<div class="panel-body-icons">
+											<span class="label label-grey-100">Ezugi</span>&nbsp; <i
+												class="fa fa-btc" data-toggle="tooltip" data-title="Bitcoin"
+												style="color: grey;"></i>&nbsp; <i class="fa fa-thumbs-o-up"
+												style="color: grey;" data-toggle="tooltip"
+												data-title="Provably Fair"></i>&nbsp; <span
+												class="font-size-18"><i class="fa fa-info-circle"
+												data-toggle="tooltip"
+												data-title="try this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit.try 
+                this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit"></i></span>&nbsp;
+											<a href="#" class="btn-primary btn-star"><i
+												class="fa fa-star"></i> </a>
+										</div>
+									</div>
+									<div class="text-center">
+										<a href="game-page.html">
+											<button class="btn btn-primary btn-playnow">Play Now</button>
+										</a> <a href="game-page.html">
+											<button class="btn btn-primary btn-practiceplay">Practice</button>
+										</a>
+
+									</div>
+								</div>
+								<div class="panel panel-default relative panel-grid"
+									style="margin-bottom: 15px; zoom: 1; opacity: 1;">
+									<div class="cover hover overlay margin-none"
+										style="height: 102px;">
+										<img src="images/slots3.png" alt="location"
+											class="img-responsive"
+											style="width: 100%; height: auto; display: block; margin-left: auto; margin-right: auto;">
+										<a ui-sref="property.map"
+											class="overlay overlay-full overlay-bg-black overlay-hover"
+											style="height: 102px;"> <span class="v-center"> <span
+												class="btn btn-play btn-lg"><i class="fa fa-play"></i></span>
+										</span>
+										</a>
+									</div>
+									<div class="panel-body">
+										<a href="game-page.html"><h4 class="margin-v-0-5">Paco
+												and the Popping Peppers</h4></a>
+										<div class="panel-body-icons">
+											<span class="label label-grey-100">Ezugi</span>&nbsp; <i
+												class="fa fa-btc" data-toggle="tooltip" data-title="Bitcoin"
+												style="color: grey;"></i>&nbsp; <i class="fa fa-thumbs-o-up"
+												style="color: grey;" data-toggle="tooltip"
+												data-title="Provably Fair"></i>&nbsp; <span
+												class="font-size-18"><i class="fa fa-info-circle"
+												data-toggle="tooltip"
+												data-title="try this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit.try 
+                this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit"></i></span>&nbsp;
+											<a href="#" class="btn-primary btn-star"><i
+												class="fa fa-star"></i> </a>
+										</div>
+									</div>
+									<div class="text-center">
+										<a href="game-page.html">
+											<button class="btn btn-primary btn-playnow">Play Now</button>
+										</a> <a href="game-page.html">
+											<button class="btn btn-primary btn-practiceplay">Practice</button>
+										</a>
+
+									</div>
+								</div>
+								<div class="panel panel-default relative panel-grid"
+									style="margin-bottom: 15px; zoom: 1; opacity: 1;">
+									<div class="cover hover overlay margin-none"
+										style="height: 102px;">
+										<img src="images/slots6.png" alt="location"
+											class="img-responsive"
+											style="width: 100%; height: auto; display: block; margin-left: auto; margin-right: auto;">
+										<a ui-sref="property.map"
+											class="overlay overlay-full overlay-bg-black overlay-hover"
+											style="height: 102px;"> <span class="v-center"> <span
+												class="btn btn-play btn-lg"><i class="fa fa-play"></i></span>
+										</span>
+										</a>
+									</div>
+									<div class="panel-body">
+										<a href="game-page.html"><h4 class="margin-v-0-5">Paco
+												and the Popping Peppers</h4></a>
+										<div class="panel-body-icons">
+											<span class="label label-grey-100">Ezugi</span>&nbsp; <i
+												class="fa fa-btc" data-toggle="tooltip" data-title="Bitcoin"
+												style="color: grey;"></i>&nbsp; <i class="fa fa-thumbs-o-up"
+												style="color: grey;" data-toggle="tooltip"
+												data-title="Provably Fair"></i>&nbsp; <span
+												class="font-size-18"><i class="fa fa-info-circle"
+												data-toggle="tooltip"
+												data-title="try this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit.try 
+                this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit"></i></span>&nbsp;
+											<a href="#" class="btn-primary btn-star"><i
+												class="fa fa-star"></i> </a>
+										</div>
+									</div>
+									<div class="text-center">
+										<a href="game-page.html">
+											<button class="btn btn-primary btn-playnow">Play Now</button>
+										</a> <a href="game-page.html">
+											<button class="btn btn-primary btn-practiceplay">Practice</button>
+										</a>
+
+									</div>
+								</div>
+								<div class="panel panel-default relative panel-grid"
+									style="margin-bottom: 15px; zoom: 1; opacity: 1;">
+									<div class="cover hover overlay margin-none"
+										style="height: 102px;">
+										<img src="images/slots3.png" alt="location"
+											class="img-responsive"
+											style="width: 100%; height: auto; display: block; margin-left: auto; margin-right: auto;">
+										<a ui-sref="property.map"
+											class="overlay overlay-full overlay-bg-black overlay-hover"
+											style="height: 102px;"> <span class="v-center"> <span
+												class="btn btn-play btn-lg"><i class="fa fa-play"></i></span>
+										</span>
+										</a>
+									</div>
+									<div class="panel-body">
+										<a href="game-page.html"><h4 class="margin-v-0-5">Paco
+												and the Popping Peppers</h4></a>
+										<div class="panel-body-icons">
+											<span class="label label-grey-100">Ezugi</span>&nbsp; <i
+												class="fa fa-btc" data-toggle="tooltip" data-title="Bitcoin"
+												style="color: grey;"></i>&nbsp; <i class="fa fa-thumbs-o-up"
+												style="color: grey;" data-toggle="tooltip"
+												data-title="Provably Fair"></i>&nbsp; <span
+												class="font-size-18"><i class="fa fa-info-circle"
+												data-toggle="tooltip"
+												data-title="try this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit.try 
+                this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit"></i></span>&nbsp;
+											<a href="#" class="btn-primary btn-star"><i
+												class="fa fa-star"></i> </a>
+										</div>
+									</div>
+									<div class="text-center">
+										<a href="game-page.html">
+											<button class="btn btn-primary btn-playnow">Play Now</button>
+										</a> <a href="game-page.html">
+											<button class="btn btn-primary btn-practiceplay">Practice</button>
+										</a>
+
+									</div>
+								</div>
+							</div>
+							<div class="galcolumn" id="item1Thlav"
+								style="width: 19.7479%; padding-left: 15px; padding-bottom: 15px; float: left; box-sizing: border-box;">
+								<div class="panel panel-default relative panel-grid"
+									style="margin-bottom: 15px; zoom: 1; opacity: 1;">
+									<div class="cover hover overlay margin-none"
+										style="height: 102px;">
+										<img src="images/slots2.png" alt="location"
+											class="img-responsive"
+											style="width: 100%; height: auto; display: block; margin-left: auto; margin-right: auto;">
+										<a ui-sref="property.map"
+											class="overlay overlay-full overlay-bg-black overlay-hover"
+											style="height: 102px;"> <span class="v-center"> <span
+												class="btn btn-play btn-lg"><i class="fa fa-play"></i></span>
+										</span>
+										</a>
+									</div>
+									<div class="panel-body">
+										<a href="game-page.html"><h4 class="margin-v-0-5">Paco
+												and the Popping Peppers</h4></a>
+										<div class="panel-body-icons">
+											<span class="label label-grey-100">Ezugi</span>&nbsp; <i
+												class="fa fa-btc" data-toggle="tooltip" data-title="Bitcoin"
+												style="color: grey;"></i>&nbsp; <i class="fa fa-thumbs-o-up"
+												style="color: grey;" data-toggle="tooltip"
+												data-title="Provably Fair"></i>&nbsp; <span
+												class="font-size-18"><i class="fa fa-info-circle"
+												data-toggle="tooltip"
+												data-title="try this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit.try 
+                this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit"></i></span>&nbsp;
+											<a href="#" class="btn-primary btn-star"><i
+												class="fa fa-star"></i> </a>
+										</div>
+									</div>
+									<div class="text-center">
+										<a href="game-page.html">
+											<button class="btn btn-primary btn-playnow">Play Now</button>
+										</a> <a href="game-page.html">
+											<button class="btn btn-primary btn-practiceplay">Practice</button>
+										</a>
+
+									</div>
+								</div>
+								<div class="panel panel-default relative panel-grid"
+									style="margin-bottom: 15px; zoom: 1; opacity: 1;">
+									<div class="cover hover overlay margin-none"
+										style="height: 102px;">
+										<img src="images/slots7.png" alt="location"
+											class="img-responsive"
+											style="width: 100%; height: auto; display: block; margin-left: auto; margin-right: auto;">
+										<a ui-sref="property.map"
+											class="overlay overlay-full overlay-bg-black overlay-hover"
+											style="height: 102px;"> <span class="v-center"> <span
+												class="btn btn-play btn-lg"><i class="fa fa-play"></i></span>
+										</span>
+										</a>
+									</div>
+									<div class="panel-body">
+										<a href="game-page.html"><h4 class="margin-v-0-5">Paco
+												and the Popping Peppers</h4></a>
+										<div class="panel-body-icons">
+											<span class="label label-grey-100">Ezugi</span>&nbsp; <i
+												class="fa fa-btc" data-toggle="tooltip" data-title="Bitcoin"
+												style="color: grey;"></i>&nbsp; <i class="fa fa-thumbs-o-up"
+												style="color: grey;" data-toggle="tooltip"
+												data-title="Provably Fair"></i>&nbsp; <span
+												class="font-size-18"><i class="fa fa-info-circle"
+												data-toggle="tooltip"
+												data-title="try this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit.try 
+                this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit"></i></span>&nbsp;
+											<a href="#" class="btn-primary btn-star"><i
+												class="fa fa-star"></i> </a>
+										</div>
+									</div>
+									<div class="text-center">
+										<a href="game-page.html">
+											<button class="btn btn-primary btn-playnow">Play Now</button>
+										</a> <a href="game-page.html">
+											<button class="btn btn-primary btn-practiceplay">Practice</button>
+										</a>
+
+									</div>
+								</div>
+								<div class="panel panel-default relative panel-grid"
+									style="margin-bottom: 15px; zoom: 1; opacity: 1;">
+									<div class="cover hover overlay margin-none"
+										style="height: 102px;">
+										<img src="images/slots2.png" alt="location"
+											class="img-responsive"
+											style="width: 100%; height: auto; display: block; margin-left: auto; margin-right: auto;">
+										<a ui-sref="property.map"
+											class="overlay overlay-full overlay-bg-black overlay-hover"
+											style="height: 102px;"> <span class="v-center"> <span
+												class="btn btn-play btn-lg"><i class="fa fa-play"></i></span>
+										</span>
+										</a>
+									</div>
+									<div class="panel-body">
+										<a href="game-page.html"><h4 class="margin-v-0-5">Paco
+												and the Popping Peppers</h4></a>
+										<div class="panel-body-icons">
+											<span class="label label-grey-100">Ezugi</span>&nbsp; <i
+												class="fa fa-btc" data-toggle="tooltip" data-title="Bitcoin"
+												style="color: grey;"></i>&nbsp; <i class="fa fa-thumbs-o-up"
+												style="color: grey;" data-toggle="tooltip"
+												data-title="Provably Fair"></i>&nbsp; <span
+												class="font-size-18"><i class="fa fa-info-circle"
+												data-toggle="tooltip"
+												data-title="try this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit.try 
+                this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit"></i></span>&nbsp;
+											<a href="#" class="btn-primary btn-star"><i
+												class="fa fa-star"></i> </a>
+										</div>
+									</div>
+									<div class="text-center">
+										<a href="game-page.html">
+											<button class="btn btn-primary btn-playnow">Play Now</button>
+										</a> <a href="game-page.html">
+											<button class="btn btn-primary btn-practiceplay">Practice</button>
+										</a>
+
+									</div>
+								</div>
+								<div class="panel panel-default relative panel-grid"
+									style="margin-bottom: 15px; zoom: 1; opacity: 1;">
+									<div class="cover hover overlay margin-none"
+										style="height: 102px;">
+										<img src="images/slots4.png" alt="location"
+											class="img-responsive"
+											style="width: 100%; height: auto; display: block; margin-left: auto; margin-right: auto;">
+										<a ui-sref="property.map"
+											class="overlay overlay-full overlay-bg-black overlay-hover"
+											style="height: 102px;"> <span class="v-center"> <span
+												class="btn btn-play btn-lg"><i class="fa fa-play"></i></span>
+										</span>
+										</a>
+									</div>
+									<div class="panel-body">
+										<a href="game-page.html"><h4 class="margin-v-0-5">Paco
+												and the Popping Peppers</h4></a>
+										<div class="panel-body-icons">
+											<span class="label label-grey-100">Ezugi</span>&nbsp; <i
+												class="fa fa-btc" data-toggle="tooltip" data-title="Bitcoin"
+												style="color: grey;"></i>&nbsp; <i class="fa fa-thumbs-o-up"
+												style="color: grey;" data-toggle="tooltip"
+												data-title="Provably Fair"></i>&nbsp; <span
+												class="font-size-18"><i class="fa fa-info-circle"
+												data-toggle="tooltip"
+												data-title="try this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit.try 
+                this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit"></i></span>&nbsp;
+											<a href="#" class="btn-primary btn-star"><i
+												class="fa fa-star"></i> </a>
+										</div>
+									</div>
+									<div class="text-center">
+										<a href="game-page.html">
+											<button class="btn btn-primary btn-playnow">Play Now</button>
+										</a> <a href="game-page.html">
+											<button class="btn btn-primary btn-practiceplay">Practice</button>
+										</a>
+
+									</div>
+								</div>
+								<div class="panel panel-default relative panel-grid"
+									style="margin-bottom: 15px; zoom: 1; opacity: 1;">
+									<div class="cover hover overlay margin-none"
+										style="height: 102px;">
+										<img src="images/slots2.png" alt="location"
+											class="img-responsive"
+											style="width: 100%; height: auto; display: block; margin-left: auto; margin-right: auto;">
+										<a ui-sref="property.map"
+											class="overlay overlay-full overlay-bg-black overlay-hover"
+											style="height: 102px;"> <span class="v-center"> <span
+												class="btn btn-play btn-lg"><i class="fa fa-play"></i></span>
+										</span>
+										</a>
+									</div>
+									<div class="panel-body">
+										<a href="game-page.html"><h4 class="margin-v-0-5">Paco
+												and the Popping Peppers</h4></a>
+										<div class="panel-body-icons">
+											<span class="label label-grey-100">Ezugi</span>&nbsp; <i
+												class="fa fa-btc" data-toggle="tooltip" data-title="Bitcoin"
+												style="color: grey;"></i>&nbsp; <i class="fa fa-thumbs-o-up"
+												style="color: grey;" data-toggle="tooltip"
+												data-title="Provably Fair"></i>&nbsp; <span
+												class="font-size-18"><i class="fa fa-info-circle"
+												data-toggle="tooltip"
+												data-title="try this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit.try 
+                this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit"></i></span>&nbsp;
+											<a href="#" class="btn-primary btn-star"><i
+												class="fa fa-star"></i> </a>
+										</div>
+									</div>
+									<div class="text-center">
+										<a href="game-page.html">
+											<button class="btn btn-primary btn-playnow">Play Now</button>
+										</a> <a href="game-page.html">
+											<button class="btn btn-primary btn-practiceplay">Practice</button>
+										</a>
+
+									</div>
+								</div>
+							</div>
+							<div class="galcolumn" id="item2Thlav"
+								style="width: 19.7479%; padding-left: 15px; padding-bottom: 15px; float: left; box-sizing: border-box;">
+								<div class="panel panel-default relative panel-grid"
+									style="margin-bottom: 15px; zoom: 1; opacity: 1;">
+									<div class="cover hover overlay margin-none"
+										style="height: 102px;">
+										<img src="images/slots3.png" alt="location"
+											class="img-responsive"
+											style="width: 100%; height: auto; display: block; margin-left: auto; margin-right: auto;">
+										<a ui-sref="property.map"
+											class="overlay overlay-full overlay-bg-black overlay-hover"
+											style="height: 102px;"> <span class="v-center"> <span
+												class="btn btn-play btn-lg"><i class="fa fa-play"></i></span>
+										</span>
+										</a>
+									</div>
+									<div class="panel-body">
+										<a href="game-page.html"><h4 class="margin-v-0-5">Paco
+												and the Popping Peppers</h4></a>
+										<div class="panel-body-icons">
+											<span class="label label-grey-100">Ezugi</span>&nbsp; <i
+												class="fa fa-btc" data-toggle="tooltip" data-title="Bitcoin"
+												style="color: grey;"></i>&nbsp; <i class="fa fa-thumbs-o-up"
+												style="color: grey;" data-toggle="tooltip"
+												data-title="Provably Fair"></i>&nbsp; <span
+												class="font-size-18"><i class="fa fa-info-circle"
+												data-toggle="tooltip"
+												data-title="try this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit.try 
+                this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit"></i></span>&nbsp;
+											<a href="#" class="btn-primary btn-star"><i
+												class="fa fa-star"></i> </a>
+										</div>
+									</div>
+									<div class="text-center">
+										<a href="game-page.html">
+											<button class="btn btn-primary btn-playnow">Play Now</button>
+										</a> <a href="game-page.html">
+											<button class="btn btn-primary btn-practiceplay">Practice</button>
+										</a>
+
+									</div>
+								</div>
+								<div class="panel panel-default relative panel-grid"
+									style="margin-bottom: 15px; zoom: 1; opacity: 1;">
+									<div class="cover hover overlay margin-none"
+										style="height: 102px;">
+										<img src="images/slots6.png" alt="location"
+											class="img-responsive"
+											style="width: 100%; height: auto; display: block; margin-left: auto; margin-right: auto;">
+										<a ui-sref="property.map"
+											class="overlay overlay-full overlay-bg-black overlay-hover"
+											style="height: 102px;"> <span class="v-center"> <span
+												class="btn btn-play btn-lg"><i class="fa fa-play"></i></span>
+										</span>
+										</a>
+									</div>
+									<div class="panel-body">
+										<a href="game-page.html"><h4 class="margin-v-0-5">Paco
+												and the Popping Peppers</h4></a>
+										<div class="panel-body-icons">
+											<span class="label label-grey-100">Ezugi</span>&nbsp; <i
+												class="fa fa-btc" data-toggle="tooltip" data-title="Bitcoin"
+												style="color: grey;"></i>&nbsp; <i class="fa fa-thumbs-o-up"
+												style="color: grey;" data-toggle="tooltip"
+												data-title="Provably Fair"></i>&nbsp; <span
+												class="font-size-18"><i class="fa fa-info-circle"
+												data-toggle="tooltip"
+												data-title="try this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit.try 
+                this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit"></i></span>&nbsp;
+											<a href="#" class="btn-primary btn-star"><i
+												class="fa fa-star"></i> </a>
+										</div>
+									</div>
+									<div class="text-center">
+										<a href="game-page.html">
+											<button class="btn btn-primary btn-playnow">Play Now</button>
+										</a> <a href="game-page.html">
+											<button class="btn btn-primary btn-practiceplay">Practice</button>
+										</a>
+
+									</div>
+								</div>
+								<div class="panel panel-default relative panel-grid"
+									style="margin-bottom: 15px; zoom: 1; opacity: 1;">
+									<div class="cover hover overlay margin-none"
+										style="height: 102px;">
+										<img src="images/slots3.png" alt="location"
+											class="img-responsive"
+											style="width: 100%; height: auto; display: block; margin-left: auto; margin-right: auto;">
+										<a ui-sref="property.map"
+											class="overlay overlay-full overlay-bg-black overlay-hover"
+											style="height: 102px;"> <span class="v-center"> <span
+												class="btn btn-play btn-lg"><i class="fa fa-play"></i></span>
+										</span>
+										</a>
+									</div>
+									<div class="panel-body">
+										<a href="game-page.html"><h4 class="margin-v-0-5">Paco
+												and the Popping Peppers</h4></a>
+										<div class="panel-body-icons">
+											<span class="label label-grey-100">Ezugi</span>&nbsp; <i
+												class="fa fa-btc" data-toggle="tooltip" data-title="Bitcoin"
+												style="color: grey;"></i>&nbsp; <i class="fa fa-thumbs-o-up"
+												style="color: grey;" data-toggle="tooltip"
+												data-title="Provably Fair"></i>&nbsp; <span
+												class="font-size-18"><i class="fa fa-info-circle"
+												data-toggle="tooltip"
+												data-title="try this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit.try 
+                this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit"></i></span>&nbsp;
+											<a href="#" class="btn-primary btn-star"><i
+												class="fa fa-star"></i> </a>
+										</div>
+									</div>
+									<div class="text-center">
+										<a href="game-page.html">
+											<button class="btn btn-primary btn-playnow">Play Now</button>
+										</a> <a href="game-page.html">
+											<button class="btn btn-primary btn-practiceplay">Practice</button>
+										</a>
+
+									</div>
+								</div>
+								<div class="panel panel-default relative panel-grid"
+									style="margin-bottom: 15px; zoom: 1; opacity: 1;">
+									<div class="cover hover overlay margin-none"
+										style="height: 102px;">
+										<img src="images/slots3.png" alt="location"
+											class="img-responsive"
+											style="width: 100%; height: auto; display: block; margin-left: auto; margin-right: auto;">
+										<a ui-sref="property.map"
+											class="overlay overlay-full overlay-bg-black overlay-hover"
+											style="height: 102px;"> <span class="v-center"> <span
+												class="btn btn-play btn-lg"><i class="fa fa-play"></i></span>
+										</span>
+										</a>
+									</div>
+									<div class="panel-body">
+										<a href="game-page.html"><h4 class="margin-v-0-5">Paco
+												and the Popping Peppers</h4></a>
+										<div class="panel-body-icons">
+											<span class="label label-grey-100">Ezugi</span>&nbsp; <i
+												class="fa fa-btc" data-toggle="tooltip" data-title="Bitcoin"
+												style="color: grey;"></i>&nbsp; <i class="fa fa-thumbs-o-up"
+												style="color: grey;" data-toggle="tooltip"
+												data-title="Provably Fair"></i>&nbsp; <span
+												class="font-size-18"><i class="fa fa-info-circle"
+												data-toggle="tooltip"
+												data-title="try this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit.try 
+                this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit"></i></span>&nbsp;
+											<a href="#" class="btn-primary btn-star"><i
+												class="fa fa-star"></i> </a>
+										</div>
+									</div>
+									<div class="text-center">
+										<a href="game-page.html">
+											<button class="btn btn-primary btn-playnow">Play Now</button>
+										</a> <a href="game-page.html">
+											<button class="btn btn-primary btn-practiceplay">Practice</button>
+										</a>
+
+									</div>
+								</div>
+								<div class="panel panel-default relative panel-grid"
+									style="margin-bottom: 15px; zoom: 1; opacity: 1;">
+									<div class="cover hover overlay margin-none"
+										style="height: 102px;">
+										<img src="images/slots5.png" alt="location"
+											class="img-responsive"
+											style="width: 100%; height: auto; display: block; margin-left: auto; margin-right: auto;">
+										<a ui-sref="property.map"
+											class="overlay overlay-full overlay-bg-black overlay-hover"
+											style="height: 102px;"> <span class="v-center"> <span
+												class="btn btn-play btn-lg"><i class="fa fa-play"></i></span>
+										</span>
+										</a>
+									</div>
+									<div class="panel-body">
+										<a href="game-page.html"><h4 class="margin-v-0-5">Paco
+												and the Popping Peppers</h4></a>
+										<div class="panel-body-icons">
+											<span class="label label-grey-100">Ezugi</span>&nbsp; <i
+												class="fa fa-btc" data-toggle="tooltip" data-title="Bitcoin"
+												style="color: grey;"></i>&nbsp; <i class="fa fa-thumbs-o-up"
+												style="color: grey;" data-toggle="tooltip"
+												data-title="Provably Fair"></i>&nbsp; <span
+												class="font-size-18"><i class="fa fa-info-circle"
+												data-toggle="tooltip"
+												data-title="try this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit.try 
+                this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit"></i></span>&nbsp;
+											<a href="#" class="btn-primary btn-star"><i
+												class="fa fa-star"></i> </a>
+										</div>
+									</div>
+									<div class="text-center">
+										<a href="game-page.html">
+											<button class="btn btn-primary btn-playnow">Play Now</button>
+										</a> <a href="game-page.html">
+											<button class="btn btn-primary btn-practiceplay">Practice</button>
+										</a>
+
+									</div>
+								</div>
+							</div>
+							<div class="galcolumn" id="item3Thlav"
+								style="width: 19.7479%; padding-left: 15px; padding-bottom: 15px; float: left; box-sizing: border-box;">
+								<div class="panel panel-default relative panel-grid"
+									style="margin-bottom: 15px; zoom: 1; opacity: 1;">
+									<div class="cover hover overlay margin-none"
+										style="height: 102px;">
+										<img src="images/slots4.png" alt="location"
+											class="img-responsive"
+											style="width: 100%; height: auto; display: block; margin-left: auto; margin-right: auto;">
+										<a ui-sref="property.map"
+											class="overlay overlay-full overlay-bg-black overlay-hover"
+											style="height: 102px;"> <span class="v-center"> <span
+												class="btn btn-play btn-lg"><i class="fa fa-play"></i></span>
+										</span>
+										</a>
+									</div>
+									<div class="panel-body">
+										<a href="game-page.html"><h4 class="margin-v-0-5">Paco
+												and the Popping Peppers</h4></a>
+										<div class="panel-body-icons">
+											<span class="label label-grey-100">Ezugi</span>&nbsp; <i
+												class="fa fa-btc" data-toggle="tooltip" data-title="Bitcoin"
+												style="color: grey;"></i>&nbsp; <i class="fa fa-thumbs-o-up"
+												style="color: grey;" data-toggle="tooltip"
+												data-title="Provably Fair"></i>&nbsp; <span
+												class="font-size-18"><i class="fa fa-info-circle"
+												data-toggle="tooltip"
+												data-title="try this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit.try 
+                this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit"></i></span>&nbsp;
+											<a href="#" class="btn-primary btn-star"><i
+												class="fa fa-star"></i> </a>
+										</div>
+									</div>
+									<div class="text-center">
+										<a href="game-page.html">
+											<button class="btn btn-primary btn-playnow">Play Now</button>
+										</a> <a href="game-page.html">
+											<button class="btn btn-primary btn-practiceplay">Practice</button>
+										</a>
+
+									</div>
+								</div>
+								<div class="panel panel-default relative panel-grid"
+									style="margin-bottom: 15px; zoom: 1; opacity: 1;">
+									<div class="cover hover overlay margin-none"
+										style="height: 102px;">
+										<img src="images/slots5.png" alt="location"
+											class="img-responsive"
+											style="width: 100%; height: auto; display: block; margin-left: auto; margin-right: auto;">
+										<a ui-sref="property.map"
+											class="overlay overlay-full overlay-bg-black overlay-hover"
+											style="height: 102px;"> <span class="v-center"> <span
+												class="btn btn-play btn-lg"><i class="fa fa-play"></i></span>
+										</span>
+										</a>
+									</div>
+									<div class="panel-body">
+										<a href="game-page.html"><h4 class="margin-v-0-5">Paco
+												and the Popping Peppers</h4></a>
+										<div class="panel-body-icons">
+											<span class="label label-grey-100">Ezugi</span>&nbsp; <i
+												class="fa fa-btc" data-toggle="tooltip" data-title="Bitcoin"
+												style="color: grey;"></i>&nbsp; <i class="fa fa-thumbs-o-up"
+												style="color: grey;" data-toggle="tooltip"
+												data-title="Provably Fair"></i>&nbsp; <span
+												class="font-size-18"><i class="fa fa-info-circle"
+												data-toggle="tooltip"
+												data-title="try this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit.try 
+                this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit"></i></span>&nbsp;
+											<a href="#" class="btn-primary btn-star"><i
+												class="fa fa-star"></i> </a>
+										</div>
+									</div>
+									<div class="text-center">
+										<a href="game-page.html">
+											<button class="btn btn-primary btn-playnow">Play Now</button>
+										</a> <a href="game-page.html">
+											<button class="btn btn-primary btn-practiceplay">Practice</button>
+										</a>
+
+									</div>
+								</div>
+								<div class="panel panel-default relative panel-grid"
+									style="margin-bottom: 15px; zoom: 1; opacity: 1;">
+									<div class="cover hover overlay margin-none"
+										style="height: 102px;">
+										<img src="images/slots4.png" alt="location"
+											class="img-responsive"
+											style="width: 100%; height: auto; display: block; margin-left: auto; margin-right: auto;">
+										<a ui-sref="property.map"
+											class="overlay overlay-full overlay-bg-black overlay-hover"
+											style="height: 102px;"> <span class="v-center"> <span
+												class="btn btn-play btn-lg"><i class="fa fa-play"></i></span>
+										</span>
+										</a>
+									</div>
+									<div class="panel-body">
+										<a href="game-page.html"><h4 class="margin-v-0-5">Paco
+												and the Popping Peppers</h4></a>
+										<div class="panel-body-icons">
+											<span class="label label-grey-100">Ezugi</span>&nbsp; <i
+												class="fa fa-btc" data-toggle="tooltip" data-title="Bitcoin"
+												style="color: grey;"></i>&nbsp; <i class="fa fa-thumbs-o-up"
+												style="color: grey;" data-toggle="tooltip"
+												data-title="Provably Fair"></i>&nbsp; <span
+												class="font-size-18"><i class="fa fa-info-circle"
+												data-toggle="tooltip"
+												data-title="try this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit.try 
+                this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit"></i></span>&nbsp;
+											<a href="#" class="btn-primary btn-star"><i
+												class="fa fa-star"></i> </a>
+										</div>
+									</div>
+									<div class="text-center">
+										<a href="game-page.html">
+											<button class="btn btn-primary btn-playnow">Play Now</button>
+										</a> <a href="game-page.html">
+											<button class="btn btn-primary btn-practiceplay">Practice</button>
+										</a>
+
+									</div>
+								</div>
+								<div class="panel panel-default relative panel-grid"
+									style="margin-bottom: 15px; zoom: 1; opacity: 1;">
+									<div class="cover hover overlay margin-none"
+										style="height: 102px;">
+										<img src="images/slots6.png" alt="location"
+											class="img-responsive"
+											style="width: 100%; height: auto; display: block; margin-left: auto; margin-right: auto;">
+										<a ui-sref="property.map"
+											class="overlay overlay-full overlay-bg-black overlay-hover"
+											style="height: 102px;"> <span class="v-center"> <span
+												class="btn btn-play btn-lg"><i class="fa fa-play"></i></span>
+										</span>
+										</a>
+									</div>
+									<div class="panel-body">
+										<a href="game-page.html"><h4 class="margin-v-0-5">Paco
+												and the Popping Peppers</h4></a>
+										<div class="panel-body-icons">
+											<span class="label label-grey-100">Ezugi</span>&nbsp; <i
+												class="fa fa-btc" data-toggle="tooltip" data-title="Bitcoin"
+												style="color: grey;"></i>&nbsp; <i class="fa fa-thumbs-o-up"
+												style="color: grey;" data-toggle="tooltip"
+												data-title="Provably Fair"></i>&nbsp; <span
+												class="font-size-18"><i class="fa fa-info-circle"
+												data-toggle="tooltip"
+												data-title="try this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit.try 
+                this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit"></i></span>&nbsp;
+											<a href="#" class="btn-primary btn-star"><i
+												class="fa fa-star"></i> </a>
+										</div>
+									</div>
+									<div class="text-center">
+										<a href="game-page.html">
+											<button class="btn btn-primary btn-playnow">Play Now</button>
+										</a> <a href="game-page.html">
+											<button class="btn btn-primary btn-practiceplay">Practice</button>
+										</a>
+
+									</div>
+								</div>
+								<div class="panel panel-default relative panel-grid"
+									style="margin-bottom: 15px; zoom: 1; opacity: 1;">
+									<div class="cover hover overlay margin-none"
+										style="height: 102px;">
+										<img src="images/slots2.png" alt="location"
+											class="img-responsive"
+											style="width: 100%; height: auto; display: block; margin-left: auto; margin-right: auto;">
+										<a ui-sref="property.map"
+											class="overlay overlay-full overlay-bg-black overlay-hover"
+											style="height: 102px;"> <span class="v-center"> <span
+												class="btn btn-play btn-lg"><i class="fa fa-play"></i></span>
+										</span>
+										</a>
+									</div>
+									<div class="panel-body">
+										<a href="game-page.html"><h4 class="margin-v-0-5">Paco
+												and the Popping Peppers</h4></a>
+										<div class="panel-body-icons">
+											<span class="label label-grey-100">Ezugi</span>&nbsp; <i
+												class="fa fa-btc" data-toggle="tooltip" data-title="Bitcoin"
+												style="color: grey;"></i>&nbsp; <i class="fa fa-thumbs-o-up"
+												style="color: grey;" data-toggle="tooltip"
+												data-title="Provably Fair"></i>&nbsp; <span
+												class="font-size-18"><i class="fa fa-info-circle"
+												data-toggle="tooltip"
+												data-title="try this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit.try 
+                this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit"></i></span>&nbsp;
+											<a href="#" class="btn-primary btn-star"><i
+												class="fa fa-star"></i> </a>
+										</div>
+									</div>
+									<div class="text-center">
+										<a href="game-page.html">
+											<button class="btn btn-primary btn-playnow">Play Now</button>
+										</a> <a href="game-page.html">
+											<button class="btn btn-primary btn-practiceplay">Practice</button>
+										</a>
+
+									</div>
+								</div>
+							</div>
+							<div class="galcolumn" id="item4Thlav"
+								style="width: 19.7479%; padding-left: 15px; padding-bottom: 15px; float: left; box-sizing: border-box;">
+								<div class="panel panel-default relative panel-grid"
+									style="margin-bottom: 15px; zoom: 1; opacity: 1;">
+									<div class="cover hover overlay margin-none"
+										style="height: 102px;">
+										<img src="images/slots5.png" alt="location"
+											class="img-responsive"
+											style="width: 100%; height: auto; display: block; margin-left: auto; margin-right: auto;">
+										<a ui-sref="property.map"
+											class="overlay overlay-full overlay-bg-black overlay-hover"
+											style="height: 102px;"> <span class="v-center"> <span
+												class="btn btn-play btn-lg"><i class="fa fa-play"></i></span>
+										</span>
+										</a>
+									</div>
+									<div class="panel-body">
+										<a href="game-page.html"><h4 class="margin-v-0-5">Paco
+												and the Popping Peppers</h4></a>
+										<div class="panel-body-icons">
+											<span class="label label-grey-100">Ezugi</span>&nbsp; <i
+												class="fa fa-btc" data-toggle="tooltip" data-title="Bitcoin"
+												style="color: grey;"></i>&nbsp; <i class="fa fa-thumbs-o-up"
+												style="color: grey;" data-toggle="tooltip"
+												data-title="Provably Fair"></i>&nbsp; <span
+												class="font-size-18"><i class="fa fa-info-circle"
+												data-toggle="tooltip"
+												data-title="try this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit.try 
+                this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit"></i></span>&nbsp;
+											<a href="#" class="btn-primary btn-star"><i
+												class="fa fa-star"></i> </a>
+										</div>
+									</div>
+									<div class="text-center">
+										<a href="game-page.html">
+											<button class="btn btn-primary btn-playnow">Play Now</button>
+										</a> <a href="game-page.html">
+											<button class="btn btn-primary btn-practiceplay">Practice</button>
+										</a>
+
+									</div>
+								</div>
+								<div class="panel panel-default relative panel-grid"
+									style="margin-bottom: 15px; zoom: 1; opacity: 1;">
+									<div class="cover hover overlay margin-none"
+										style="height: 102px;">
+										<img src="images/slots4.png" alt="location"
+											class="img-responsive"
+											style="width: 100%; height: auto; display: block; margin-left: auto; margin-right: auto;">
+										<a ui-sref="property.map"
+											class="overlay overlay-full overlay-bg-black overlay-hover"
+											style="height: 102px;"> <span class="v-center"> <span
+												class="btn btn-play btn-lg"><i class="fa fa-play"></i></span>
+										</span>
+										</a>
+									</div>
+									<div class="panel-body">
+										<a href="game-page.html"><h4 class="margin-v-0-5">Paco
+												and the Popping Peppers</h4></a>
+										<div class="panel-body-icons">
+											<span class="label label-grey-100">Ezugi</span>&nbsp; <i
+												class="fa fa-btc" data-toggle="tooltip" data-title="Bitcoin"
+												style="color: grey;"></i>&nbsp; <i class="fa fa-thumbs-o-up"
+												style="color: grey;" data-toggle="tooltip"
+												data-title="Provably Fair"></i>&nbsp; <span
+												class="font-size-18"><i class="fa fa-info-circle"
+												data-toggle="tooltip"
+												data-title="try this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit.try 
+                this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit"></i></span>&nbsp;
+											<a href="#" class="btn-primary btn-star"><i
+												class="fa fa-star"></i> </a>
+										</div>
+									</div>
+									<div class="text-center">
+										<a href="game-page.html">
+											<button class="btn btn-primary btn-playnow">Play Now</button>
+										</a> <a href="game-page.html">
+											<button class="btn btn-primary btn-practiceplay">Practice</button>
+										</a>
+
+									</div>
+								</div>
+								<div class="panel panel-default relative panel-grid"
+									style="margin-bottom: 15px; zoom: 1; opacity: 1;">
+									<div class="cover hover overlay margin-none"
+										style="height: 102px;">
+										<img src="images/slots5.png" alt="location"
+											class="img-responsive"
+											style="width: 100%; height: auto; display: block; margin-left: auto; margin-right: auto;">
+										<a ui-sref="property.map"
+											class="overlay overlay-full overlay-bg-black overlay-hover"
+											style="height: 102px;"> <span class="v-center"> <span
+												class="btn btn-play btn-lg"><i class="fa fa-play"></i></span>
+										</span>
+										</a>
+									</div>
+									<div class="panel-body">
+										<a href="game-page.html"><h4 class="margin-v-0-5">Paco
+												and the Popping Peppers</h4></a>
+										<div class="panel-body-icons">
+											<span class="label label-grey-100">Ezugi</span>&nbsp; <i
+												class="fa fa-btc" data-toggle="tooltip" data-title="Bitcoin"
+												style="color: grey;"></i>&nbsp; <i class="fa fa-thumbs-o-up"
+												style="color: grey;" data-toggle="tooltip"
+												data-title="Provably Fair"></i>&nbsp; <span
+												class="font-size-18"><i class="fa fa-info-circle"
+												data-toggle="tooltip"
+												data-title="try this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit.try 
+                this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit"></i></span>&nbsp;
+											<a href="#" class="btn-primary btn-star"><i
+												class="fa fa-star"></i> </a>
+										</div>
+									</div>
+									<div class="text-center">
+										<a href="game-page.html">
+											<button class="btn btn-primary btn-playnow">Play Now</button>
+										</a> <a href="game-page.html">
+											<button class="btn btn-primary btn-practiceplay">Practice</button>
+										</a>
+
+									</div>
+								</div>
+								<div class="panel panel-default relative panel-grid"
+									style="margin-bottom: 15px; zoom: 1; opacity: 1;">
+									<div class="cover hover overlay margin-none"
+										style="height: 102px;">
+										<img src="images/slots7.png" alt="location"
+											class="img-responsive"
+											style="width: 100%; height: auto; display: block; margin-left: auto; margin-right: auto;">
+										<a ui-sref="property.map"
+											class="overlay overlay-full overlay-bg-black overlay-hover"
+											style="height: 102px;"> <span class="v-center"> <span
+												class="btn btn-play btn-lg"><i class="fa fa-play"></i></span>
+										</span>
+										</a>
+									</div>
+									<div class="panel-body">
+										<a href="game-page.html"><h4 class="margin-v-0-5">Paco
+												and the Popping Peppers</h4></a>
+										<div class="panel-body-icons">
+											<span class="label label-grey-100">Ezugi</span>&nbsp; <i
+												class="fa fa-btc" data-toggle="tooltip" data-title="Bitcoin"
+												style="color: grey;"></i>&nbsp; <i class="fa fa-thumbs-o-up"
+												style="color: grey;" data-toggle="tooltip"
+												data-title="Provably Fair"></i>&nbsp; <span
+												class="font-size-18"><i class="fa fa-info-circle"
+												data-toggle="tooltip"
+												data-title="try this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit.try 
+                this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit"></i></span>&nbsp;
+											<a href="#" class="btn-primary btn-star"><i
+												class="fa fa-star"></i> </a>
+										</div>
+									</div>
+									<div class="text-center">
+										<a href="game-page.html">
+											<button class="btn btn-primary btn-playnow">Play Now</button>
+										</a> <a href="game-page.html">
+											<button class="btn btn-primary btn-practiceplay">Practice</button>
+										</a>
+
+									</div>
+								</div>
+							</div>
+							<div id="clearThlav"
+								style="clear: both; height: 0px; width: 0px; display: block;"></div>
+						</div>
+						<ul class="pagination margin-top-none ">
+							<li><a href="#">«</a></li>
+							<li class="active"><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">»</a></li>
+						</ul>
+					</div>
+
+					<!-- END / Grid View -->
+
+
+				</div>
+				<!-- /st-content-inner -->
+			</div>
+			<!-- /st-content -->
+		</div>
+
+		<!-- /st-pusher -->

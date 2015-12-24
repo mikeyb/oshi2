@@ -3,7 +3,7 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html class="no-js st-layout ls-top-navbar ls-bottom-footer-fixed show-sidebar sidebar-l-sum-13">
+<html class="no-js st-layout ls-top-navbar ls-bottom-footer show-sidebar sidebar-l-sum-13">
 <!--<![endif]-->
 <head>
     <meta charset="utf-8">
@@ -39,33 +39,22 @@
 	<!-- endbuild -->
 	<!-- build:css({.tmp,client}) app/app.css -->
 	<!-- injector:css -->
-	<link rel="stylesheet" href="app/css/app.css">
-	<link rel="stylesheet" href="app/css/colors-buttons.css">
-	<link rel="stylesheet" href="app/css/colors-text.css">
-	<link rel="stylesheet" href="app/css/custom.css">
-	<link rel="stylesheet" href="app/css/font-awesome.css">
-	<link rel="stylesheet" href="app/css/layout.css">
-	<link rel="stylesheet" href="app/css/main.css">
-	<link rel="stylesheet" href="app/css/media.css">
-	<link rel="stylesheet" href="app/css/navbar.css">
-	<link rel="stylesheet" href="app/css/sidebar-skins.css">
-	<link rel="stylesheet" href="app/css/sidebar.css">
+	<link rel="stylesheet" href="app/css/all.css">
 	<link rel="stylesheet" href="components/modal/modal.css">
 	<!-- endinjector -->
 	<!-- endbuild -->
 </head>
-<body ng-app="oshi2App">
+<body ng-app="oshi2App" class="breakpoint-1024">
 	<!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     
-    <div class="st-container1">
+    <div class="st-container">
 
         <!-- Fixed navbar -->
 		<nav class="navbar navbar-skin-cover navbar-static-top navbar-absolute-top main-nav" role="navigation">
 			<div class="container-fluid">
 			  <div class="navbar-header">
-			    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
 			    <a  class="navbar-brand" href="index.html"><img   src="assets/images/oshi-logo-xsmall.png"   alt="oshi Bitcoin Casino" ></a>     
 			 </div> 
 			  <div class="collapse navbar-collapse" id="main-nav">
@@ -81,7 +70,7 @@
 	                        <ul class="uib-dropdown-menu dropdown-menu" aria-labelledby="simple-dropdown">
 		                        <li role="menuitem" ng-class="{ 'active': $state.is('list') }"><a ui-sref="list"><span class="badge pull-right">120+</span>Slots</a></li>
 		                        <li role="menuitem" ng-class="{ 'active': $state.is('grid') }"><a ui-sref="grid"><span class="badge pull-right">60+</span>Theme Slots</a></li>
-		                        <li role="menuitem" ng-class="{ 'active': $state.is('page.1') }"><a href="#"><span class="badge pull-right">60+</span>Fruit Slots </a></li>
+		                        <li role="menuitem" ng-class="{ 'active': $state.is('list2') }"><a ui-sref="list2"><span class="badge pull-right">60+</span>Fruit Slots </a></li>
 		                        <li role="menuitem" ng-class="{ 'active': $state.is('page.1') }"><a href="#"><span class="badge pull-right">30+</span>Table Games</a></li>
 		                        <li role="menuitem" ng-class="{ 'active': $state.is('page.1') }"><a href="#"><span class="badge pull-right">40+</span>Casual Games</a></li>
 		                        <li role="menuitem" ng-class="{ 'active': $state.is('page.1') }"><a href="#"><span class="badge pull-right">60+</span>Video Poker</a></li>
@@ -284,103 +273,22 @@
 			</div>
 		</nav>
 
-	<div ui-view=""></div>
+	   <div ui-view=""></div>
 
 
-<!-- Footer -->
-<div class="footer-hide">
-<section class="footer-section">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-6 col-md-2">
-                <h4>Corporate</h4>
-                <ul class="list-unstyled">
-                    <li><a href="#" " target="_blank ">About Oshi</a></li>
-                    <li><a href=" "" target="_blank">Contact</a>
-                    </li>
-                    <li><a href="" " target="_blank ">Terms & Conditions</a></li>
-                    <li><a href=" "" target="_blank">Privacy</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-xs-6 col-md-2">
-                <h4>Explore</h4>
-                <ul class="list-unstyled">
-                    <li>
-                    <li><a href="#">Games Explorer</a>
-                    </li>
-                    <li><a href="#">Slots</a>
-                    </li>
-                    <li><a href="#">Table Games</a>
-                    </li>
-                    <li><a href="#">Casual Games</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-xs-12 col-md-4 text-center">
-                <h4>Latest Blog Posts</h4>
-                <div class="panel bg-transparent margin-none">
-                    <div class="panel-body rss-blogposts">
-                        <!-- RSS Feed from  http://blog.oshi.io/ here -->
-                        <p>
-                            <a href="#">
-                                <i class="fa fa-arrow-right"> </i> Lorem ipsum dolor sit amet, consectetur...  
-                        </p>
-                        <p><a href="#"><i class="fa fa-arrow-right"> </i> nteger vel odio maximus leo rutrum ultricies...   </p>
-                        <p><a href="#"><i class="fa fa-arrow-right"> </i> Aliquam mattis metus orci, at commodo...</p>
-                        <p><a href="#"><i class="fa fa-arrow-right"> </i> Pellentesque nec egestas risus, ut dapibus ...</p>
-                        <p><a href="#"><i class="fa fa-arrow-right"> </i> Curabitur quis malesuada dui...  </p>
-                        <p><a href="#"><i class="fa fa-arrow-right"> </i> Suspendisse posuere cursus dui et venenatis....</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-12 col-md-4">
-            <h4>Latest Winners</h4>
-            <div class="panel bg-transparent margin-none">
-            <div class="panel-body">
-            <!-- example winners -->
-            <div>- &nbsp;<span ng-bind="game.nickname" class="ng-binding">tomfin1</span> just won </div>
-            <div> <strong  >1.5 mBTC</strong> <span>in</span> <a>Lucky Lady's Clover</a> </div>
-            <div>- &nbsp;<span ng-bind="game.nickname" class="ng-binding">tomfin1</span> just won </div>
-            <div> <strong>1.5 mBTC</strong> <span>in</span> <a>Lucky Lady's Clover</a> </div>
-            <div>- &nbsp;<span ng-bind="game.nickname" class="ng-binding">tomfin1</span> just won </div>
-            <div> <strong>1.5 mBTC</strong> <span>in</span> <a>Lucky Lady's Clover</a> </div>
-            <div>- &nbsp;<span ng-bind="game.nickname" class="ng-binding">tomfin1</span> just won </div>
-            <div> <strong>1.5 mBTC</strong> <span>in</span> <a>Lucky Lady's Clover</a> </div>
-            <div>- &nbsp;<span ng-bind="game.nickname" class="ng-binding">tomfin1</span> just won </div>
-            <div> <strong>1.5 mBTC</strong> <span>in</span> <a>Lucky Lady's Clover</a> </div>
-            <!-- END / example winners -->
-            </div>
-            </div>
-            </div>
-        </div>
-        <div class="footer_out_links">
-            <img src="assets/images/18.png" data-toggle="tooltip" data-title="Over 18 Only">
-            <a href="http://www.softswiss.com" target="_blank"> <img src="assets/images/softswiss.png" data-toggle="tooltip" data-title="Softswiss Bitcoin casino platform">
-            </a>
-            <a href="#<!-- page with licence -->" target="_blank"> <img src="assets/images/curaco37px_high_v2.png" data-toggle="tooltip" data-title="Curacao Licence">
-            <a href="#<!--Page with iTech test certificate -->" target="_blank"><img src="assets/images/itech.png" data-toggle="tooltip" data-title="Rated as Provably Fair by iTech, an independent testing company.">
-            <a href="#<!-- page about our security -->" target="_blank"><img src="assets/images/100safe.png" data-toggle="tooltip" data-title="We're 100% secure (because we only use Bitcoin)">
-            <a href="#<!--Page with itech certificate and explanation of in game fairness testing.-->" target="_blank"><img src="assets/images/provable_fair.png" data-toggle="tooltip" data-title="Provably Fair: Itech Labs testing & in Game testing for Softswiss Games.">
-            <a href="#<!--Page on responsible gambling -->" target="_blank">
-                <img src="assets/images/responsible_gamble.png" data-toggle="tooltip" data-title="We take Resposnsible Gambling very seriously. Why? We want happy customers.">
-        </div>
-    </div>
-</section>
-<!-- END upper Footer -->
-<!-- // END #content -->
-<!-- Lower Footer -->
 
-	<div id="DIV_1">
-		<a href="#" id="A_2"></a><a href="#" id="A_3"></a><a href="#" id="A_4"></a><a
-			href="#" id="A_5"></a><a href="#" id="A_6"></a>
-	</div>
+		<!-- Lower Footer -->
 
-	<!-- Footer -->
-	<footer class="footer">
-		Oshi Bitcoin Casino</strong>&copy;2015
-	</footer>
-	<!-- // Footer -->
+		<div id="DIV_1">
+			<a href="#" id="A_2"></a><a href="#" id="A_3"></a><a href="#" id="A_4"></a><a
+				href="#" id="A_5"></a><a href="#" id="A_6"></a>
+		</div>
+	
+		<!-- Footer -->
+		<footer class="footer">
+			Oshi Bitcoin Casino</strong>&copy;2015
+		</footer>
+		<!-- // Footer -->
 
     </div>
 
@@ -431,6 +339,8 @@
 	<script src="app/grid/grid.js"></script>
 	<script src="app/list/list.controller.js"></script>
 	<script src="app/list/list.js"></script>
+	<script src="app/list2/list.controller.js"></script>
+	<script src="app/list2/list.js"></script>
 	<script src="app/main/main.controller.js"></script>
 	<script src="app/main/main.js"></script>
 	<script src="components/modal/modal.service.js"></script>
