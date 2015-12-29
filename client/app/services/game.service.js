@@ -1,3 +1,5 @@
+'use strict';
+
 angular.module('oshi2App')
 .factory('Games', function($resource, ENDPOINT) {
 	return $resource(ENDPOINT + 'api/open/game', {}, {
