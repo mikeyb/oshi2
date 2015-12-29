@@ -643,7 +643,7 @@ pre code {
 	overflow-y: scroll;
 }
 /*.container{margin-right:auto;margin-left:auto;padding-left:15px;padding-right:15px;}*/
-@media ( min-width :768px) {
+/* @media ( min-width :768px) {
 	.container {
 		width: 750px;
 	}
@@ -666,7 +666,7 @@ pre code {
 	margin-left: auto;
 	padding-left: 15px;
 	padding-right: 15px;
-}
+} */
 
 .row {
 	margin-left: -15px;
@@ -15947,14 +15947,21 @@ html.st-layout, html.st-layout body, html.st-layout .st-pusher, html.st-layout .
 }
 
 .st-content-inner {
-/* 	overflow-y: scroll;
-	height: 100%; */
 	height: 100%;
     top: 0;
-    bottom:0;
-    position:fixed;
-    overflow-y:scroll;
-    overflow-x:hidden;
+    bottom: 0;
+    position: fixed;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.content-home {
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    position: fixed;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .st-content { /* , .st-content-inner { */
@@ -15964,6 +15971,7 @@ html.st-layout, html.st-layout body, html.st-layout .st-pusher, html.st-layout .
 .st-container {
 	position: relative;
 	overflow: hidden;
+    padding-top: 25px;
 }
 
 .top-navbar .st-container, .ls-top-navbar .st-container {
@@ -17883,11 +17891,11 @@ ul.icon-list li a {
 	background: #141414;
 }
 
-.st-container {
+/* .st-container {
 	position: relative;
 	overflow: hidden;
 	padding-top: 25px;
-}
+} */
 
 .media-body-list {
 	max-width: 500px;
