@@ -1,7 +1,16 @@
 'use strict';
 
 angular.module('oshi2App')
-  .controller('MainCtrl', function ($scope) {
+  .controller('MainCtrl', function ($scope, Games) {
+	  
+	  $scope.firstList = [];
+	  Games.category('landing', '10').$promise.then(function (res) {
+		  console.log('D> Landing resp: ', res);
+		  $scope.firstList = res;
+	  }, function(err) {
+		  console.log('E> Error getting first games: ', err);
+	  });
+
 	  
 	  $scope.breakpoints = 
     	[
