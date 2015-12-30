@@ -31,7 +31,7 @@
     <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/manifest.json">
-   
+
    	<!-- build:css(client) app/vendor.css -->
 	<!-- bower:css -->
 	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
@@ -50,60 +50,49 @@
 	<!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    
+
     <div ng-class="{'st-container': !isHome()}">
 
-        <!-- Fixed navbar -->
+    <!-- Fixed navbar -->
 		<nav class="navbar navbar-skin-cover navbar-static-top navbar-absolute-top main-nav" role="navigation">
 			<div class="container-fluid">
 			  <div class="navbar-header">
-			    <a  class="navbar-brand" href="index.html"><img   src="assets/images/oshi-logo-xsmall.png"   alt="oshi Bitcoin Casino" ></a>     
-			 </div> 
+			    <a  class="navbar-brand" href="index.html"><img src="assets/images/oshi-logo-xsmall.png" alt="oshi Bitcoin Casino"></a>
+			  </div>
 			  <div class="collapse navbar-collapse" id="main-nav">
 			    <!-- Left Nav -->
 			    <ul class="nav navbar-nav">
-			    
+
 				    <!--Games-->
-	                <li class="dropdown main-nav-dropdown-menu">
-	                    <div uib-dropdown>
-	                        <button id="single-button" type="button" class="" uib-dropdown-toggle ng-disabled="disabled">
-	                            Games <span class="caret"></span>
-	                        </button>
-	                        <ul class="uib-dropdown-menu dropdown-menu" aria-labelledby="simple-dropdown">
-		                        <li role="menuitem" ng-class="{ 'active': $state.is('list') }"><a ui-sref="list"><span class="badge pull-right">120+</span>Slots</a></li>
-		                        <li role="menuitem" ng-class="{ 'active': $state.is('grid') }"><a ui-sref="grid"><span class="badge pull-right">60+</span>Theme Slots</a></li>
-		                        <li role="menuitem" ng-class="{ 'active': $state.is('list2') }"><a ui-sref="list2"><span class="badge pull-right">60+</span>Fruit Slots </a></li>
-		                        <li role="menuitem" ng-class="{ 'active': $state.is('page.1') }"><a href="#"><span class="badge pull-right">30+</span>Table Games</a></li>
-		                        <li role="menuitem" ng-class="{ 'active': $state.is('page.1') }"><a href="#"><span class="badge pull-right">40+</span>Casual Games</a></li>
-		                        <li role="menuitem" ng-class="{ 'active': $state.is('page.1') }"><a href="#"><span class="badge pull-right">60+</span>Video Poker</a></li>
-		                        <li role="menuitem" ng-class="{ 'active': $state.is('page.1') }"><a href="#"><span class="badge pull-right">60+</span>Blackjack</a></li>
-		                        <li role="menuitem" ng-class="{ 'active': $state.is('page.1') }"><a href="#"><span class="badge pull-right">60+</span>Roulette</a></li>
-		                        <li role="menuitem" ng-class="{ 'active': $state.is('page.1') }"><a href="#"><span class="badge pull-right">60+</span>Poker Games</a></li>
-		                        <li role="menuitem" ng-class="{ 'active': $state.is('page.1') }"><a href="#"><span class="badge pull-right">60+</span>Card Games</a></li>
-	                        </ul>
-	                    </div> 
-	                </li>          
+            <li class="dropdown main-nav-dropdown-menu">
+                <div uib-dropdown>
+                    <button id="single-button" type="button" class="" uib-dropdown-toggle ng-disabled="disabled">
+                        Games <span class="caret"></span>
+                    </button>
+                    <ul class="uib-dropdown-menu dropdown-menu" aria-labelledby="simple-dropdown">
+                      <li role="menuitem" ng-class="{ 'active': $state.is('list') }" ng-repeat="category in categories">
+                        <a ui-sref="list"><span class="badge pull-right">{{category.gameCount}}</span>{{category.name}}</a>
+                      </li>
+                    </ul>
+                </div>
+            </li>
 				    <!--END / Games-->
-			
-			        <!-- Providers -->
-                    <li class="dropdown main-nav-dropdown-menu">
-                        <div uib-dropdown>
-                            <button id="single-button" type="button" class="" uib-dropdown-toggle ng-disabled="disabled">
-                                Providers <span class="caret"></span>
-                            </button>
-                            <ul class="uib-dropdown-menu dropdown-menu" aria-labelledby="simple-dropdown">
-		                        <li role="menuitem" ng-class="{ 'active': $state.is('page.1') }"><a href="#"><span class="badge pull-right">120+</span> Game Provider 1</a></li>
-		                        <li role="menuitem" ng-class="{ 'active': $state.is('page.2') }"><a href="#"><span class="badge pull-right">30+</span> Game Provider 2</a></li>
-		                        <li role="menuitem" ng-class="{ 'active': $state.is('page.3') }"><a href="#"><span class="badge pull-right">40+</span> Game Provider 3</a></li>
-		                        <li role="menuitem" ng-class="{ 'active': $state.is('page.4') }"><a href="#"><span class="badge pull-right">60+</span> Game Provider 4</a></li>
-		                        <li role="menuitem" ng-class="{ 'active': $state.is('page.5') }"><a href="#"><span class="badge pull-right">120+</span> Game Provider 5</a></li>
-		                        <li role="menuitem" ng-class="{ 'active': $state.is('page.6') }"><a href="#"><span class="badge pull-right">30+</span> Game Provider 6</a></li>
-		                        <li role="menuitem" ng-class="{ 'active': $state.is('page.7') }"><a href="#"><span class="badge pull-right">40+</span> Game Provider 7</a></li>
-                            </ul>
-                        </div> 
-                    </li>          
-    			    <!-- END/ Providers -->
-			     
+
+            <!-- Providers -->
+            <li class="dropdown main-nav-dropdown-menu">
+                <div uib-dropdown>
+                    <button id="single-button" type="button" class="" uib-dropdown-toggle ng-disabled="disabled">
+                        Providers <span class="caret"></span>
+                    </button>
+                    <ul class="uib-dropdown-menu dropdown-menu" aria-labelledby="simple-dropdown">
+                      <li role="menuitem" ng-class="{ 'active': $state.is('page.1') }" ng-repeat="provider in providers">
+                        <a href="#"><span class="badge pull-right">{{provider.gameCount}}</span>{{provider.name}}</a>
+                      </li>
+                    </ul>
+                </div>
+            </li>
+            <!-- END/ Providers -->
+
     			    <!-- Bonuses -->
                     <li class="dropdown main-nav-dropdown-menu">
                         <div uib-dropdown>
@@ -114,12 +103,12 @@
                                 <li role="menuitem" ng-class="{ 'active': $state.is('page.1') }"><a ui-sref="page.1"><span>How Bonuses Work</span></a></li>
 			                    <li role="menuitem" ng-class="{ 'active': $state.is('page.2') }"><a ui-sref="page.2"><span>Latest Bouses!</span></a></li>
                             </ul>
-                        </div> 
-                    </li>          
+                        </div>
+                    </li>
     			    <!-- END / Bonuses -->
-			    
-			
-			    
+
+
+
     			    <!-- Help -->
                     <li class="dropdown main-nav-dropdown-menu">
                         <div uib-dropdown>
@@ -135,10 +124,10 @@
 				                <li role="menuitem" ng-class="{ 'active': $state.is('page.6') }"><a ui-sref="page.6"><span>Privacy </span></a></li>
 				                <li role="menuitem" ng-class="{ 'active': $state.is('page.6') }"><a ui-sref="page.6"><span>Tor Friendly</span></a></li>
                             </ul>
-                        </div> 
-                    </li>          
+                        </div>
+                    </li>
     			    <!-- END / Help -->
-			    
+
     		        <!-- About -->
                     <li class="dropdown main-nav-dropdown-menu">
                         <div uib-dropdown>
@@ -153,13 +142,13 @@
 			                    <li role="menuitem" ng-class="{ 'active': $state.is('page.5') }"><a ui-sref="page.5"><span>Philosophy</span></a></li>
 			                    <li role="menuitem" ng-class="{ 'active': $state.is('page.6') }"><a ui-sref="page.6"><span>Blog</span></a></li>
                             </ul>
-                        </div> 
-                    </li>         
+                        </div>
+                    </li>
     			    <!-- END / About -->
-			    
-			    <!-- Search  
+
+			    <!-- Search
 			      <li class="dropdown main-nav-dropdown-menu"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Search<span class="caret"></span></a>
-			        <ul class="dropdown-menu">       
+			        <ul class="dropdown-menu">
 			          <form class="navbar-form margin-none">
 			            <div class="search">
 			              <div class="input-group"> <span class="input-group-addon"><i class="icon-search"></i></span>
@@ -170,10 +159,10 @@
 			        </ul>
 			      </li>
 			    <!-- END/ Search -->
-			    
+
 			    </ul>
 			    <!-- END/ Left Nav -->
-			
+
 			    <!-- Right Nav -->
 			    <ul class="nav navbar-nav navbar-right" ng-show="!isAuth()">
 			        <!-- Login -->
@@ -262,8 +251,8 @@
                                 <li role="menuitem" ng-class="{ 'active': $state.is('page.3') }"><a href="https://www.oshi.io/accounts/history"><span>History</span></a></li>
                                 <li role="menuitem" ng-class="{ 'active': $state.is('page.6') }"><a href="" ng-click="logout()"><span>Logout</span></a></li>
                             </ul>
-                        </div> 
-                    </li>                          
+                        </div>
+                    </li>
                     <!-- END My Account -->
                 </ul>
   			    <!-- END Right Nav -->
@@ -282,7 +271,7 @@
 			<a href="#" id="A_2"></a><a href="#" id="A_3"></a><a href="#" id="A_4"></a><a
 				href="#" id="A_5"></a><a href="#" id="A_6"></a>
 		</div>
-	
+
 		<!-- Footer -->
 		<footer class="footer">
 			Oshi Bitcoin Casino</strong>&copy;2015
@@ -348,6 +337,7 @@
 	<script src="app/services/auth.service.js"></script>
 	<script src="app/services/category.service.js"></script>
 	<script src="app/services/game.service.js"></script>
+	<script src="app/services/provider.service.js"></script>
 	<script src="app/services/sitedata.service.js"></script>
 	<script src="components/modal/modal.service.js"></script>
 	<script src="components/navbar/navbar.controller.js"></script>

@@ -1,11 +1,12 @@
 'use strict';
 
 angular.module('oshi2App')
-  .controller('AppCtrl', function ($scope, $rootScope, $window, $state, AuthLogin, AuthLogout, AuthRegister, localStorageService) {
+  .controller('AppCtrl', function ($scope, $rootScope, $window, $state, AuthLogin, AuthLogout, AuthRegister,
+                                   localStorageService, Categories, Providers) {
 
 	$scope.rego = {};
 	$scope.rego.promos = true;
-	  
+
 	$scope.isHome = function () {
 		if ($window.location.pathname === '/') {
 		    return true;
@@ -13,7 +14,7 @@ angular.module('oshi2App')
 		    return false;
 		}
 	};
-	
+
 	$scope.isAuth = function() {
 		$rootScope.account = localStorageService.get('account');
 		if ($rootScope.account) {
@@ -22,7 +23,7 @@ angular.module('oshi2App')
 			return false;
 		}
 	};
-	
+
 	$scope.register = function(rego) {
 //			  "ageAcceptance": true,
 //			  "confirmPassword": "testtest",
@@ -32,11 +33,11 @@ angular.module('oshi2App')
 //			  "receiveNewsletters": true,
 //			  "receivePromos": true,
 //			  "termsAcceptance": true
-		
+
 		if (!rego.tcs) {
 			return "Validation error";
 		}
-		
+
 		var accountObj = {};
 		accountObj.ageAcceptance = rego.tcs;
 		accountObj.receiveNewsletters = true;
@@ -59,7 +60,7 @@ angular.module('oshi2App')
 		});
 
 	};
-	
+
 	$scope.login = function(email, password) {
 		$rootScope.account = {};
 		$scope.loginObj = {};
@@ -77,7 +78,7 @@ angular.module('oshi2App')
 			$state.go('main');
 		});
 	};
-  
+
 	$scope.logout = function() {
 		AuthLogout.logout().$promise.then(function () {
 			$rootScope.account = null;
@@ -90,5 +91,16 @@ angular.module('oshi2App')
 			$state.go('main');
 		});
 	};
-  
+
+
+  $scope.categories = [];
+  Categories.getAll().then(function(categories) {
+    $scope.categories = categories;
   });
+
+  $scope.providers = [];
+  Providers.getAll().then(function(providers) {
+    $scope.providers = providers;
+  });
+
+});
