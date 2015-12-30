@@ -15,9 +15,12 @@ angular.module('oshi2App', [
 
     $locationProvider.html5Mode(true);
   })
-.config(function (localStorageServiceProvider) {
-	localStorageServiceProvider
-		.setPrefix('oshi')
-		.setStorageCookieDomain('oshi.io')
-		.setNotify(true, true);
-});
+  .config(function (localStorageServiceProvider) {
+    localStorageServiceProvider
+      .setPrefix('oshi')
+      .setStorageCookieDomain('oshi.io')
+      .setNotify(true, true);
+  })
+  .run(function (SiteData) {
+    SiteData.load();
+  });
