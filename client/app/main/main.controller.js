@@ -2,8 +2,8 @@
 
 angular.module('oshi2App')
   .controller('MainCtrl', function ($scope) {
-
-    $scope.breakpoints = 
+	  
+	  $scope.breakpoints = 
     	[
     	 {
             breakpoint: 1024,

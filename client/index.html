@@ -175,27 +175,27 @@
 			    <!-- END/ Left Nav -->
 			
 			    <!-- Right Nav -->
-			    <ul class="nav navbar-nav navbar-right">
+			    <ul class="nav navbar-nav navbar-right" ng-show="!isAuth()">
 			        <!-- Login -->
                     <li class="dropdown main-nav-dropdown-menu">
                         <div uib-dropdown>
                             <button id="single-button" type="button" class="" uib-dropdown-toggle ng-disabled="disabled">
                                 <i class="fa fa-fw fa-lock"></i> Login
                             </button>
-					        <div class="dropdown-menu dropdown-size-280">
+					        <div class="dropdown-menu dropdown-size-280" ng-click="$event.stopPropagation();">
 					            <form>
 						            <div class="form-group">
 						                <div class="input-group"> <span class="input-group-addon"><i class="fa fa-user"></i></span>
-						                    <input type="text" class="form-control" placeholder="Username">
+						                    <input type="text" ng-model="email" class="form-control" placeholder="Email Address">
 						                </div>
 						            </div>
 						            <div class="form-group">
 						                <div class="input-group"> <span class="input-group-addon"><i class="fa fa-shield"></i></span>
-						                    <input type="password" class="form-control" placeholder="Password">
+						                    <input type="password" ng-model="password" class="form-control" placeholder="Password">
 						                </div>
 						            </div>
 						            <div class="text-center">
-						                <button type="submit" class="btn btn-primary">Login <i class="fa fa-sign-in"></i></button>
+						                <button type="submit" ng-click="login(email, password)" class="btn btn-primary">Login <i class="fa fa-sign-in"></i></button>
 						            </div>
 					            </form>
 					        </div>
@@ -269,7 +269,24 @@
 		             </li>
 			      <!-- // END sign up -->
 			    </ul>
-			    <!-- END Right Nav -->
+                <ul class="nav navbar-nav navbar-right" ng-show="isAuth()">
+                    <!-- My Account -->
+                    <li class="dropdown main-nav-dropdown-menu">
+                        <div uib-dropdown>
+                            <button id="single-button" type="button" class="" uib-dropdown-toggle ng-disabled="disabled">
+                                My Account <span class="caret"></span>
+                            </button>
+                            <ul class="uib-dropdown-menu dropdown-menu" aria-labelledby="simple-dropdown">
+                                <li role="menuitem" ng-class="{ 'active': $state.is('page.1') }"><a href="https://www.oshi.io/profile"><span>My Account</span></a></li>
+                                <li role="menuitem" ng-class="{ 'active': $state.is('page.2') }"><a href="https://www.oshi.io/profile/bonuses/actual"><span>Bonuses</span></a></li>
+                                <li role="menuitem" ng-class="{ 'active': $state.is('page.3') }"><a href="https://www.oshi.io/accounts/history"><span>History</span></a></li>
+                                <li role="menuitem" ng-class="{ 'active': $state.is('page.6') }"><a href="" ng-click="logout()"><span>Logout</span></a></li>
+                            </ul>
+                        </div> 
+                    </li>                          
+                    <!-- END My Account -->
+                </ul>
+  			    <!-- END Right Nav -->
 			  </div>
 			  <!-- /.navbar-collapse -->
 			</div>
@@ -329,6 +346,7 @@
 	<script src="bower_components/slick-carousel/slick/slick.min.js"></script>
 	<script src="bower_components/angular-slick/dist/slick.js"></script>
 	<script src="bower_components/breakpoints/breakpoints.js"></script>
+	<script src="bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
 	<!-- endbower -->
 	<!-- endbuild -->
 
@@ -347,6 +365,7 @@
 	<script src="app/list2/list.js"></script>
 	<script src="app/main/main.controller.js"></script>
 	<script src="app/main/main.js"></script>
+	<script src="app/services/auth.service.js"></script>
 	<script src="app/services/game.service.js"></script>
 	<script src="components/modal/modal.service.js"></script>
 	<script src="components/navbar/navbar.controller.js"></script>
