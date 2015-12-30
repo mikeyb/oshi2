@@ -93,12 +93,12 @@ angular.module('oshi2App')
 	};
 
 
-  $scope.categories = [];
+  $scope.categories = [{name:'loading...'}];
   Categories.getAll().then(function(categories) {
     $scope.categories = categories;
   });
 
-  $scope.providers = [];
+  $scope.providers = [{name:'loading...'}];
   Providers.getAll().then(function(providers) {
     $scope.providers = providers;
   });

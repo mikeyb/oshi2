@@ -12,7 +12,7 @@ angular.module('oshi2App')
     //});
 
 
-    $scope.categories = [];
+    $scope.categories = [{name:'loading...'}];
     Categories.getAllWithGames().then(function(categories) {
       $scope.categories = categories;
     });
