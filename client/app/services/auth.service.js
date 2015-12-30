@@ -18,3 +18,12 @@ angular.module('oshi2App')
 		}
 	});
 });
+
+angular.module('oshi2App')
+.factory('AuthRegister', function($resource, ENDPOINT) {
+	return $resource(ENDPOINT + 'api/open/account', {}, {
+		'register': {
+			method: 'POST'
+		}
+	});
+});
