@@ -3,19 +3,19 @@
 angular.module('oshi2App')
   .controller('MainCtrl', function ($scope, Games, Categories) {
 
-    $scope.firstList = [];
-    Games.category('landing', '10').$promise.then(function (res) {
-      console.log('D> Landing resp: ', res);
-      $scope.firstList = res;
-    }, function(err) {
-      console.log('E> Error getting first games: ', err);
-    });
+    //$scope.firstList = [];
+    //Games.category('landing', '10').$promise.then(function (res) {
+    //  console.log('D> Landing resp: ', res);
+    //  $scope.firstList = res;
+    //}, function(err) {
+    //  console.log('E> Error getting first games: ', err);
+    //});
 
 
     $scope.categories = [];
     Categories.getAllWithGames().then(function(categories) {
       $scope.categories = categories;
-    })
+    });
 
 
     $scope.breakpoints =
