@@ -45,6 +45,5 @@ angular.module('oshi2App')
         }
       }];
 
-;
   });
 
