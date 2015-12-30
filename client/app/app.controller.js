@@ -3,6 +3,9 @@
 angular.module('oshi2App')
   .controller('AppCtrl', function ($scope, $rootScope, $window, $state, AuthLogin, AuthLogout, AuthRegister, localStorageService) {
 
+	$scope.rego = {};
+	$scope.rego.promos = true;
+	  
 	$scope.isHome = function () {
 		if ($window.location.pathname === '/') {
 		    return true;
@@ -30,17 +33,17 @@ angular.module('oshi2App')
 //			  "receivePromos": true,
 //			  "termsAcceptance": true
 		
-		if (!rego.tcs || !rego.age) {
+		if (!rego.tcs) {
 			return "Validation error";
 		}
 		
 		var accountObj = {};
-		accountObj.ageAcceptance = rego.age;
-		accountObj.receiveNewsletters = rego.newsletters;
+		accountObj.ageAcceptance = rego.tcs;
+		accountObj.receiveNewsletters = true;
 		accountObj.receivePromos = rego.promos;
 		accountObj.termsAcceptance = rego.tcs;
 		accountObj.email = rego.email;
-		accountObj.nickname = rego.nickname;
+		accountObj.nickname = rego.email;
 		accountObj.password = rego.password;
 		accountObj.confirmPassword = rego.password;
 		AuthRegister.register(accountObj).$promise.then(function (res) {
