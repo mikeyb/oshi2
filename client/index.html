@@ -71,7 +71,7 @@
                     </button>
                     <ul class="uib-dropdown-menu dropdown-menu" aria-labelledby="simple-dropdown">
                       <li role="menuitem" ng-class="{ 'active': $state.is('list') }" ng-repeat="category in categories">
-                        <a ui-sref="list"><span class="badge pull-right">{{category.gameCount}}</span>{{category.name}}</a>
+                        <a ui-sref="list({category:category.name,provider:null})"><span class="badge pull-right">{{category.gameCount}}</span>{{category.name}}</a>
                       </li>
                     </ul>
                 </div>
@@ -86,7 +86,7 @@
                     </button>
                     <ul class="uib-dropdown-menu dropdown-menu" aria-labelledby="simple-dropdown">
                       <li role="menuitem" ng-class="{ 'active': $state.is('page.1') }" ng-repeat="provider in providers">
-                        <a href="#"><span class="badge pull-right">{{provider.gameCount}}</span>{{provider.name}}</a>
+                        <a ui-sref="list({category:null,provider:provider.name})"><span class="badge pull-right">{{provider.gameCount}}</span>{{provider.name}}</a>
                       </li>
                     </ul>
                 </div>

@@ -4,7 +4,7 @@ angular.module('oshi2App')
   .config(function ($stateProvider) {
     $stateProvider
       .state('list', {
-        url: '/list',
+        url: '/list?category&provider',
         templateUrl: 'app/list/list.html',
         controller: 'ListCtrl'
       });
