@@ -5,7 +5,7 @@ angular.module('oshi2App')
     console.log('begin SiteData');
 
     var timesLoadMethodCalled = 0;
-    var siteData = undefined;
+    var siteData;
     var loading = false;
     var pendingPromises = [];
 
@@ -21,7 +21,7 @@ angular.module('oshi2App')
           return loadDeferred.promise;
         }
 
-        if (siteData == undefined) {
+        if (siteData == undefined) { //jshint ignore:line
           console.log('calling site data endpoint');
           loading = true;
 
@@ -33,7 +33,7 @@ angular.module('oshi2App')
             _.each(pendingPromises, function (pendingPromise) {
               pendingPromise.resolve(siteDataResponse);
             });
-          }, function (err) {
+          }, function () {
             loading = false;
             console.log('falhou');
             _.each(pendingPromises, function (pendingPromise) {
@@ -50,7 +50,7 @@ angular.module('oshi2App')
 
     };
 
-    function callEndpoint() {
+    function callEndpoint() { //jshint ignore:line
       console.log('called callEndpoint');
       return $resource(ENDPOINT + 'api/open/site-data').get();
     }

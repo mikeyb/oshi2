@@ -35,7 +35,7 @@ angular.module('oshi2App')
 //			  "termsAcceptance": true
 
 		if (!rego.tcs) {
-			return "Validation error";
+			return 'Validation error';
 		}
 
 		var accountObj = {};
