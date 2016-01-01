@@ -9,11 +9,12 @@ angular.module('oshi2App', [
   'slick',
   'LocalStorageModule'
 ])
-  .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
+  .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
     $urlRouterProvider
       .otherwise('/');
 
     $locationProvider.html5Mode(true);
+    $httpProvider.defaults.withCredentials = true;
   })
   .config(function (localStorageServiceProvider) {
     localStorageServiceProvider
