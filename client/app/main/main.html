@@ -179,7 +179,9 @@
                   <span class="label label-grey-100">{{game.providerName}}</span>&nbsp;
                   <i class="fa fa-btc" popover="Bitcoin" popover-trigger="mouseenter" style="color: grey;"></i>&nbsp;
                   <i class="fa fa-thumbs-o-up" style="color: grey;" popover="Provably Fair" popover-trigger="mouseenter"></i>
-                  <a ui-sref="#" class="btn btn-primary btn-star"><i class="fa fa-star"></i></a>
+                  <a ng-if="isAuth()" ng-click="toggleFavorite(game)" class="btn btn-primary btn-star" ng-style="{'color': game.isFavorite ? '#fcaf3e' : '#fff'}">
+                    <i class="fa fa-star"></i>
+                  </a>
                 </div>
               </div>
               <div class="hide-buttons">
