@@ -811,7 +811,7 @@
 						<div class="media">
 							<div class="media-left listing-media-left">
 								<div class="cover hover overlay margin-none" style="height: 110px;">
-									<img ng-src="{{game.iconUrl}}" alt="location" lass="media-object">
+									<img ng-src="{{game.iconUrl}}" alt="location" class="media-object">
                     <a ui-sref="property.map" class="overlay overlay-full overlay-bg-black overlay-hover" style="height: 110px;">
                       <span class="v-center"><span class="btn btn-play btn-lg"><i class="fa fa-play"></i></span>
 									</span>
@@ -831,7 +831,9 @@
 									<span class="label label-grey-100">{{game.providerName}}</span>&nbsp;
                     <i class="fa fa-btc" popover="Bitcoin" popover-trigger="mouseenter" aria-hidden="true" tyle="color: grey;"></i>&nbsp;
                     <i class="fa fa-thumbs-o-up" style="color: grey;" popover="Provably Fair" popover-trigger="mouseenter" aria-hidden="true"></i>&nbsp;
-                    <a ui-sref="#" class="btn btn-primary btn-star"><i class="fa fa-star"></i></a>
+                    <a ng-if="isAuth()" ng-click="toggleFavorite(game)" class="btn btn-primary btn-star" ng-style="{'color': game.isFavorite ? '#fcaf3e' : '#fff'}">
+                      <i class="fa fa-star"></i>
+                    </a>
 								</div>
 							</div>
 						</div>

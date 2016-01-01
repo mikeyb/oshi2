@@ -2,7 +2,7 @@
 
 angular.module('oshi2App')
   .controller('AppCtrl', function ($scope, $rootScope, $window, $state, $log, localStorageService,
-                                   AuthLogin, AuthLogout, AuthRegister, Categories, Providers, GamePlay) {
+                                   AuthLogin, AuthLogout, AuthRegister, Categories, Providers, GamePlay, Favorites) {
 
 	$scope.rego = {};
 	$scope.rego.promos = true;
@@ -68,6 +68,7 @@ angular.module('oshi2App')
 		$scope.loginObj.password = password;
 		AuthLogin.login($scope.loginObj).$promise.then(function (res) {
 			console.log('D> Login resp: ', res);
+      $rootScope.$emit('login:success', res);
 			$rootScope.account = res;
 			localStorageService.set('account', res);
 			$state.go('main');
@@ -115,6 +116,14 @@ angular.module('oshi2App')
     }, function (err) {
       $log.error('Failed calling gamePlay endpoint', err);
       $window.location.href = gameUrl;
+    });
+  };
+
+  $scope.toggleFavorite = function (game) {
+    Favorites.addOrRemove(game).then(function () {
+    }, function (err) {
+      //TODO show message to user
+      $log.error('Failed removing favorite', err);
     });
   };
 
