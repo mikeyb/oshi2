@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('oshi2App')
-  .controller('AppCtrl', function ($scope, $rootScope, $window, $state, AuthLogin, AuthLogout, AuthRegister,
-                                   localStorageService, Categories, Providers) {
+  .controller('AppCtrl', function ($scope, $rootScope, $window, $state, $log, localStorageService,
+                                   AuthLogin, AuthLogout, AuthRegister, Categories, Providers, GamePlay) {
 
 	$scope.rego = {};
 	$scope.rego.promos = true;
@@ -102,5 +102,19 @@ angular.module('oshi2App')
   Providers.getAll().then(function(providers) {
     $scope.providers = providers;
   });
+
+  $scope.playGame = function (gameUrl, gameId, playForFun, fromRecommendation) {
+    var request = {
+      gameId: gameId,
+      playForFun: playForFun,
+      fromRecommendation: fromRecommendation
+    };
+    GamePlay.post(request).$promise.then(function () {
+      $window.location.href = gameUrl;
+    }, function (err) {
+      $log.error('Failed calling gamePlay endpoint', err);
+      $window.location.href = gameUrl;
+    });
+  };
 
 });

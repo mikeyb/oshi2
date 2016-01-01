@@ -956,12 +956,12 @@
 									</a>
 								</div>
 								<div class="listing-buttons">
-									<a href="{{game.playUrl}}"><button class="btn btn-primary btn-playnow">Play</button></a>
-                  <a href="{{game.playForFunUrl}}"><button type="submit" class="btn btn-primary btn-practiceplay">Practice</button></a>
+									<a ng-click="playGame(game.playUrl, game.id, false, false)"><button class="btn btn-primary btn-playnow">Play</button></a>
+                  <a ng-click="playGame(game.playForFunUrl, game.id, true, false)"><button type="submit" class="btn btn-primary btn-practiceplay">Practice</button></a>
 								</div>
 							</div>
 							<div class="media-body media-body-list">
-								<a href="{{game.playUrl}}">
+								<a ng-click="playGame(game.playUrl, game.id, false, false)">
 									<h4 class="media-heading margin-v-0-10">{{game.name}}</h4>
 								</a>
 								<p class="margin-none">{{game.description}}</p>

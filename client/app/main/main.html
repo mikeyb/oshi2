@@ -164,7 +164,7 @@
             <div class="panel panel-default relative">
               <div class="cover hover overlay margin-none">
                 <img ng-src="{{game.iconUrl}}" alt="location" class="img-responsive img-data-items-4" />
-                <a href="{{game.playUrl}}" class="overlay overlay-full overlay-bg-black overlay-hover">
+                <a ng-click="playGame(game.playUrl, game.id, false, false)" class="overlay overlay-full overlay-bg-black overlay-hover">
                 <span class="v-center">
                   <span class="btn btn-play btn-lg" data-toggle="tooltip" data-placement="right"
                         data-title="Lorem ipsum dolor sit amet, consectetur adipisicing elit.try this in a tooltip with an 'i' Lorem ipsum dolor sit amet, consectetur adipisicing elit">
@@ -184,8 +184,8 @@
               </div>
               <div class="hide-buttons">
                 <div class="text-center">
-                  <a href="{{game.playUrl}}"><button class="btn btn-primary btn-playnow">Play Now</button></a>
-                  <a href="{{game.playForFunUrl}}"><button class="btn btn-primary btn-practiceplay">Practice</button></a>
+                  <a ng-click="playGame(game.playUrl, game.id, false, false)"><button class="btn btn-primary btn-playnow">Play Now</button></a>
+                  <a ng-click="playGame(game.playForFunUrl, game.id, true, false)"><button class="btn btn-primary btn-practiceplay">Practice</button></a>
                 </div>
               </div>
             </div>
@@ -295,7 +295,7 @@
         <a href="#<!-- page with licence -->" target="_blank">
           <img src="assets/images/curaco37px_high_v2.png" uib-popover="Curacao Licence" popover-trigger="mouseenter" aria-hidden="true" data-title="">
         </a>
-        <a href="#<!--Page with iTech test certificate -->" target="_blank"> 
+        <a href="#<!--Page with iTech test certificate -->" target="_blank">
           <img src="assets/images/itech.png" uib-popover="Rated as Provably Fair by iTech, an independent testing company." popover-trigger="mouseenter" aria-hidden="true">
         </a>
         <a href="#<!-- page about our security -->" target="_blank">
