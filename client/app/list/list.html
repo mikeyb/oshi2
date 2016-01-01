@@ -16,14 +16,14 @@
 		<div class="category">Narrow by:</div>
 		<div class="sidebar-block">
 			<ul class="list-group list-group-menu">
-				<li class="list-group-item" ng-repeat="category in categories">
+				<li class="list-group-item" ng-repeat="category in categories" ng-class="{'active':category.name == listTitle}">
           <a ui-sref="list({category:category.name,provider:null})"><span class="badge pull-right">{{category.gameCount}}</span>{{category.name}}</a>
         </li>
 			</ul>
     </div>
     <div class="category">Narrow by:</div>
 			<ul class="list-group list-group-menu">
-				<li class="list-group-item" ng-repeat="provider in providers">
+				<li class="list-group-item" ng-repeat="provider in providers" ng-class="{'active':provider.name == listTitle}">
           <a ui-sref="list({category:null,provider:provider.name})"><span class="badge pull-right">{{provider.gameCount}}</span>{{provider.name}}</a>
         </li>
 			</ul>
