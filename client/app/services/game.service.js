@@ -17,7 +17,7 @@ angular.module('oshi2App')
 
 
 
-  .factory('Games', function (SiteData, $q) {
+  .factory('Games', function (SiteData, $q, $resource, ENDPOINT) {
     return {
 
       getAll: function () {
@@ -48,6 +48,10 @@ angular.module('oshi2App')
           deferred.resolve(gamesFiltered);
         });
         return deferred.promise;
+      },
+
+      getLastPlayed: function() {
+        return $resource(ENDPOINT + 'api/open/game/lastPlayed').query();
       }
     };
   });

@@ -53,4 +53,17 @@ angular.module('oshi2App')
     };
 
     $scope.displayType = 'list';
+
+
+    // TODO check why animation is not working (original realstate site seams to be using a jquery plugin to toggle the menu)
+    // TODO add 'loading...' visual feedback
+    $scope.lastPlayedGamesMenuOpen = false;
+    $scope.toggleLastPlayedMenu = function() {
+      $scope.lastPlayedGamesMenuOpen = !$scope.lastPlayedGamesMenuOpen;
+      if ($scope.lastPlayedGamesMenuOpen) {
+        Games.getLastPlayed().$promise.then(function(games) {
+          $scope.lastPlayedGames = games;
+        });
+      }
+    };
   });

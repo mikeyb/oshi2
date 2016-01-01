@@ -103,6 +103,7 @@ angular.module('oshi2App')
     $scope.providers = providers;
   });
 
+  // TODO when not logged in, store games played in the local storage to show last played games
   $scope.playGame = function (gameUrl, gameId, playForFun, fromRecommendation) {
     var request = {
       gameId: gameId,
