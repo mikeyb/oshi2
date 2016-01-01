@@ -4,7 +4,7 @@ angular.module('oshi2App')
   .factory('Favorites', function ($rootScope, $resource, $q, ENDPOINT, Games) {
 
     var resource = $resource(ENDPOINT + 'api/open/favorite/:gameId', {gameId: '@gameId'});
-    var favorites = [];
+    var favorites = []; // TODO persist to survive page refresh
 
     $rootScope.$on('login:success', function (event, loginData) {
       if (loginData.favorites) {

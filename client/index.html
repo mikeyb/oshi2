@@ -168,24 +168,31 @@
 			        <!-- Login -->
                     <li class="dropdown main-nav-dropdown-menu">
                         <div uib-dropdown>
-                            <button id="single-button" type="button" class="" uib-dropdown-toggle ng-disabled="disabled">
+                            <button id="single-button" type="button" class="" uib-dropdown-toggle ng-disabled="disabled"
+                                    ng-click="isForgotPasswordForm = false">
                                 <i class="fa fa-fw fa-lock"></i> Login
                             </button>
 					        <div class="dropdown-menu dropdown-size-280" ng-click="$event.stopPropagation();">
 					            <form>
+                        <div style="text-align:center; margin-bottom:10px;" ng-show="loginMessage">{{loginMessage}}</div>
 						            <div class="form-group">
 						                <div class="input-group"> <span class="input-group-addon"><i class="fa fa-user"></i></span>
 						                    <input type="text" ng-model="email" class="form-control" placeholder="Email Address">
 						                </div>
 						            </div>
-						            <div class="form-group">
+						            <div class="form-group" ng-show="!isForgotPasswordForm">
 						                <div class="input-group"> <span class="input-group-addon"><i class="fa fa-shield"></i></span>
 						                    <input type="password" ng-model="password" class="form-control" placeholder="Password">
 						                </div>
 						            </div>
-						            <div class="text-center">
-						                <button type="submit" ng-click="login(email, password)" class="btn btn-primary">Login <i class="fa fa-sign-in"></i></button>
+						            <div class="text-center" ng-show="!isForgotPasswordForm">
+						                <button type="submit" ng-click="login()" class="btn btn-primary">Login <i class="fa fa-sign-in"></i></button>
+                            <a ng-click="toggleShowForgotPasswordForm()">Forgot password?</a>
 						            </div>
+                        <div class="text-center" ng-show="isForgotPasswordForm">
+                          <button type="submit" ng-click="forgotPassword()" class="btn btn-primary">Reset password <i class="fa fa-sign-in"></i></button>
+                          <a ng-click="toggleShowForgotPasswordForm()">Login</a>
+                        </div>
 					            </form>
 					        </div>
                         </div>

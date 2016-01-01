@@ -27,3 +27,12 @@ angular.module('oshi2App')
 		}
 	});
 });
+
+angular.module('oshi2App')
+.factory('AuthForgotPassword', function($resource, ENDPOINT) {
+	return $resource(ENDPOINT + 'api/open/resetPassword', {}, {
+		'resetPassword': {
+			method: 'POST'
+		}
+	});
+});

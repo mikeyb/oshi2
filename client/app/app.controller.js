@@ -2,7 +2,8 @@
 
 angular.module('oshi2App')
   .controller('AppCtrl', function ($scope, $rootScope, $window, $state, $log, localStorageService,
-                                   AuthLogin, AuthLogout, AuthRegister, Categories, Providers, GamePlay, Favorites) {
+                                   AuthLogin, AuthLogout, AuthRegister, AuthForgotPassword, Categories, Providers,
+                                   GamePlay, Favorites) {
 
 	$scope.rego = {};
 	$scope.rego.promos = true;
@@ -61,24 +62,50 @@ angular.module('oshi2App')
 
 	};
 
-	$scope.login = function(email, password) {
-		$rootScope.account = {};
-		$scope.loginObj = {};
-		$scope.loginObj.email = email;
-		$scope.loginObj.password = password;
-		AuthLogin.login($scope.loginObj).$promise.then(function (res) {
-			console.log('D> Login resp: ', res);
+
+  //$scope.email = // TODO store store/read from storage last logged in user
+  $scope.login = function () {
+    if (!$scope.email || $scope.email.trim().length === 0) {
+      $scope.loginMessage = 'Please enter your email';
+      return;
+    }
+    if (!$scope.password || $scope.password.trim().length === 0) {
+      $scope.loginMessage = 'Please enter your password';
+      return;
+    }
+
+    $rootScope.account = {};
+    AuthLogin.login({email: $scope.email, password: $scope.password}).$promise.then(function (res) {
+      console.log('D> Login resp: ', res);
       $rootScope.$emit('login:success', res);
-			$rootScope.account = res;
-			localStorageService.set('account', res);
-			$state.go('main');
-		}, function(err) {
-			console.log('E> Error logging in: ', err);
-			$rootScope.account = null;
-			localStorageService.clearAll();
-			$state.go('main');
-		});
-	};
+      $rootScope.account = res;
+      localStorageService.set('account', res);
+      $scope.password = '';
+      $state.go('main');
+    }, function (err) {
+      console.log('E> Error logging in: ', err);
+      $scope.loginMessage = 'Email or Password invalid';
+      $rootScope.account = null;
+      localStorageService.clearAll();
+    });
+  };
+
+  $scope.isForgotPasswordForm = false;
+  $scope.toggleShowForgotPasswordForm = function () {
+    $scope.loginMessage = undefined;
+    $scope.isForgotPasswordForm = !$scope.isForgotPasswordForm;
+  };
+  $scope.forgotPassword = function (email) {
+    if (!$scope.email || $scope.email.trim().length === 0) {
+      $scope.loginMessage = 'Please enter your email';
+      return;
+    }
+    AuthForgotPassword.resetPassword({email: $scope.email}).$promise.then(function () {
+      $scope.loginMessage = 'We’ve sent you a password reset email';
+    }, function () {
+      $scope.loginMessage = 'Oops, something wrong happened';
+    });
+  };
 
 	$scope.logout = function() {
 		AuthLogout.logout().$promise.then(function () {
