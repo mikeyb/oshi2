@@ -95,7 +95,7 @@ angular.module('oshi2App')
     $scope.loginMessage = undefined;
     $scope.isForgotPasswordForm = !$scope.isForgotPasswordForm;
   };
-  $scope.forgotPassword = function (email) {
+  $scope.forgotPassword = function () {
     if (!$scope.email || $scope.email.trim().length === 0) {
       $scope.loginMessage = 'Please enter your email';
       return;

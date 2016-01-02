@@ -119,533 +119,79 @@
       <!-- END / Last Played sidebar -->
 
       <!-- top winners sidebar -->
-			<li class="hasSubmenu"
-				ng-class="{ 'open active': $state.includes('gameprovider') }">
-				<a href="#topwinners" data-toggle="collapse" class="collapsed"
-				aria-expanded="false"><i class="fa fa-trophy"></i><span>Top
-						Winners</span></a>
-				<ul id="topwinners"
-					ng-class="{ 'in': $state.includes('topwinners') }"
-					class="winners no-main ng-isolate-scope collapse"
-					name="latest_winners" template="latest_winners_game" limit="8"
-					aria-expanded="false">
+      <li class="hasSubmenu" ng-class="{ 'open active': topWinnersMenuOpen }">
+        <a href="#last-played" data-toggle="collapse" ng-class="{ 'collapsed': topWinnersMenuOpen }"
+           aria-expanded="{{topWinnersMenuOpen}}" ng-click="toggleTopWinnersMenu()">
+          <i class="fa fa-question"></i><span>Top Winners</span>
+        </a>
 
-					<div class="winners-box-sidebar">
-						<div class="winners-image">
-							<div class="cover hover overlay margin-none">
-								<img src="assets/images/slots3.png" alt="location" class="media-object">
-								<a href="game-page.html"
-									class="overlay overlay-full overlay-bg-black overlay-hover">
-									<span class="v-center"> <span class="btn btn-play  "><i
-											class="fa fa-play"></i> </span>
-								</span>
-								</a>
-							</div>
-						</div>
-						<div class="winners-content">
-							<div class="winners-name">
-								<span>andy.barabash</span> just won
-							</div>
-							<div class="winners-money">
-								4 mBTC <span>in</span>
-							</div>
-							<div class="winners-game">
-								<a href="game-page.html">Platinum Lightning</a>
-							</div>
-						</div>
-					</div>
+        <ul id="topwinners" ng-class="{ 'in': topWinnersMenuOpen }" class="winners no-main ng-isolate-scope collapse in"
+            name="last-played" template="latest_winners_game" limit="8" aria-expanded="{{topWinnersMenuOpen}}">
 
+          <div class="winners-box-sidebar" ng-repeat="winner in topWinners">
+            <div class="winners-image">
+              <div class="cover hover overlay margin-none">
+                <img src="{{winner.game.iconUrl}}" alt="location" class="media-object">
+                <a ng-click="playGame(winner.game.gameUrl, winner.game.id, false, false)" class="overlay overlay-full overlay-bg-black overlay-hover">
+                  <span class="v-center"> <span class="btn btn-play"><i class="fa fa-play"></i> </span>
+                </span>
+                </a>
+              </div>
+            </div>
+            <div>
+              <div class="winners-name">
+                <span>{{winner.nickname}}</span> just won
+              </div>
+              <div class="winners-money">
+                {{winner.win}} <span>in</span>
+              </div>
+              <div class="winners-game">
+                <a ng-click="playGame(winner.game.gameUrl, winner.game.id, false, false)">{{winner.game.name}}</a>
+              </div>
+            </div>
+          </div>
+        </ul>
+      </li>
+      <!-- END / top winners sidebar -->
 
-					<div class="winners-box-sidebar">
-						<div class="winners-image">
-							<div class="cover hover overlay margin-none">
-								<img src="assets/images/slots3.png" alt="location" class="media-object">
-								<a href="game-page.html"
-									class="overlay overlay-full overlay-bg-black overlay-hover">
-									<span class="v-center"> <span class="btn btn-play  "><i
-											class="fa fa-play"></i> </span>
-								</span>
-								</a>
-							</div>
-						</div>
-						<div class="winners-content">
-							<div class="winners-name">
-								<span>andy.barabash</span> just won
-							</div>
-							<div class="winners-money">
-								4 mBTC <span>in</span>
-							</div>
-							<div class="winners-game">
-								<a href="game-page.html">Platinum Lightning</a>
-							</div>
-						</div>
-					</div>
+      <!-- latest winners sidebar -->
+      <li class="hasSubmenu" ng-class="{ 'open active': latestWinnersMenuOpen }">
+        <a href="#last-played" data-toggle="collapse" ng-class="{ 'collapsed': latestWinnersMenuOpen }"
+           aria-expanded="{{latestWinnersMenuOpen}}" ng-click="toggleLatestWinnersMenu()">
+          <i class="fa fa-question"></i><span>Latest Winners</span>
+        </a>
 
-					<div class="winners-box-sidebar">
-						<div class="winners-image">
-							<div class="cover hover overlay margin-none">
-								<img src="assets/images/slots3.png" alt="location" class="media-object">
-								<a href="game-page.html"
-									class="overlay overlay-full overlay-bg-black overlay-hover">
-									<span class="v-center"> <span class="btn btn-play  "><i
-											class="fa fa-play"></i> </span>
-								</span>
-								</a>
-							</div>
-						</div>
-						<div class="winners-content">
-							<div class="winners-name">
-								<span>andy.barabash</span> just won
-							</div>
-							<div class="winners-money">
-								4 mBTC <span>in</span>
-							</div>
-							<div class="winners-game">
-								<a href="game-page.html">Platinum Lightning</a>
-							</div>
-						</div>
-					</div>
+        <ul id="latestwinners" ng-class="{ 'in': latestWinnersMenuOpen }" class="winners no-main ng-isolate-scope collapse in"
+            name="last-played" template="latest_winners_game" limit="8" aria-expanded="{{latestWinnersMenuOpen}}">
 
-					<div class="winners-box-sidebar">
-						<div class="winners-image">
-							<div class="cover hover overlay margin-none">
-								<img src="assets/images/slots3.png" alt="location" class="media-object">
-								<a href="game-page.html"
-									class="overlay overlay-full overlay-bg-black overlay-hover">
-									<span class="v-center"> <span class="btn btn-play  "><i
-											class="fa fa-play"></i> </span>
-								</span>
-								</a>
-							</div>
-						</div>
-						<div class="winners-content">
-							<div class="winners-name">
-								<span>andy.barabash</span> just won
-							</div>
-							<div class="winners-money">
-								4 mBTC <span>in</span>
-							</div>
-							<div class="winners-game">
-								<a href="game-page.html">Platinum Lightning</a>
-							</div>
-						</div>
-					</div>
-
-					<div class="winners-box-sidebar">
-						<div class="winners-image">
-							<div class="cover hover overlay margin-none">
-								<img src="assets/images/slots3.png" alt="location" class="media-object">
-								<a href="game-page.html"
-									class="overlay overlay-full overlay-bg-black overlay-hover">
-									<span class="v-center"> <span class="btn btn-play  "><i
-											class="fa fa-play"></i> </span>
-								</span>
-								</a>
-							</div>
-						</div>
-						<div class="winners-content">
-							<div class="winners-name">
-								<span>andy.barabash</span> just won
-							</div>
-							<div class="winners-money">
-								4 mBTC <span>in</span>
-							</div>
-							<div class="winners-game">
-								<a href="game-page.html">Platinum Lightning</a>
-							</div>
-						</div>
-					</div>
-
-					<div class="winners-box-sidebar">
-						<div class="winners-image">
-							<div class="cover hover overlay margin-none">
-								<img src="assets/images/slots3.png" alt="location" class="media-object">
-								<a href="game-page.html"
-									class="overlay overlay-full overlay-bg-black overlay-hover">
-									<span class="v-center"> <span class="btn btn-play  "><i
-											class="fa fa-play"></i> </span>
-								</span>
-								</a>
-							</div>
-						</div>
-						<div class="winners-content">
-							<div class="winners-name">
-								<span>andy.barabash</span> just won
-							</div>
-							<div class="winners-money">
-								4 mBTC <span>in</span>
-							</div>
-							<div class="winners-game">
-								<a href="game-page.html">Platinum Lightning</a>
-							</div>
-						</div>
-					</div>
-
-					<div class="winners-box-sidebar">
-						<div class="winners-image">
-							<div class="cover hover overlay margin-none">
-								<img src="assets/images/slots3.png" alt="location" class="media-object">
-								<a href="game-page.html"
-									class="overlay overlay-full overlay-bg-black overlay-hover">
-									<span class="v-center"> <span class="btn btn-play  "><i
-											class="fa fa-play"></i> </span>
-								</span>
-								</a>
-							</div>
-						</div>
-						<div class="winners-content">
-							<div class="winners-name">
-								<span>andy.barabash</span> just won
-							</div>
-							<div class="winners-money">
-								4 mBTC <span>in</span>
-							</div>
-							<div class="winners-game">
-								<a href="game-page.html">Platinum Lightning</a>
-							</div>
-						</div>
-					</div>
-
-					<div class="winners-box-sidebar">
-						<div class="winners-image">
-							<div class="cover hover overlay margin-none">
-								<img src="assets/images/slots3.png" alt="location" class="media-object">
-								<a href="game-page.html"
-									class="overlay overlay-full overlay-bg-black overlay-hover">
-									<span class="v-center"> <span class="btn btn-play  "><i
-											class="fa fa-play"></i> </span>
-								</span>
-								</a>
-							</div>
-						</div>
-						<div class="winners-content">
-							<div class="winners-name">
-								<span>andy.barabash</span> just won
-							</div>
-							<div class="winners-money">
-								4 mBTC <span>in</span>
-							</div>
-							<div class="winners-game">
-								<a href="game-page.html">Platinum Lightning</a>
-							</div>
-						</div>
-					</div>
-
-					<div class="winners-box-sidebar">
-						<div class="winners-image">
-							<div class="cover hover overlay margin-none">
-								<img src="assets/images/slots3.png" alt="location" class="media-object">
-								<a href="game-page.html"
-									class="overlay overlay-full overlay-bg-black overlay-hover">
-									<span class="v-center"> <span class="btn btn-play  "><i
-											class="fa fa-play"></i> </span>
-								</span>
-								</a>
-							</div>
-						</div>
-						<div class="winners-content">
-							<div class="winners-name">
-								<span>andy.barabash</span> just won
-							</div>
-							<div class="winners-money">
-								4 mBTC <span>in</span>
-							</div>
-							<div class="winners-game">
-								<a href="game-page.html">Platinum Lightning</a>
-							</div>
-						</div>
-					</div>
-
-					<div class="winners-box-sidebar">
-						<div class="winners-image">
-							<div class="cover hover overlay margin-none">
-								<img src="assets/images/slots3.png" alt="location" class="media-object">
-								<a href="game-page.html"
-									class="overlay overlay-full overlay-bg-black overlay-hover">
-									<span class="v-center"> <span class="btn btn-play  "><i
-											class="fa fa-play"></i> </span>
-								</span>
-								</a>
-							</div>
-						</div>
-						<div class="winners-content">
-							<div class="winners-name">
-								<span>andy.barabash</span> just won
-							</div>
-							<div class="winners-money">
-								4 mBTC <span>in</span>
-							</div>
-							<div class="winners-game">
-								<a href="game-page.html">Platinum Lightning</a>
-							</div>
-						</div>
-					</div>
-
-				</ul> <!-- END / top winners sidebar --> <!-- winners sidebar -->
-			</li>
-			<li class="hasSubmenu"
-				ng-class="{ 'open active': $state.includes('gameprovider') }">
-				<a href="#gamewinners" data-toggle="collapse" class="collapsed"
-				aria-expanded="false"><i class="fa fa-btc"></i><span>Winners</span></a>
-				<ul id="gamewinners"
-					ng-class="{ 'in': $state.includes('gamewinners') }"
-					class="winners no-main ng-isolate-scope collapse"
-					name="latest_winners" template="latest_winners_game" limit="8"
-					aria-expanded="false">
-
-					<div class="winners-box-sidebar">
-						<div class="winners-image">
-							<div class="cover hover overlay margin-none">
-								<img src="assets/images/slots3.png" alt="location" class="media-object">
-								<a href="game-page.html"
-									class="overlay overlay-full overlay-bg-black overlay-hover">
-									<span class="v-center"> <span class="btn btn-play  "><i
-											class="fa fa-play"></i> </span>
-								</span>
-								</a>
-							</div>
-						</div>
-						<div class="winners-content">
-							<div class="winners-name">
-								<span>andy.barabash</span> just won
-							</div>
-							<div class="winners-money">
-								4 mBTC <span>in</span>
-							</div>
-							<div class="winners-game">
-								<a href="game-page.html">Platinum Lightning</a>
-							</div>
-						</div>
-					</div>
+          <div class="winners-box-sidebar" ng-repeat="winner in latestWinners">
+            <div class="winners-image">
+              <div class="cover hover overlay margin-none">
+                <img src="{{winner.game.iconUrl}}" alt="location" class="media-object">
+                <a ng-click="playGame(winner.game.gameUrl, winner.game.id, false, false)" class="overlay overlay-full overlay-bg-black overlay-hover">
+                  <span class="v-center"> <span class="btn btn-play"><i class="fa fa-play"></i> </span>
+                </span>
+                </a>
+              </div>
+            </div>
+            <div>
+              <div class="winners-name">
+                <span>{{winner.nickname}}</span> just won
+              </div>
+              <div class="winners-money">
+                {{winner.win}} <span>in</span>
+              </div>
+              <div class="winners-game">
+                <a ng-click="playGame(winner.game.gameUrl, winner.game.id, false, false)">{{winner.game.name}}</a>
+              </div>
+            </div>
+          </div>
+        </ul>
+      </li>
+      <!-- END / latest winners sidebar -->
 
 
-					<div class="winners-box-sidebar">
-						<div class="winners-image">
-							<div class="cover hover overlay margin-none">
-								<img src="assets/images/slots3.png" alt="location" class="media-object">
-								<a href="game-page.html"
-									class="overlay overlay-full overlay-bg-black overlay-hover">
-									<span class="v-center"> <span class="btn btn-play  "><i
-											class="fa fa-play"></i> </span>
-								</span>
-								</a>
-							</div>
-						</div>
-						<div class="winners-content">
-							<div class="winners-name">
-								<span>andy.barabash</span> just won
-							</div>
-							<div class="winners-money">
-								4 mBTC <span>in</span>
-							</div>
-							<div class="winners-game">
-								<a href="game-page.html">Platinum Lightning</a>
-							</div>
-						</div>
-					</div>
 
-					<div class="winners-box-sidebar">
-						<div class="winners-image">
-							<div class="cover hover overlay margin-none">
-								<img src="assets/images/slots3.png" alt="location" class="media-object">
-								<a href="game-page.html"
-									class="overlay overlay-full overlay-bg-black overlay-hover">
-									<span class="v-center"> <span class="btn btn-play  "><i
-											class="fa fa-play"></i> </span>
-								</span>
-								</a>
-							</div>
-						</div>
-						<div class="winners-content">
-							<div class="winners-name">
-								<span>andy.barabash</span> just won
-							</div>
-							<div class="winners-money">
-								4 mBTC <span>in</span>
-							</div>
-							<div class="winners-game">
-								<a href="game-page.html">Platinum Lightning</a>
-							</div>
-						</div>
-					</div>
-
-					<div class="winners-box-sidebar">
-						<div class="winners-image">
-							<div class="cover hover overlay margin-none">
-								<img src="assets/images/slots3.png" alt="location" class="media-object">
-								<a href="game-page.html"
-									class="overlay overlay-full overlay-bg-black overlay-hover">
-									<span class="v-center"> <span class="btn btn-play  "><i
-											class="fa fa-play"></i> </span>
-								</span>
-								</a>
-							</div>
-						</div>
-						<div class="winners-content">
-							<div class="winners-name">
-								<span>andy.barabash</span> just won
-							</div>
-							<div class="winners-money">
-								4 mBTC <span>in</span>
-							</div>
-							<div class="winners-game">
-								<a href="game-page.html">Platinum Lightning</a>
-							</div>
-						</div>
-					</div>
-
-					<div class="winners-box-sidebar">
-						<div class="winners-image">
-							<div class="cover hover overlay margin-none">
-								<img src="assets/images/slots3.png" alt="location" class="media-object">
-								<a href="game-page.html"
-									class="overlay overlay-full overlay-bg-black overlay-hover">
-									<span class="v-center"> <span class="btn btn-play  "><i
-											class="fa fa-play"></i> </span>
-								</span>
-								</a>
-							</div>
-						</div>
-						<div class="winners-content">
-							<div class="winners-name">
-								<span>andy.barabash</span> just won
-							</div>
-							<div class="winners-money">
-								4 mBTC <span>in</span>
-							</div>
-							<div class="winners-game">
-								<a href="game-page.html">Platinum Lightning</a>
-							</div>
-						</div>
-					</div>
-
-					<div class="winners-box-sidebar">
-						<div class="winners-image">
-							<div class="cover hover overlay margin-none">
-								<img src="assets/images/slots3.png" alt="location" class="media-object">
-								<a href="game-page.html"
-									class="overlay overlay-full overlay-bg-black overlay-hover">
-									<span class="v-center"> <span class="btn btn-play  "><i
-											class="fa fa-play"></i> </span>
-								</span>
-								</a>
-							</div>
-						</div>
-						<div class="winners-content">
-							<div class="winners-name">
-								<span>andy.barabash</span> just won
-							</div>
-							<div class="winners-money">
-								4 mBTC <span>in</span>
-							</div>
-							<div class="winners-game">
-								<a href="game-page.html">Platinum Lightning</a>
-							</div>
-						</div>
-					</div>
-
-					<div class="winners-box-sidebar">
-						<div class="winners-image">
-							<div class="cover hover overlay margin-none">
-								<img src="assets/images/slots3.png" alt="location" class="media-object">
-								<a href="game-page.html"
-									class="overlay overlay-full overlay-bg-black overlay-hover">
-									<span class="v-center"> <span class="btn btn-play  "><i
-											class="fa fa-play"></i> </span>
-								</span>
-								</a>
-							</div>
-						</div>
-						<div class="winners-content">
-							<div class="winners-name">
-								<span>andy.barabash</span> just won
-							</div>
-							<div class="winners-money">
-								4 mBTC <span>in</span>
-							</div>
-							<div class="winners-game">
-								<a href="game-page.html">Platinum Lightning</a>
-							</div>
-						</div>
-					</div>
-
-					<div class="winners-box-sidebar">
-						<div class="winners-image">
-							<div class="cover hover overlay margin-none">
-								<img src="assets/images/slots3.png" alt="location" class="media-object">
-								<a href="game-page.html"
-									class="overlay overlay-full overlay-bg-black overlay-hover">
-									<span class="v-center"> <span class="btn btn-play  "><i
-											class="fa fa-play"></i> </span>
-								</span>
-								</a>
-							</div>
-						</div>
-						<div class="winners-content">
-							<div class="winners-name">
-								<span>andy.barabash</span> just won
-							</div>
-							<div class="winners-money">
-								4 mBTC <span>in</span>
-							</div>
-							<div class="winners-game">
-								<a href="game-page.html">Platinum Lightning</a>
-							</div>
-						</div>
-					</div>
-
-					<div class="winners-box-sidebar">
-						<div class="winners-image">
-							<div class="cover hover overlay margin-none">
-								<img src="assets/images/slots3.png" alt="location" class="media-object">
-								<a href="game-page.html"
-									class="overlay overlay-full overlay-bg-black overlay-hover">
-									<span class="v-center"> <span class="btn btn-play  "><i
-											class="fa fa-play"></i> </span>
-								</span>
-								</a>
-							</div>
-						</div>
-						<div class="winners-content">
-							<div class="winners-name">
-								<span>andy.barabash</span> just won
-							</div>
-							<div class="winners-money">
-								4 mBTC <span>in</span>
-							</div>
-							<div class="winners-game">
-								<a href="game-page.html">Platinum Lightning</a>
-							</div>
-						</div>
-					</div>
-
-					<div class="winners-box-sidebar">
-						<div class="winners-image">
-							<div class="cover hover overlay margin-none">
-								<img src="assets/images/slots3.png" alt="location" class="media-object">
-								<a href="game-page.html"
-									class="overlay overlay-full overlay-bg-black overlay-hover">
-									<span class="v-center"> <span class="btn btn-play  "><i
-											class="fa fa-play"></i> </span>
-								</span>
-								</a>
-							</div>
-						</div>
-						<div class="winners-content">
-							<div class="winners-name">
-								<span>andy.barabash</span> just won
-							</div>
-							<div class="winners-money">
-								4 mBTC <span>in</span>
-							</div>
-							<div class="winners-game">
-								<a href="game-page.html">Platinum Lightning</a>
-							</div>
-						</div>
-					</div>
-
-				</ul> <!-- END / winners sidebar --> <!-- Game Categories -->
-			</li>
 			<li class="hasSubmenu hide-menu-upto-768"
 				ng-class="{ 'open active': $state.includes('gamecategories') }">
 				<a href="#gamecategories" data-toggle="collapse" class="collapsed"

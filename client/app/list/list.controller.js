@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('oshi2App')
-  .controller('ListCtrl', function ($scope, $stateParams, Games, Categories, Providers) {
+  .controller('ListCtrl', function ($scope, $stateParams, Games, Categories, Providers, TopWinners, LatestWinners) {
 
     $scope.categories = [{name: 'loading...'}];
     Categories.getAll().then(function (categories) {
@@ -63,6 +63,26 @@ angular.module('oshi2App')
       if ($scope.lastPlayedGamesMenuOpen) {
         Games.getLastPlayed().$promise.then(function(games) {
           $scope.lastPlayedGames = games;
+        });
+      }
+    };
+
+    $scope.topWinnersMenuOpen = false;
+    $scope.toggleTopWinnersMenu = function() {
+      $scope.topWinnersMenuOpen = !$scope.topWinnersMenuOpen;
+      if ($scope.topWinnersMenuOpen) {
+        TopWinners.query({size:5}).$promise.then(function(topWinners) {
+          $scope.topWinners = topWinners;
+        });
+      }
+    };
+
+    $scope.latestWinnersMenuOpen = false;
+    $scope.toggleLatestWinnersMenu = function() {
+      $scope.latestWinnersMenuOpen = !$scope.latestWinnersMenuOpen;
+      if ($scope.latestWinnersMenuOpen) {
+        LatestWinners.query({size:5}).$promise.then(function(latestWinners) {
+          $scope.latestWinners = latestWinners;
         });
       }
     };
