@@ -202,19 +202,19 @@
         <div class="col-xs-6 col-md-2">
           <h4>Corporate</h4>
           <ul class="list-unstyled">
-            <li><a href="#" target="_blank ">About Oshi</a></li>
-            <li><a href="" target="_blank">Contact</a></li>
-            <li><a href="" target="_blank ">Terms & Conditions</a></li>
-            <li><a href="" target="_blank">Privacy</a></li>
+            <li><a ui-sref="about-oshi">About Oshi</a></li>
+            <li><a ui-sref="help-contact">Contact</a></li>
+            <li><a ui-sref="help-tcs">Terms & Conditions</a></li>
+            <li><a ui-sref="help-privacy">Privacy</a></li>
           </ul>
         </div>
         <div class="col-xs-6 col-md-2">
           <h4>Explore</h4>
           <ul class="list-unstyled">
-            <li><a href="#">Games Explorer</a></li>
-            <li><a href="#">Slots</a></li>
-            <li><a href="#">Table Games</a></li>
-            <li><a href="#">Casual Games</a></li>
+            <li><a ui-sref="list({category:null,provider:null})">Games Explorer</a></li>
+            <li><a ui-sref="list({category:'slots',provider:null})">Slots</a></li>
+            <li><a ui-sref="list({category:'table',provider:null})">Table Games</a></li>
+            <li><a ui-sref="list({category:'casual',provider:null})">Casual Games</a></li>
           </ul>
         </div>
         <div class="col-xs-12 col-md-4 text-center">
