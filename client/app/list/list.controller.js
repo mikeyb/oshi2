@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('oshi2App')
-  .controller('ListCtrl', function ($scope, $stateParams, Games, Categories, Providers, TopWinners, LatestWinners) {
+  .controller('ListCtrl', function ($rootScope, $scope, $stateParams, Games, Categories, Providers, TopWinners, LatestWinners) {
 
     $scope.categories = [{name: 'loading...'}];
     Categories.getAll().then(function (categories) {
@@ -12,6 +12,11 @@ angular.module('oshi2App')
     Providers.getAll().then(function (providers) {
       $scope.providers = providers;
     });
+
+    // set on root to keep type across selection changes - TODO persist to survive page refresh
+    if (!$rootScope.displayType) {
+      $rootScope.displayType = 'grid';
+    }
 
     $scope.games = [];
     $scope.gamesPage = [];
@@ -37,11 +42,13 @@ angular.module('oshi2App')
       });
     }
 
-    //$scope.displayType = 'list';
-    $scope.displayType = 'grid';
+    $scope.setDisplayType = function(displayType) {
+      $rootScope.displayType = displayType;
+      $scope.paginate(0);
+    };
 
-    var pageSize = $scope.displayType == 'grid' ? 24 : 10;
     $scope.paginate = function (pageNumber) {
+      var pageSize = $rootScope.displayType == 'grid' ? 24 : 10;
       $scope.numberOfPages = Math.ceil($scope.games.length / pageSize);
       if (pageNumber < 0 || $scope.numberOfPages <= pageNumber) {
         return;

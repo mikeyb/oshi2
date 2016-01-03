@@ -91,12 +91,11 @@
 
       <!-- Last Played sidebar -->
       <li class="hasSubmenu" ng-class="{ 'open active': lastPlayedGamesMenuOpen }">
-        <a href="#last-played" data-toggle="collapse" ng-class="{ 'collapsed': lastPlayedGamesMenuOpen }"
-           aria-expanded="{{lastPlayedGamesMenuOpen}}" ng-click="toggleLastPlayedMenu()">
+        <a data-toggle="collapse" ng-class="{ 'collapsed': lastPlayedGamesMenuOpen }" ng-click="toggleLastPlayedMenu()">
           <i class="fa fa-question"></i><span>Last Played</span>
         </a>
         <ul id="last-played" ng-class="{ 'in': lastPlayedGamesMenuOpen }" class="winners no-main ng-isolate-scope collapse in"
-          name="last-played" template="latest_winners_game" limit="8" aria-expanded="{{lastPlayedGamesMenuOpen}}">
+          name="last-played" template="latest_winners_game" limit="8">
 
           <div class="winners-box-sidebar" ng-repeat="game in lastPlayedGames">
             <div class="winners-image">
@@ -120,13 +119,12 @@
 
       <!-- top winners sidebar -->
       <li class="hasSubmenu" ng-class="{ 'open active': topWinnersMenuOpen }">
-        <a href="#last-played" data-toggle="collapse" ng-class="{ 'collapsed': topWinnersMenuOpen }"
-           aria-expanded="{{topWinnersMenuOpen}}" ng-click="toggleTopWinnersMenu()">
+        <a data-toggle="collapse" ng-class="{ 'collapsed': topWinnersMenuOpen }" ng-click="toggleTopWinnersMenu()">
           <i class="fa fa-question"></i><span>Top Winners</span>
         </a>
 
         <ul id="topwinners" ng-class="{ 'in': topWinnersMenuOpen }" class="winners no-main ng-isolate-scope collapse in"
-            name="last-played" template="latest_winners_game" limit="8" aria-expanded="{{topWinnersMenuOpen}}">
+            name="last-played" template="latest_winners_game" limit="8">
 
           <div class="winners-box-sidebar" ng-repeat="winner in topWinners">
             <div class="winners-image">
@@ -156,13 +154,12 @@
 
       <!-- latest winners sidebar -->
       <li class="hasSubmenu" ng-class="{ 'open active': latestWinnersMenuOpen }">
-        <a href="#last-played" data-toggle="collapse" ng-class="{ 'collapsed': latestWinnersMenuOpen }"
-           aria-expanded="{{latestWinnersMenuOpen}}" ng-click="toggleLatestWinnersMenu()">
-          <i class="fa fa-question"></i><span>Latest Winners</span>
+        <a data-toggle="collapse" ng-class="{ 'collapsed': latestWinnersMenuOpen }" ng-click="toggleLatestWinnersMenu()">
+					<i class="fa fa-btc"></i><span>Latest Winners</span>
         </a>
 
         <ul id="latestwinners" ng-class="{ 'in': latestWinnersMenuOpen }" class="winners no-main ng-isolate-scope collapse in"
-            name="last-played" template="latest_winners_game" limit="8" aria-expanded="{{latestWinnersMenuOpen}}">
+            name="last-played" template="latest_winners_game" limit="8">
 
           <div class="winners-box-sidebar" ng-repeat="winner in latestWinners">
             <div class="winners-image">
@@ -319,11 +316,11 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav navbar-left-m">
-                <li ng-class="{ 'active': $state.is('discover.listing') }">
-                  <a href="listing.html"><i class="fa fa-list fa-fw"></i>List</a>
+                <li ng-class="{ 'active': displayType == 'list' }">
+                  <a ng-click="setDisplayType('list')"><i class="fa fa-list fa-fw"></i>List</a>
                 </li>
-                <li ng-class="{ 'active': $state.is('discover.listing-grid') }">
-                  <a href="listing-grid.html"><i class="fa fa-th fa-fw"></i>Grid</a>
+                <li ng-class="{ 'active': displayType == 'grid' }">
+                  <a ng-click="setDisplayType('grid')"><i class="fa fa-th fa-fw"></i>Grid</a>
                 </li>
               </ul>
               <div class="grid-navbar navbar-right navbar-right-m">
