@@ -36,7 +36,10 @@ angular.module('oshi2App')
       });
     }
 
-    var pageSize = 10;
+    //$scope.displayType = 'list';
+    $scope.displayType = 'grid';
+
+    var pageSize = $scope.displayType == 'grid' ? 24 : 10;
     $scope.paginate = function (pageNumber) {
       $scope.numberOfPages = Math.ceil($scope.games.length / pageSize);
       if (pageNumber < 0 || $scope.numberOfPages <= pageNumber) {
@@ -51,8 +54,6 @@ angular.module('oshi2App')
       $scope.hasPreviousPage = pageNumber > 0;
       $scope.pages = new Array($scope.numberOfPages); // to overcome ng-repeat limitation
     };
-
-    $scope.displayType = 'list';
 
 
     // TODO check why animation is not working (original realstate site seams to be using a jquery plugin to toggle the menu)
