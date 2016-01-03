@@ -48,7 +48,7 @@ angular.module('oshi2App')
     };
 
     $scope.paginate = function (pageNumber) {
-      var pageSize = $rootScope.displayType == 'grid' ? 24 : 10;
+      var pageSize = $rootScope.displayType === 'grid' ? 24 : 10;
       $scope.numberOfPages = Math.ceil($scope.games.length / pageSize);
       if (pageNumber < 0 || $scope.numberOfPages <= pageNumber) {
         return;
