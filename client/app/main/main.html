@@ -158,7 +158,7 @@
           <a ui-sref="list({category:category.name,provider:null})"><h3>{{category.name}}</h3></a>
         </div>
         <!-- Carousel -->
-        <slick class="slider single-item" slides-to-show=4 slides-to-scroll=3 mobileFirst=true responsive="breakpoints" ng-cloak>
+        <slick class="slider single-item" slides-to-show=4 slides-to-scroll=1 mobileFirst=true responsive="breakpoints" dots="true" ng-cloak>
           <!-- Master grid panel -->
 					<div class="item" ng-repeat="game in category.games | limitTo:10">
 						<div class="panel panel-default relative">
