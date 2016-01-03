@@ -33,6 +33,7 @@ angular.module('oshi2App')
       $scope.listTitle = 'all';
       Games.getByCategory($scope.listTitle).then(function (games) {
         $scope.games = games;
+        $scope.paginate(0);
       });
     }
 
