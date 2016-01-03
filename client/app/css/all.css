@@ -15730,8 +15730,10 @@ html.st-layout, html.st-layout body, html.st-layout .st-pusher, html.st-layout .
     overflow-x: hidden;
 }
 
-.content-home {
+#content-home {
+	background-color: #fff;
     height: 100%;
+    width: 100%;
     top: 0;
     bottom: 0;
     position: fixed;
