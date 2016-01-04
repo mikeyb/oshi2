@@ -1,0 +1,19 @@
+.bonus-table td {
+    border-style: none;
+    border-width: 0px;
+    padding: 5px 5px;
+}
+
+.bonus-table-bordered td {
+    border-style: solid;
+    border-width: 1px;
+}
+hr {
+    margin: 0px;
+    padding: 8px;
+    background-image: url('https://www.oshi.io/system/comfy/cms/files/files/000/000/074/original/oshi_hr.png') !important;
+    background-repeat: repeat-x;
+    height:20px;
+    border:none !important;
+    opacity: 0.15;
+}
