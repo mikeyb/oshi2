@@ -59,18 +59,24 @@
 			<div class="container-fluid">
 			  <div class="navbar-header">
 			    <a  class="navbar-brand" href="index.html"><img src="assets/images/oshi-logo-xsmall.png" alt="oshi Bitcoin Casino"></a>
-			  </div>
-			  <div class="collapse navbar-collapse" id="main-nav">
+                <button type="button" class="navbar-toggle collapsed"  ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>	
+		      </div>
+			  <div class="collapse navbar-collapse" id="main-nav" ng-class="!navCollapsed && 'in'" ng-click="navCollapsed=true">
 			    <!-- Left Nav -->
 			    <ul class="nav navbar-nav">
 
 				    <!--Games-->
             <li class="dropdown main-nav-dropdown-menu">
                 <div uib-dropdown>
-                    <button id="single-button" type="button" class="" uib-dropdown-toggle ng-disabled="disabled">
+                    <button id="single-button" type="button" class="dropdown-toggle" uib-dropdown-toggle>
                         Games <span class="caret"></span>
                     </button>
-                    <ul class="uib-dropdown-menu dropdown-menu" aria-labelledby="simple-dropdown">
+                    <ul class="uib-dropdown-menu dropdown-menu">
                       <li role="menuitem" ng-class="{ 'active': $state.is('list') }" ng-repeat="category in categories">
                         <a ui-sref="list({category:category.name,provider:null})"><span class="badge pull-right">{{category.gameCount}}</span>{{category.displayName}}</a>
                       </li>
@@ -333,6 +339,7 @@
 	<!-- build:js({.tmp,client}) app/app.js -->
 
 	<script src="app/app.js"></script>
+	<script src="app/js/vendor/flash_detect_min.js"></script>
 	<!-- injector:js -->
 	<script src="app/about/about-fair/about-fair.controller.js"></script>
 	<script src="app/about/about-fair/about-fair.js"></script>
@@ -370,6 +377,7 @@
 	<script src="app/help/help-tcs/help-tcs.js"></script>
 	<script src="app/help/help-tor/help-tor.controller.js"></script>
 	<script src="app/help/help-tor/help-tor.js"></script>
+	<script src="app/js/vendor/flash_detect_min.js"></script>
 	<script src="app/list/list.controller.js"></script>
 	<script src="app/list/list.js"></script>
 	<script src="app/main/main.controller.js"></script>
@@ -388,5 +396,6 @@
 	<script src="components/navbar/navbar.controller.js"></script>
 	<!-- endinjector -->
 	<!-- endbuild -->
+	
 </body>
 </html>

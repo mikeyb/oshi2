@@ -7,6 +7,13 @@ angular.module('oshi2App')
 
 	$scope.rego = {};
 	$scope.rego.promos = true;
+	
+	
+    if(!FlashDetect.installed){
+    	$scope.hasFlash = false;
+    }else{
+    	$scope.hasFlash = true;
+    }
 
 	$scope.isHome = function () {
 		if ($window.location.pathname === '/') {
@@ -143,15 +150,21 @@ angular.module('oshi2App')
     GamePlay.post(request).$promise.then(function () {
     	console.log('D> playing game with id: ', gameId);
     	var params = {gameUrl: gameUrl, aspectRatio: aspectRatio};
-    	$state.go('play', params);
-//      $window.location.href = gameUrl;
+    	if (!$scope.hasFlash) {
+    		$window.location.href = gameUrl;
+    	} else {
+    		$state.go('play', params);
+    	}
     }, function (err) {
       $log.error('Failed calling gamePlay endpoint', err);
       console.log('E> Error calling game: ', err);
 	  	console.log('D> playing (error) game with id: ', gameId);
 		var params = {gameUrl: gameUrl, aspectRatio: aspectRatio};
-		$state.go('play', params);
-//      $window.location.href = gameUrl;
+    	if (!$scope.hasFlash) {
+    		$window.location.href = gameUrl;
+    	} else {
+    		$state.go('play', params);
+    	}
     });
   };
 
