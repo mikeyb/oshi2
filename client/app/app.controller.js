@@ -132,17 +132,26 @@ angular.module('oshi2App')
   });
 
   // TODO when not logged in, store games played in the local storage to show last played games
-  $scope.playGame = function (gameUrl, gameId, playForFun, fromRecommendation) {
+  $scope.playGame = function (gameUrl, gameId, playForFun, fromRecommendation, aspectRatio) {
+	  console.log('D> in playGame with id: ', gameId, aspectRatio);
     var request = {
       gameId: gameId,
       playForFun: playForFun,
       fromRecommendation: fromRecommendation
     };
+    console.log('D> posting request: ', request);
     GamePlay.post(request).$promise.then(function () {
-      $window.location.href = gameUrl;
+    	console.log('D> playing game with id: ', gameId);
+    	var params = {gameUrl: gameUrl, aspectRatio: aspectRatio};
+    	$state.go('play', params);
+//      $window.location.href = gameUrl;
     }, function (err) {
       $log.error('Failed calling gamePlay endpoint', err);
-      $window.location.href = gameUrl;
+      console.log('E> Error calling game: ', err);
+	  	console.log('D> playing (error) game with id: ', gameId);
+		var params = {gameUrl: gameUrl, aspectRatio: aspectRatio};
+		$state.go('play', params);
+//      $window.location.href = gameUrl;
     });
   };
 
