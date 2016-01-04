@@ -158,7 +158,7 @@
 					<a ui-sref="list({category:category.name,provider:null})"><h3>{{category.displayName}}</h3></a>
 				</div>
 				<!-- Carousel -->
-				<slick class="slider single-item" slides-to-show=4 slides-to-scroll=1 mobileFirst=true responsive="breakpoints" dots="true" ng-cloak>
+				<slick class="slider single-item" slides-to-show="{{slidesToShow($index)}}" slides-to-scroll=1 mobileFirst=true responsive="breakpoints" dots="true" ng-cloak>
 					<!-- Master grid panel -->
 					<div class="item" ng-repeat="game in category.games | limitTo:10">
 						<div class="panel panel-default relative">
@@ -172,9 +172,9 @@
 								<h4 class="margin-v-0-5">{{game.name}}</h4>
 								<div class="hide-panel-body">
 									<span class="label label-grey-100">{{game.providerName}}</span>&nbsp;
-									<i class="fa fa-btc" style="color: grey;" popover="Bitcoin" popover-trigger="mouseenter"></i>&nbsp;
-									<i class="fa fa-thumbs-o-up" style="color: grey;" popover="Provably Fair" popover-trigger="mouseenter"></i>&nbsp;
-									<i class="fa fa-info-circle" popover-trigger="mouseenter" popover="{{game.description}}"></i>&nbsp;
+									<i class="fa fa-btc" style="color: grey;" uib-popover="Bitcoin" popover-trigger="mouseenter"></i>&nbsp;
+									<i class="fa fa-thumbs-o-up" style="color: grey;" uib-popover="Provably Fair" popover-trigger="mouseenter"></i>&nbsp;
+									<i class="fa fa-info-circle" popover-trigger="mouseenter" uib-popover="{{game.description}}"></i>&nbsp;
 									<i class="fa fa-star" ng-if="isAuth()" ng-click="toggleFavorite(game)" ng-style="{'color': game.isFavorite ? '#fcaf3e' : '#fff'}"></i>
 								</div>
 							</div>
@@ -190,8 +190,13 @@
 				</slick>
 				<!-- END/ Carousel -->
 
-				<div ng-if="$index == 1">FIRST IMAGE HERE</div>
-				<div ng-if="$index == 4">SECOND IMAGE HERE</div>
+				<div ng-if="$index == 1" class="home-page-section-content">
+                    <img src="assets/images/spacer-home.gif" alt="location" class="img-responsive">
+                </div>
+                <div ng-if="$index == 4" class="home-page-section-content">
+                    <img src="assets/images/spacer-home.gif" alt="location" class="img-responsive">
+                </div>
+
 			</div>
     </div>
   </div>

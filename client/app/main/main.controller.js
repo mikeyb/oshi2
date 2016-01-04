@@ -8,6 +8,16 @@ angular.module('oshi2App')
       $scope.categories = categories;
     });
 
+    $scope.slidesToShow = function(index) {
+    	if (index <= 1) {
+    		return 4;
+    	} else if (index > 1 && index <= 4) {
+    		return 5;
+    	} else {
+    		return 6;
+    	}
+    };
+    
     $scope.breakpoints =
       [{
         breakpoint: 1024,
