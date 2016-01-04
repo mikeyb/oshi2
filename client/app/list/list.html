@@ -17,14 +17,14 @@
 		<div class="sidebar-block">
 			<ul class="list-group list-group-menu">
 				<li class="list-group-item" ng-repeat="category in categories" ng-class="{'active':category.name == listTitle}">
-          <a ui-sref="list({category:category.name,provider:null})"><span class="badge pull-right">{{category.gameCount}}</span>{{category.displayName}}</a>
+          <a ui-sref="list({category:category.name,provider:null,display:category.displayName})"><span class="badge pull-right">{{category.gameCount}}</span>{{category.displayName}}</a>
         </li>
 			</ul>
     </div>
     <div class="category">Narrow by:</div>
 			<ul class="list-group list-group-menu">
 				<li class="list-group-item" ng-repeat="provider in providers" ng-class="{'active':provider.name == listTitle}">
-          <a ui-sref="list({category:null,provider:provider.name})"><span class="badge pull-right">{{provider.gameCount}}</span>{{provider.name}}</a>
+          <a ui-sref="list({category:null,provider:provider.name,display:provider.displayName})"><span class="badge pull-right">{{provider.gameCount}}</span>{{provider.displayName}}</a>
         </li>
 			</ul>
 		</div>
@@ -372,7 +372,7 @@
 								<span class="label label-grey-100">{{game.providerName}}</span>&nbsp;
 								<i class="fa fa-btc" style="color: grey;" popover="Bitcoin" popover-trigger="mouseenter"></i>&nbsp;
 								<i class="fa fa-thumbs-o-up" style="color: grey;" popover="Provably Fair" popover-trigger="mouseenter"></i>&nbsp;
-								<i class="fa fa-star" ng-if="isAuth()" ng-click="toggleFavorite(game)" ng-style="{'color': game.isFavorite ? '#fcaf3e' : '#fff'}"></i>
+								<!-- <i class="fa fa-star" ng-if="isAuth()" ng-click="toggleFavorite(game)" ng-style="{'color': game.isFavorite ? '#fcaf3e' : '#fff'}"></i> -->
 							</div>
 						</div>
 					</div>
@@ -396,7 +396,7 @@
 								<i class="fa fa-btc" style="color: grey;" popover="Bitcoin" popover-trigger="mouseenter"></i>&nbsp;
 								<i class="fa fa-thumbs-o-up" style="color: grey;" popover="Provably Fair" popover-trigger="mouseenter"></i>&nbsp;
 								<i class="fa fa-info-circle" popover-trigger="mouseenter" popover="{{game.description}}"></i>&nbsp;
-								<i class="fa fa-star" ng-if="isAuth()" ng-click="toggleFavorite(game)" ng-style="{'color': game.isFavorite ? '#fcaf3e' : '#fff'}"></i>
+								<!-- <i class="fa fa-star" ng-if="isAuth()" ng-click="toggleFavorite(game)" ng-style="{'color': game.isFavorite ? '#fcaf3e' : '#fff'}"></i> -->
 							</div>
 						</div>
 						<div class="text-center">
