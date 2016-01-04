@@ -121,8 +121,8 @@ angular.module('oshi2App')
 	};
 
 
-  $scope.categories = [{name:'loading...'}];
-  Categories.getAll().then(function(categories) {
+  $scope.categories = [{displayName:'loading...'}];
+  Categories.getMenuCategories().then(function(categories) {
     $scope.categories = categories;
   });
 

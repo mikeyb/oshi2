@@ -153,13 +153,13 @@
       <hr>
 
       <!-- Page section 1 -->
-      <div class="home-page-section" ng-repeat="category in categories | limitTo:5">
-        <div class="text-left">
-          <a ui-sref="list({category:category.name,provider:null})"><h3>{{category.name}}</h3></a>
-        </div>
-        <!-- Carousel -->
-        <slick class="slider single-item" slides-to-show=4 slides-to-scroll=1 mobileFirst=true responsive="breakpoints" dots="true" ng-cloak>
-          <!-- Master grid panel -->
+			<div class="home-page-section" ng-repeat="category in categories">
+				<div class="text-left">
+					<a ui-sref="list({category:category.name,provider:null})"><h3>{{category.displayName}}</h3></a>
+				</div>
+				<!-- Carousel -->
+				<slick class="slider single-item" slides-to-show=4 slides-to-scroll=1 mobileFirst=true responsive="breakpoints" dots="true" ng-cloak>
+					<!-- Master grid panel -->
 					<div class="item" ng-repeat="game in category.games | limitTo:10">
 						<div class="panel panel-default relative">
 							<div class="cover hover overlay margin-none">
@@ -186,10 +186,13 @@
 							</div>
 						</div>
 					</div>
-          <!-- END/ Master grid panel -->
-        </slick>
-        <!-- END/ Carousel -->
-      </div>
+					<!-- END/ Master grid panel -->
+				</slick>
+				<!-- END/ Carousel -->
+
+				<div ng-if="$index == 1">FIRST IMAGE HERE</div>
+				<div ng-if="$index == 4">SECOND IMAGE HERE</div>
+			</div>
     </div>
   </div>
 </div>

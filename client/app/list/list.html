@@ -17,7 +17,7 @@
 		<div class="sidebar-block">
 			<ul class="list-group list-group-menu">
 				<li class="list-group-item" ng-repeat="category in categories" ng-class="{'active':category.name == listTitle}">
-          <a ui-sref="list({category:category.name,provider:null})"><span class="badge pull-right">{{category.gameCount}}</span>{{category.name}}</a>
+          <a ui-sref="list({category:category.name,provider:null})"><span class="badge pull-right">{{category.gameCount}}</span>{{category.displayName}}</a>
         </li>
 			</ul>
     </div>

@@ -3,8 +3,8 @@
 angular.module('oshi2App')
   .controller('ListCtrl', function ($rootScope, $scope, $stateParams, Games, Categories, Providers, TopWinners, LatestWinners) {
 
-    $scope.categories = [{name: 'loading...'}];
-    Categories.getAll().then(function (categories) {
+    $scope.categories = [{displayName: 'loading...'}];
+    Categories.getMenuCategories().then(function (categories) {
       $scope.categories = categories;
     });
 

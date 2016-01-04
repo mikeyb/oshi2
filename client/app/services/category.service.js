@@ -4,27 +4,49 @@ angular.module('oshi2App')
   .factory('Categories', function (SiteData, Games, $q) {
     return {
 
-      getAll: function () {
+      getMainPageCategories: function () {
         var deferred = $q.defer();
         SiteData.load().then(function (siteData) {
-          deferred.resolve(siteData.categories);
+          var mainPageCategories = _.filter(siteData.categories, function(category) {
+            return category.mainPageOrder;
+          });
+
+          mainPageCategories = _.sortBy(mainPageCategories, function(category) {
+            return category.mainPageOrder;
+          });
+
+          setGames(mainPageCategories);
+
+          deferred.resolve(mainPageCategories);
         });
         return deferred.promise;
       },
 
-      getAllWithGames: function() {
+      getMenuCategories: function () {
         var deferred = $q.defer();
-
         SiteData.load().then(function (siteData) {
-          _.each(siteData.categories, function(category) {
-            Games.getByCategory(category.name).then(function(games) {
-              category.games = games;
-            });
+          var menuCategories = _.filter(siteData.categories, function(category) {
+            return category.menuOrder;
           });
-          deferred.resolve(deferred.resolve(siteData.categories));
+
+          menuCategories = _.sortBy(menuCategories, function(category) {
+            return category.menuOrder;
+          });
+
+          setGames(menuCategories);
+
+          deferred.resolve(menuCategories);
         });
         return deferred.promise;
       }
 
     };
+
+    function setGames(categories) {
+      _.each(categories, function (category) {
+        Games.getByCategory(category.name).then(function (games) {
+          category.games = games;
+        });
+      });
+    }
   });
