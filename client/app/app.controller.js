@@ -8,8 +8,7 @@ angular.module('oshi2App')
 	$scope.rego = {};
 	$scope.rego.promos = true;
 	
-	
-    if(!FlashDetect.installed){
+    if(!FlashDetect.installed) { //jshint ignore:line
     	$scope.hasFlash = false;
     }else{
     	$scope.hasFlash = true;
