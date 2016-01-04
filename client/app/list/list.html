@@ -17,17 +17,16 @@
 		<div class="sidebar-block">
 			<ul class="list-group list-group-menu">
 				<li class="list-group-item" ng-repeat="category in categories" ng-class="{'active':category.name == listTitle}">
-          <a ui-sref="list({category:category.name,provider:null,display:category.displayName})"><span class="badge pull-right">{{category.gameCount}}</span>{{category.displayName}}</a>
-        </li>
+                    <a ui-sref="list({category:category.name,provider:null,display:category.displayName})"><span class="badge pull-right">{{category.gameCount}}</span>{{category.displayName}}</a>
+                </li>
 			</ul>
-    </div>
-    <div class="category">Narrow by:</div>
-			<ul class="list-group list-group-menu">
-				<li class="list-group-item" ng-repeat="provider in providers" ng-class="{'active':provider.name == listTitle}">
-          <a ui-sref="list({category:null,provider:provider.name,display:provider.displayName})"><span class="badge pull-right">{{provider.gameCount}}</span>{{provider.displayName}}</a>
-        </li>
-			</ul>
-		</div>
+        </div>
+        <div class="category">Narrow by:</div>
+		<ul class="list-group list-group-menu">
+			<li class="list-group-item" ng-repeat="provider in providers" ng-class="{'active':provider.name == listTitle}">
+                <a ui-sref="list({category:null,provider:provider.name,display:provider.displayName})"><span class="badge pull-right">{{provider.gameCount}}</span>{{provider.displayName}}</a>
+            </li>
+		</ul>
 	</div>
 	<div id="ascrail2000" class="nicescroll-rails"
 		style="width: 5px; z-index: 2; cursor: default; position: absolute; top: 0px; left: 194px; height: 331px; opacity: 0;">
@@ -187,8 +186,6 @@
       </li>
       <!-- END / latest winners sidebar -->
 
-
-
 			<li class="hasSubmenu hide-menu-upto-768"
 				ng-class="{ 'open active': $state.includes('gamecategories') }">
 				<a href="#gamecategories" data-toggle="collapse" class="collapsed"
@@ -283,9 +280,6 @@
 			</li>
 			<!-- END/ Game Provider -->
 
-
-
-
 		</ul>
 	</div>
 	<div id="ascrail2001" class="nicescroll-rails"
@@ -348,7 +342,6 @@
 				<!-- listings -->
 
 				<!-- Master Listing -->
-
 				<div class="panel panel-default" ng-repeat="game in gamesPage" ng-if="displayType == 'list'">
 					<div class="media">
 						<div class="media-left listing-media-left">

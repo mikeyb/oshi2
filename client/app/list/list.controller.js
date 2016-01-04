@@ -22,21 +22,21 @@ angular.module('oshi2App')
     $scope.gamesPage = [];
     if ($stateParams.category) {
       $scope.listTitle = $stateParams.display;
-      Games.getByCategory($scope.listTitle).then(function (games) {
+      Games.getByCategory($stateParams.category).then(function (games) {
         $scope.games = games;
         $scope.paginate(0);
       });
     }
     else if ($stateParams.provider) {
       $scope.listTitle = $stateParams.display;
-      Games.getByProvider($scope.listTitle).then(function (games) {
+      Games.getByProvider($stateParams.category).then(function (games) {
         $scope.games = games;
         $scope.paginate(0);
       });
     }
     else {
       $scope.listTitle = 'All Games';
-      Games.getByCategory($scope.listTitle).then(function (games) {
+      Games.getByCategory($stateParams.category).then(function (games) {
         $scope.games = games;
         $scope.paginate(0);
       });
