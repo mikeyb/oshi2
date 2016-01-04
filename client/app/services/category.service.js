@@ -2,6 +2,15 @@
 
 angular.module('oshi2App')
   .factory('Categories', function (SiteData, Games, $q) {
+
+    function setGames(categories) {
+      _.each(categories, function (category) {
+        Games.getByCategory(category.name).then(function (games) {
+          category.games = games;
+        });
+      });
+    }
+
     return {
 
       getMainPageCategories: function () {
@@ -42,11 +51,4 @@ angular.module('oshi2App')
 
     };
 
-    function setGames(categories) {
-      _.each(categories, function (category) {
-        Games.getByCategory(category.name).then(function (games) {
-          category.games = games;
-        });
-      });
-    }
   });
