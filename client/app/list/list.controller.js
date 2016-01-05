@@ -3,12 +3,12 @@
 angular.module('oshi2App')
   .controller('ListCtrl', function ($rootScope, $scope, $stateParams, Games, Categories, Providers, TopWinners, LatestWinners) {
 
-    $scope.categories = [{displayName: 'loading...'}];
+    $scope.categories = [{displayName: 'Loading...'}];
     Categories.getMenuCategories().then(function (categories) {
       $scope.categories = categories;
     });
 
-    $scope.providers = [{name: 'loading...'}];
+    $scope.providers = [{name: 'Loading...'}];
     Providers.getAll().then(function (providers) {
       $scope.providers = providers;
     });
@@ -21,22 +21,22 @@ angular.module('oshi2App')
     $scope.games = [];
     $scope.gamesPage = [];
     if ($stateParams.category) {
-      $scope.listTitle = $stateParams.category;
-      Games.getByCategory($scope.listTitle).then(function (games) {
+      $scope.listTitle = $stateParams.display;
+      Games.getByCategory($stateParams.category).then(function (games) {
         $scope.games = games;
         $scope.paginate(0);
       });
     }
     else if ($stateParams.provider) {
-      $scope.listTitle = $stateParams.provider;
-      Games.getByProvider($scope.listTitle).then(function (games) {
+      $scope.listTitle = $stateParams.display;
+      Games.getByProvider($stateParams.category).then(function (games) {
         $scope.games = games;
         $scope.paginate(0);
       });
     }
     else {
-      $scope.listTitle = 'all';
-      Games.getByCategory($scope.listTitle).then(function (games) {
+      $scope.listTitle = 'All Games';
+      Games.getByCategory($stateParams.category).then(function (games) {
         $scope.games = games;
         $scope.paginate(0);
       });

@@ -15728,6 +15728,7 @@ html.st-layout, html.st-layout body, html.st-layout .st-pusher, html.st-layout .
     position: fixed;
     overflow-y: scroll;
     overflow-x: hidden;
+    margin-top: 50px;
 }
 
 #content-home {
@@ -18791,13 +18792,13 @@ label {
 }
 
 }
-iframe {
+/* iframe {
 	display: block;
 	background: #000;
 	border: none;
 	height: 100vh;
 	width: 100vw;
-}
+} */
 
 .game-content {
 	height: 100%;
