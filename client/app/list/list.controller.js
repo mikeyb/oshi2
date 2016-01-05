@@ -24,23 +24,38 @@ angular.module('oshi2App')
       $scope.listTitle = $stateParams.display;
       Games.getByCategory($stateParams.category).then(function (games) {
         $scope.games = games;
-        $scope.paginate(0);
+        $scope.orderBy($scope.selectedOrder);
       });
     }
     else if ($stateParams.provider) {
       $scope.listTitle = $stateParams.display;
       Games.getByProvider($stateParams.provider).then(function (games) {
         $scope.games = games;
-        $scope.paginate(0);
+        $scope.orderBy($scope.selectedOrder);
       });
     }
     else {
       $scope.listTitle = 'All Games';
       Games.getByCategory($stateParams.category).then(function (games) {
         $scope.games = games;
-        $scope.paginate(0);
+        $scope.orderBy($scope.selectedOrder);
       });
     }
+
+    $scope.selectedOrder = 'Most Popular';
+    $scope.orderBy = function (orderBy) {
+      $scope.selectedOrder = orderBy;
+
+      var sortByFunction;
+      if ($scope.selectedOrder === 'Most Popular') {
+        sortByFunction = function (game) { return game.popularity; };
+      }
+      else if ($scope.selectedOrder === 'Name') {
+        sortByFunction = function (game) { return game.name; };
+      }
+      $scope.games = _.sortBy($scope.games, sortByFunction);
+      $scope.paginate(0);
+    };
 
     $scope.setDisplayType = function(displayType) {
       $rootScope.displayType = displayType;
