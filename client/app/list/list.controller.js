@@ -29,7 +29,7 @@ angular.module('oshi2App')
     }
     else if ($stateParams.provider) {
       $scope.listTitle = $stateParams.display;
-      Games.getByProvider($stateParams.category).then(function (games) {
+      Games.getByProvider($stateParams.provider).then(function (games) {
         $scope.games = games;
         $scope.paginate(0);
       });
