@@ -6626,12 +6626,12 @@ pre code {
 	overflow-y: scroll;
 }
 
-.container {
+/* .container {
 	margin-right: auto;
 	margin-left: auto;
 	padding-left: 15px;
 	padding-right: 15px;
-}
+} */
 
 @media ( min-width :768px) {
 	.container {
@@ -18907,27 +18907,6 @@ label {
 	background-color: #FFFFFF;
 }
 
-.page-container {
-	border-radius: 6px;
-	max-width: 800px;
-	color: #333;
-	font-size: 18px;
-	line-height: 1.45;
-	font-weight: 400;
-	font-style: normal;
-}
-
-.page-container a {
-	color: #08c;
-}
-
-.page-container a {
-	text-decoration: none;
-}
-
-.page-container h2 {
-	font-size: 30px;
-}
 
 }
 /* iframe {
