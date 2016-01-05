@@ -38,7 +38,7 @@ angular.module('oshi2App')
           slidesToScroll: 1
         }
       }, {
-        breakpoint: 320,
+        breakpoint: 321,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1

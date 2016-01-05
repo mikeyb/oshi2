@@ -1,5 +1,5 @@
 <div ng-cloak>
-  <div class="bg-black home-page-top-padding">
+  <div class="bg-black home-page-top-padding ">
     <div class="container">
       <input class="toggle-box" id="header1" type="checkbox" checked="checked"/>
       <label for="header1">Hide/Open The Join Today Panel</label>
@@ -12,16 +12,73 @@
           </div>
           <div class="row">
             <div class="col-md-8">
+            
+            
+             <!-- Sign up -->
+              <div class="hide-homepage-join-top homepage-join dropdown-size-280">
+                <form>
+                  <!-- Sales content -->
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group form-control-sales">
+                        <div class="text-center">
+                          <span class="join-text">In 2 minutes you have a huge 2000mBTC signup bonus! </span>
+                        </div>
+                        <span class="join-notes">No bonus? Just untick the box below.
+                          <span class="join-icons">
+                            <a href="#" target="_blank">
+                              <i class="fa fa-info-circle"></i>
+                              <i class="fa fa-external-link"></i>
+                            </a>
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- END sales content -->
+                  <div class="form-group form-control-default required">
+                    <!--   <label for="exampleInputEmail1">Email address</label> -->
+                    <input type="email" ng-model="rego.email" class="form-control" id="InputEmail1" placeholder="Enter Email...">
+                  </div>
+                  <div class="form-group form-control-default required">
+                    <!-- <label for="exampleInputPassword1">Password</label> -->
+                    <input type="password" ng-model="rego.password" class="form-control" id="InputPassword1" placeholder="Enter Password...">
+                  </div>
+                  <!-- Checkbox Receive Promos -->
+                  <div>
+                    <label for="ReceivePromos1">
+                      <input type="checkbox" ng-model="rego.promos" checked placeholder="Receive Promos" id="ReceivePromos1"/>
+                      Get My 2000 mBTC & Other Bonuses <sup></sup>
+                    </label>
+                  </div>
+                  <!-- Checkbox Terms and Conditions -->
+                  <div id="DIV_49">
+                    <label id="LABEL_50">
+                      <input type="checkbox" ng-model="rego.tcs" placeholder="I'm Over 18 & I agree to Terms and Conditions" id="INPUT_51" required/>
+                      <span>I'm Over 18 & I agree to Terms and Conditions</span><sup>*</sup>
+                    </label>
+                  </div>
+                  <!-- END/ Join Opt In / Out  -->
+                  <div class="text-center">
+                    <button type="submit" ng-click="login(rego)" class="btn btn-primary">All set? Click here to join Oshi</button>
+                  </div>
+                </form>
+              </div>
+              <!-- // END sign up -->
+            
+            
+            <div class="img-homepage-main-banner">
               <div class="media">
-                <div class="media-body">
+                <div class="media-body img-homepage-main-banner">
                   <img src="assets/images/sales-asset-760x380.jpg" alt="location" class="img-responsive" />
                 </div>
               </div>
             </div>
+             </div>
             <!-- Right Side Column -->
             <div class="col-md-4">
               <!-- Sign up -->
-              <div class="homepage-join dropdown-size-280">
+              <div class="hide-homepage-join homepage-join dropdown-size-280">
                 <form>
                   <!-- Sales content -->
                   <div class="row">
@@ -117,44 +174,15 @@
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-sm-12 footer_out_links footer_out_links-panel-body">
-              <img src="assets/images/18.png" popover-trigger="mouseenter" uib-popover="Over 18 Only">
-              <a href="http://www.softswiss.com" target="_blank">
-                <img src="assets/images/softswiss.png" uib-popover="Softswiss Bitcoin casino platform" popover-trigger="mouseenter" popover-append-to-body popover-placement="top">
-              </a>
-              <a href="/" target="_blank">
-                <img src="assets/images/curaco37px_high_v2.png" uib-popover="Curacao License" popover-trigger="mouseenter" popover-append-to-body popover-placement="top">
-              </a>
-              <a href="/" target="_blank">
-                <img src="assets/images/itech.png" uib-popover="Rated as Provably Fair by iTech, an independent testing company."
-                     popover-trigger="mouseenter" popover-append-to-body aria-hidden="true">
-              </a>
-              <a href="/" target="_blank">
-                <img src="assets/images/100safe.png" uib-popover="We're 100% secure (because we only use Bitcoin)"
-                     popover-trigger="mouseenter" popover-append-to-body aria-hidden="true"/>
-              </a>
-              <a href="/" target="_blank">
-                <img src="assets/images/provable_fair.png"
-                     uib-popover="Provably Fair: Itech Labs testing & in Game testing for Softswiss Games."
-                     popover-trigger="mouseenter" popover-append-to-body aria-hidden="true">
-              </a>
-              <a href="/" target="_blank"
-                    uib-popover="We take Resposnsible Gambling very seriously. Why? We want happy customers."
-                    popover-trigger="mouseenter">
-                <img src="assets/images/responsible_gamble.png">
-              </a>
-            </div>
-          </div>
           <!-- END/ Call to Action Row -->
           <!-- END / Expand collapse  -->
         </div>
       </div>
-      <hr>
+    
 
       <!-- Page section 1 -->
 			<div class="home-page-section" ng-repeat="category in categories">
-				<div class="text-left">
+				<div class="text-left home-page-h3-cat-name">
 					<a ui-sref="list({category:category.name,provider:null})"><h3>{{category.displayName}}</h3></a>
 				</div>
 				<!-- Carousel -->
@@ -162,24 +190,23 @@
 					<!-- Master grid panel -->
 					<div class="item" ng-repeat="game in category.games | limitTo:10">
 						<div class="panel panel-default relative">
-							<div class="cover hover overlay margin-none">
+							 	<a ng-click="playGame(game.playUrl, game.id, false, false)"  >
 								<img ng-src="{{game.iconUrl}}" class="img-responsive" style="width: 100%"/>
-								<a ng-click="playGame(game.playUrl, game.id, false, false)" class="overlay overlay-full overlay-bg-black overlay-hover">
-									<span class="v-center"><span class="btn btn-play btn-lg"><i class="fa fa-play"></i></span></span>
+								<a ng-click="playGame(game.playUrl, game.id, false, false)"  >
 								</a>
-							</div>
+							 
 							<div class="panel-body">
 								<h4 class="margin-v-0-5">{{game.name}}</h4>
 								<div class="hide-panel-body">
-									<span class="label label-grey-100">{{game.providerName}}</span>&nbsp;
-									<i class="fa fa-btc" style="color: grey;" uib-popover="Bitcoin" popover-trigger="mouseenter"></i>&nbsp;
-									<i class="fa fa-thumbs-o-up" style="color: grey;" uib-popover="Provably Fair" popover-trigger="mouseenter"></i>&nbsp;
-									<i class="fa fa-info-circle" popover-trigger="mouseenter" uib-popover="{{game.description}}"></i>&nbsp;
+									<span class="label label-grey-100">{{game.providerName}}</span>
+									<i class="fa fa-btc" style="color: grey;" uib-popover="Bitcoin" popover-trigger="mouseenter"></i>
+									<i class="fa fa-thumbs-o-up" style="color: grey;" uib-popover="Provably Fair" popover-trigger="mouseenter"></i>
+									<i class="fa fa-info-circle" popover-trigger="mouseenter" uib-popover="{{game.description}}"></i>
 									<!-- <i class="fa fa-star" ng-if="isAuth()" ng-click="toggleFavorite(game)" ng-style="{'color': game.isFavorite ? '#fcaf3e' : '#fff'}"></i> -->
 								</div>
 							</div>
 							<div class="hide-buttons">
-								<div class="text-center">
+								<div class="text-left">
 									<button class="btn btn-primary btn-playnow" ng-click="playGame(game.playUrl, game.id, false, false, game.aspectRatio)">Play</button>
 									<button class="btn btn-primary btn-practiceplay" ng-click="playGame(game.playForFunUrl, game.id, true, false, game.aspectRatio)">Practice</button>
 								</div>
@@ -189,24 +216,25 @@
 					<!-- END/ Master grid panel -->
 				</slick>
 				<!-- END/ Carousel -->
-
+			<div class="spacer-home">
 				<div ng-if="$index == 1" class="home-page-section-content">
                     <img src="assets/images/spacer-home.gif" alt="location" class="img-responsive">
                 </div>
                 <div ng-if="$index == 4" class="home-page-section-content">
                     <img src="assets/images/spacer-home.gif" alt="location" class="img-responsive">
                 </div>
-
 			</div>
+		 
     </div>
   </div>
 </div>
 
 <!-- Footer -->
-<div class="footer-hide">
   <section class="footer-section">
+ <div class="home-page-footer-hide">
     <div class="container">
       <div class="row">
+      <div class="footer-hide-top">
         <div class="col-xs-6 col-md-2">
           <h4>Corporate</h4>
           <ul class="list-unstyled">
@@ -225,6 +253,8 @@
             <li><a ui-sref="list({category:'casual',provider:null})">Casual Games</a></li>
           </ul>
         </div>
+        </div>
+        <div class="footer-hide-bottom">
         <div class="col-xs-12 col-md-4 text-center">
           <h4>Latest Blog Posts</h4>
           <div class="panel bg-transparent margin-none">
@@ -291,6 +321,8 @@
           </div>
         </div>
       </div>
+      </div>
+      <div class="footer-hide-outlinks">
       <div class="col-sm-12 footer_out_links">
         <img src="assets/images/18.png" uib-popover="Over 18 Only" popover-trigger="mouseenter"/>
         <a href="http://www.softswiss.com" target="_blank">
@@ -313,6 +345,7 @@
         </a>
       </div>
     </div>
+   </div> 
   </section>
 </div>
 <!-- END upper Footer -->
