@@ -8,7 +8,7 @@ angular.module('oshi2App')
       $scope.categories = categories;
     });
 
-    $scope.providers = [{name: 'Loading...'}];
+    $scope.providers = [{displayName: 'Loading...'}];
     Providers.getAll().then(function (providers) {
       $scope.providers = providers;
     });

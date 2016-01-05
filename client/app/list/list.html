@@ -18,14 +18,14 @@
 	<div class="category">Narrow by:</div>
 	<div class="sidebar-block">
 	    <ul class="list-group list-group-menu">
-		<li class="list-group-item" ng-repeat="category in categories" ng-class="{'active':category.name == listTitle}">
+		<li class="list-group-item" ng-repeat="category in categories" ng-class="{'active':category.displayName == listTitle}">
 		    <a ui-sref="list({category:category.name,provider:null,display:category.displayName})"><span class="badge pull-right">{{category.gameCount}}</span>{{category.displayName}}</a>
 		</li>
 	    </ul>
 	</div>
 	<div class="category">Narrow by:</div>
 	<ul class="list-group list-group-menu">
-	    <li class="list-group-item" ng-repeat="provider in providers" ng-class="{'active':provider.name == listTitle}">
+	    <li class="list-group-item" ng-repeat="provider in providers" ng-class="{'active':provider.displayName == listTitle}">
 		<a ui-sref="list({category:null,provider:provider.name,display:provider.displayName})"><span class="badge pull-right">{{provider.gameCount}}</span>{{provider.displayName}}</a>
 	    </li>
 	</ul>
@@ -119,7 +119,7 @@
 		<uib-Accordion-Heading>
 		    <a data-toggle="collapse" ng-class="{ 'collapsed': topWinnersMenuOpen }" ng-click="toggleTopWinnersMenu()" class="accordion-link">
 			<i class="fa fa-question"></i><span>Top Winners</span>
-		    </a> 
+		    </a>
 		</uib-Accordion-Heading>
 		<ul id="topwinners" ng-class="{ 'in': topWinnersMenuOpen }" class="winners no-main ng-isolate-scope collapse in" name="last-played" template="latest_winners_game" limit="8">
 		    <div class="winners-box-sidebar" ng-repeat="winner in topWinners">
