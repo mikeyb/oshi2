@@ -2285,7 +2285,7 @@ tbody.collapse.in {
 .dropup, .dropdown {
 	position: relative;
 }
-
+/*
 .dropdown-toggle:focus {
 	outline: 0;
 }
@@ -2400,6 +2400,9 @@ tbody.collapse.in {
 	right: 0;
 	left: auto;
 }
+
+*/
+
 /*.dropup .caret,.navbar-fixed-bottom .dropdown .caret{border-top:0;border-bottom:4px solid;content:"";}
 .dropup .dropdown-menu,.navbar-fixed-bottom .dropdown .dropdown-menu{top:auto;bottom:100%;margin-bottom:2px;}/*/
 @media ( min-width :768px) {
@@ -2553,12 +2556,12 @@ textarea.input-group-sm > .form-control,textarea.input-group-sm > .input-group-a
 	padding-left: 0;
 	list-style: none;
 }
-
+/*
 .nav > li {
 	position: relative;
 	display: block;
 }
-
+*/
 .nav > li > a, nav > li > div > button  {
 	position: relative;
 	display: block;
@@ -3659,11 +3662,6 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover,
 	border-radius: 0;
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
 }
-/*
-.panel-body {
-	padding: 15px;
-}
-*/
 
 .panel-heading {
 	padding: 10px 15px;
@@ -8462,6 +8460,7 @@ tbody.collapse.in {
 
 .dropup, .dropdown {
 	position: relative;
+	cursor: pointer;
 }
 
 .dropdown-toggle:focus {
@@ -8976,8 +8975,14 @@ textarea.input-group-sm > .form-control, textarea.input-group-sm > .input-group-
 }
 
 .nav > li > div > button {
-	background-color: #141414;
+	background-color: transparent;
 	border: none;
+}
+@media (min-width:1px) and (max-width:767px){
+.nav > li > div > button {
+	/*background-color: #272727;*/
+	border: none;
+}
 }
 
 .nav > li > div > button #signup-button {
@@ -10576,11 +10581,7 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover,
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
 }
 
-/*
-.panel-body {
-	padding: 15px;
-}
-*/
+ 
 
 .panel-heading {
 	padding: 10px 15px;
@@ -12890,7 +12891,7 @@ hr {
 
 @media ( min-width :992px) {
 	.footer-section {
-		padding: 62px 0;
+	padding: 62px 0 0 45px;
 	}
 }
 
@@ -14417,7 +14418,7 @@ html.app-mobile body > .container, html.app-mobile .ui-view-main > .container,
 	border: 0;
 	border-radius: 0;
 	padding: 0;
-	margin-top: 1px;
+	margin-top: 0;
 }
 
 @media ( min-width :768px) {
@@ -14933,6 +14934,7 @@ html.app-mobile body > .container, html.app-mobile .ui-view-main > .container,
 	color: #ffffff;
 }
 
+/*
 @media ( max-width :767px) {
 	.navbar-skin-cover .navbar-nav > li > a, .navbar-skin-cover .navbar-nav > li > div > button {
 		font-weight: 500;
@@ -14976,6 +14978,7 @@ html.app-mobile body > .container, html.app-mobile .ui-view-main > .container,
 		color: #ffffff;
 	}
 }
+*/
 
 .navbar-skin-cover .toggle {
 	color: #ffffff;
@@ -17543,7 +17546,7 @@ ul.icon-list li a {
 		color: #fff;
 	}
 	.navbar-skin-cover .navbar-nav > li > a i, .navbar-skin-cover .navbar-nav > li > div > button i {
-		color: #000;
+		color: #cccccc;
 	}
 	.navbar-skin-cover.navbar-skin-cover-white .navbar-nav > li > a, .navbar-skin-cover.navbar-skin-cover-white .navbar-nav > li > div > button  {
 		color: #000;
@@ -18359,8 +18362,13 @@ label {
 .panel-body {
 	padding: 0;
 	font-size: 15px;
-}	 
+}
 
+@media ( min-width : 1px) and (max-width: 320px) {	 
+.panel-body {
+	text-align:center;
+}
+}
 .panel-body p {
 	color: #757575;
 	max-height: 90px;
@@ -18519,6 +18527,7 @@ label {
 	padding: 0;
 	border: none;
 	outline: none;
+	z-index: 11;
 }
 
 .slick-prev:before, .slick-next:before {
@@ -18865,7 +18874,7 @@ label {
 
 .text-left h3 {
 	font-size: 18px;
-	padding: 0 0 0 40px;
+	padding: 20px 0 0 40px;
 }
 
 @media ( min-width : 1px) and (max-width: 320px) {
