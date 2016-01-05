@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('oshi2App')
-  .controller('MainCtrl', function ($scope, Games, Categories) {
+  .controller('MainCtrl', function ($scope, Games, Categories, LatestWinners) {
 
     $scope.categories = [{displayName:'loading...'}];
     Categories.getMainPageCategories().then(function(categories) {
@@ -17,7 +17,7 @@ angular.module('oshi2App')
     		return 6;
     	}
     };
-    
+
     $scope.breakpoints =
       [{
         breakpoint: 1024,
@@ -44,6 +44,10 @@ angular.module('oshi2App')
           slidesToScroll: 1
         }
       }];
+
+    LatestWinners.query({size: 5}).$promise.then(function (latestWinners) {
+      $scope.latestWinners = latestWinners;
+    });
 
   });
 

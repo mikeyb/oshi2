@@ -12,8 +12,8 @@
           </div>
           <div class="row">
             <div class="col-md-8">
-            
-            
+
+
              <!-- Sign up -->
               <div class="hide-homepage-join-top homepage-join dropdown-size-280">
                 <form>
@@ -65,8 +65,8 @@
                 </form>
               </div>
               <!-- // END sign up -->
-            
-            
+
+
             <div class="img-homepage-main-banner">
               <div class="media">
                 <div class="media-body img-homepage-main-banner">
@@ -178,7 +178,7 @@
           <!-- END / Expand collapse  -->
         </div>
       </div>
-    
+
 
       <!-- Page section 1 -->
 			<div class="home-page-section" ng-repeat="category in categories">
@@ -194,7 +194,7 @@
 								<img ng-src="{{game.iconUrl}}" class="img-responsive" style="width: 100%"/>
 								<a ng-click="playGame(game.playUrl, game.id, false, false)"  >
 								</a>
-							 
+
 							<div class="panel-body">
 								<h4 class="margin-v-0-5">{{game.name}}</h4>
 								<div class="hide-panel-body">
@@ -224,7 +224,7 @@
                     <img src="assets/images/spacer-home.gif" alt="location" class="img-responsive">
                 </div>
 			</div>
-		 
+
     </div>
   </div>
 </div>
@@ -252,7 +252,6 @@
             <li><a ui-sref="list({category:'table',provider:null})">Table Games</a></li>
             <li><a ui-sref="list({category:'casual',provider:null})">Casual Games</a></li>
           </ul>
-        </div>
         </div>
         <div class="footer-hide-bottom">
         <div class="col-xs-12 col-md-4 text-center">
@@ -285,38 +284,16 @@
           <h4>Latest Winners</h4>
           <div class="panel bg-transparent margin-none">
             <div class="panel-body">
-              <!-- example winners -->
-              <div>
-                - &nbsp;<span ng-bind="game.nickname" class="ng-binding">tomfin1</span> just won
-              </div>
-              <div>
-                <strong>1.5 mBTC</strong> <span>in</span> <a>Lucky Lady's Clover</a>
-              </div>
-              <div>
-                - &nbsp;<span ng-bind="game.nickname" class="ng-binding">tomfin1</span> just won
-              </div>
-              <div>
-                <strong>1.5 mBTC</strong> <span>in</span> <a>Lucky Lady's Clover</a>
-              </div>
-              <div>
-                - &nbsp;<span ng-bind="game.nickname" class="ng-binding">tomfin1</span> just won
-              </div>
-              <div>
-                <strong>1.5 mBTC</strong> <span>in</span> <a>Lucky Lady's Clover</a>
-              </div>
-              <div>
-                - &nbsp;<span ng-bind="game.nickname" class="ng-binding">tomfin1</span> just won
-              </div>
-              <div>
-                <strong>1.5 mBTC</strong> <span>in</span> <a>Lucky Lady's Clover</a>
-              </div>
-              <div>
-                - &nbsp;<span ng-bind="game.nickname" class="ng-binding">tomfin1</span> just won
-              </div>
-              <div>
-                <strong>1.5 mBTC</strong> <span>in</span> <a>Lucky Lady's Clover</a>
-              </div>
-              <!-- END / example winners -->
+							<div ng-if="!latestWinners">Loading...</div>
+							<span ng-repeat="winner in latestWinners">
+								<div>
+									- &nbsp;<span class="ng-binding">{{winner.nickname}}</span> just won
+								</div>
+								<div>
+									<strong>{{winner.win}}</strong> <span>in</span>
+									<a ng-click="playGame(winner.game.gameUrl, winner.game.id, false, false)">{{winner.game.name}}</a>
+								</div>
+							</span>
             </div>
           </div>
         </div>
@@ -344,8 +321,10 @@
           <img src="assets/images/responsible_gamble.png" uib-popover="We take Resposnsible Gambling very seriously. Why? We want happy customers." popover-trigger="mouseenter" aria-hidden="true">
         </a>
       </div>
+      </div>
     </div>
-   </div> 
+    </div>
+  </div>
   </section>
 </div>
 <!-- END upper Footer -->
