@@ -100,7 +100,7 @@
 			<div class="winners-image">
 			    <div class="cover hover overlay margin-none">
 				<img src="{{game.iconUrl}}" alt="location" class="media-object">
-				<a ng-click="playGame(game.gameUrl, game.id, false, false)" class="overlay overlay-full overlay-bg-black overlay-hover">
+				<a ng-click="playGame(game.gameUrl, game.id, false, false, game.aspectRatio)" class="overlay overlay-full overlay-bg-black overlay-hover">
 				    <span class="v-center"> <span class="btn btn-play"><i class="fa fa-play"></i> </span>
 				    </span>
 				</a>
@@ -108,7 +108,7 @@
 			</div>
 			<div class="winners-content">
 			    <div class="winners-game">
-				<a ng-click="playGame(game.gameUrl, game.id, false, false)">{{game.name}}</a>
+				<a ng-click="playGame(game.gameUrl, game.id, false, false, game.aspectRatio)">{{game.name}}</a>
 			    </div>
 			</div>
 		    </div>
@@ -126,7 +126,7 @@
 			<div class="winners-image">
 			    <div class="cover hover overlay margin-none">
 				<img src="{{winner.game.iconUrl}}" alt="location" class="media-object">
-				<a ng-click="playGame(winner.game.gameUrl, winner.game.id, false, false)" class="overlay overlay-full overlay-bg-black overlay-hover">
+				<a ng-click="playGame(winner.game.gameUrl, winner.game.id, false, false, game.aspectRatio)" class="overlay overlay-full overlay-bg-black overlay-hover">
 				    <span class="v-center"> <span class="btn btn-play"><i class="fa fa-play"></i> </span>
 				    </span>
 				</a>
@@ -140,7 +140,7 @@
 				{{winner.win}} <span>in</span>
 			    </div>
 			    <div class="winners-game">
-				<a ng-click="playGame(winner.game.gameUrl, winner.game.id, false, false)">{{winner.game.name}}</a>
+				<a ng-click="playGame(winner.game.gameUrl, winner.game.id, false, false, game.aspectRatio)">{{winner.game.name}}</a>
 			    </div>
 			</div>
 		    </div>
@@ -158,7 +158,7 @@
 			<div class="winners-image">
 			    <div class="cover hover overlay margin-none">
 				<img src="{{winner.game.iconUrl}}" alt="location" class="media-object">
-				<a ng-click="playGame(winner.game.gameUrl, winner.game.id, false, false)" class="overlay overlay-full overlay-bg-black overlay-hover">
+				<a ng-click="playGame(winner.game.gameUrl, winner.game.id, false, false, game.aspectRatio)" class="overlay overlay-full overlay-bg-black overlay-hover">
 				    <span class="v-center"> <span class="btn btn-play"><i class="fa fa-play"></i> </span>
 				    </span>
 				</a>
@@ -172,7 +172,7 @@
 				{{winner.win}} <span>in</span>
 			    </div>
 			    <div class="winners-game">
-				<a ng-click="playGame(winner.game.gameUrl, winner.game.id, false, false)">{{winner.game.name}}</a>
+				<a ng-click="playGame(winner.game.gameUrl, winner.game.id, false, false, game.aspectRatio)">{{winner.game.name}}</a>
 			    </div>
 			</div>
 		    </div>
@@ -243,13 +243,13 @@
 					<div class="media">
 						<div class="media-left listing-media-left">
 							<div class="cover hover overlay margin-none">
-								<a ng-click="playGame(game.playUrl, game.id, false, false)"   style="height: 110px;">
+								<a ng-click="playGame(game.playUrl, game.id, false, false, game.aspectRatio)"   style="height: 110px;">
 									<img ng-src="{{game.iconUrl}}"/>	 
 								</a>
 							</div> 
 						</div>
 						<div class="media-body media-body-list">
-							<a ng-click="playGame(game.playUrl, game.id, false, false)">
+							<a ng-click="playGame(game.playUrl, game.id, false, false, game.aspectRatio)">
 								<h4 class="media-heading">{{game.name}}</h4>
 							</a>
 							<p class="margin-none game-description">{{game.description}}</p>
@@ -272,12 +272,12 @@
 				<div class="row" ng-if="displayType == 'grid'">
 					<div class="col-lg-2 col-lg-3 col-md-3 col-sm-4 col-xs-6" ng-repeat="game in gamesPage" style="padding-bottom: 46px">
 					<div class="cover hover overlay margin-none">
-								<a ng-click="playGame(game.playUrl, game.id, false, false)"   style="height: 110px;">
+								<a ng-click="playGame(game.playUrl, game.id, false, false, game.aspectRatio)"   style="height: 110px;">
 									<img ng-src="{{game.iconUrl}}"/>	 
 								</a>
 							</div> 
 						<div class="panel-body">
-							<a ng-click="playGame(game.playUrl, game.id, false, false)">
+							<a ng-click="playGame(game.playUrl, game.id, false, false, game.aspectRatio)">
 								<h4 style="margin: 5px 0px;">{{game.name}}</h4>
 							</a>
 							<div>
@@ -289,8 +289,8 @@
 							</div>
 						</div>
 						<div class="text-left">
-							<button class="btn btn-primary btn-playnow" ng-click="playGame(game.playUrl, game.id, false, false)">Play</button>
-							<button class="btn btn-primary btn-practiceplay" ng-click="playGame(game.playForFunUrl, game.id, true, false)">Practice</button>
+							<button class="btn btn-primary btn-playnow" ng-click="playGame(game.playUrl, game.id, false, false, game.aspectRatio)">Play</button>
+							<button class="btn btn-primary btn-practiceplay" ng-click="playGame(game.playForFunUrl, game.id, true, false, game.aspectRatio)">Practice</button>
 						</div>
 					</div>
 				</div>

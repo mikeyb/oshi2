@@ -176,9 +176,9 @@
 					<!-- Master grid panel -->
 					<div class="item" ng-repeat="game in category.games | limitTo:10">
 						<div class="panel panel-default relative">
-							 	<a ng-click="playGame(game.playUrl, game.id, false, false)"  >
+							 	<a ng-click="playGame(game.playUrl, game.id, false, false, game.aspectRatio)"  >
 								<img ng-src="{{game.iconUrl}}" class="img-responsive" style="width: 100%"/>
-								<a ng-click="playGame(game.playUrl, game.id, false, false)"  >
+								<a ng-click="playGame(game.playUrl, game.id, false, false, game.aspectRatio)"  >
 								</a>
 
 							<div class="panel-body">
@@ -277,7 +277,7 @@
 								</div>
 								<div>
 									<strong>{{winner.win}}</strong> <span>in</span>
-									<a ng-click="playGame(winner.game.gameUrl, winner.game.id, false, false)">{{winner.game.name}}</a>
+									<a ng-click="playGame(winner.game.gameUrl, winner.game.id, false, false, game.aspectRatio)">{{winner.game.name}}</a>
 								</div>
 							</span>
             </div>
