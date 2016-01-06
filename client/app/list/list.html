@@ -270,16 +270,15 @@
 				<!-- END/ Master Listing -->
 
 				<div class="row" ng-if="displayType == 'grid'">
-					<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6" ng-repeat="game in gamesPage" style="padding-bottom: 15px">
-						<div class="cover hover overlay margin-none">
-							<img src="{{game.iconUrl}}" class="img-responsive">
-							<a ng-click="playGame(game.playUrl, game.id, false, false)" class="overlay overlay-full overlay-bg-black overlay-hover">
-								<span class="v-center"><span class="btn btn-play btn-lg"><i class="fa fa-play"></i></span></span>
-							</a>
-						</div>
+					<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6" ng-repeat="game in gamesPage" style="padding-bottom: 20px">
+					<div class="cover hover overlay margin-none">
+								<a ng-click="playGame(game.playUrl, game.id, false, false)"   style="height: 110px;">
+									<img ng-src="{{game.iconUrl}}"/>	 
+								</a>
+							</div> 
 						<div class="panel-body">
 							<a ng-click="playGame(game.playUrl, game.id, false, false)">
-								<h5 style="margin: 5px 0px;">{{game.name}}</h5>
+								<h4 style="margin: 5px 0px;">{{game.name}}</h4>
 							</a>
 							<div>
 								<!--<span class="label label-grey-100">{{game.providerName}}</span>&nbsp;-->
