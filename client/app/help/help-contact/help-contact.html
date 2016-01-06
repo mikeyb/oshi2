@@ -2,8 +2,45 @@
 	<div class="home-page-top-padding">
 		<div class="container page-container">
 			<!-- Content goes below -->
-    
-            Contact Form
+
+			<h1>Contact Oshi</h1>
+
+			<p>Need some assistance? Something not working for you? Either
+				chat to our Live Help guys or fill in the form below and we'll get
+				back to you as soon as possible!</p>
+
+			<form name="contactForm" class="css-form" novalidate>
+				<table class="table table-bordered">
+					<tbody>
+						<tr>
+							<td>Email*</td>
+							<td>
+							      <input ng-model="contact.email" name="email" type="email" size="55" required></input>
+							      <div ng-show="contactForm.$submitted || contactForm.email.$touched">
+								      <span class="has-error" ng-show="contactForm.email.$error.required">Please enter your email address</span>
+		                              <span class="has-error" ng-show="contactForm.email.$error.email">Please enter a valid email address</span>
+							      </div>
+							</td>
+						</tr>
+						<tr>
+							<td>Name (optional)</td>
+							<td><input ng-model="contact.name" type="text" size="55"></input></td>
+						</tr>
+						<tr>
+							<td>Message*</td>
+							<td>
+							    <textarea ng-model="contact.message" name="message" cols="55" rows="5" required></textarea>
+                                <div ng-show="contactForm.$submitted || contactForm.message.$touched">
+                                    <span class="has-error" ng-show="contactForm.message.$error.required">Please enter your message</span>
+                                </div>
+						    </td>
+						</tr>
+					</tbody>
+				</table>
+				<h5>* Required fields</h5>
+				<button type="submit" ng-click="contactus(contact)" class="btn btn-primary">Contact Us</button>
+			</form>
+
 		</div>
 	</div>
 </div>
