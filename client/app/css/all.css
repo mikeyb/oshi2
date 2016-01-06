@@ -14013,6 +14013,13 @@ html.app-mobile body > .container, html.app-mobile .ui-view-main > .container,
 	line-height: 50px;
 	font-size: 1.15rem;
 }
+@media (min-width:768px) and (max-width:991px){
+.navbar-nav > li > a, .navbar-nav > li > div > button  {
+	padding: 0 2px;
+}
+}
+
+
 
 .navbar-nav > li > a  img, .navbar-nav > li > div > button img {
 	margin-right: 3px;
@@ -14028,6 +14035,12 @@ html.app-mobile body > .container, html.app-mobile .ui-view-main > .container,
 	height: 50px;
 	line-height: 50px;
 	margin-left: 15px;
+}
+
+@media (min-width:768px) and (max-width:991px){
+.navbar-nav > li > a.dropdown-toggle, .navbar-nav > li > div > button.dropdown-toggle {
+	margin-left: 0px;
+}
 }
 
 .navbar-nav > li > a.dropdown-toggle img, .navbar-nav > li > div > button.dropdown-toggle img {
@@ -18955,7 +18968,6 @@ label {
 
 }
 iframe {
-	display: block;
 	background: #141414;
 	border: none;
 	 
