@@ -18945,6 +18945,11 @@ label {
 		padding-top: 20px;
 	}
 }
+@media ( min-width : 992px)  and (max-width: 320px)  {
+.ng-binding  h3{
+		padding: 20px 0 0 60px;
+	}
+}
 
 
 .home-page-section-content {
