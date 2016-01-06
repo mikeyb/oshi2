@@ -30,11 +30,11 @@
 	    </li>
 	</ul>
     </div>
-<div id="ascrail2000" class="nicescroll-rails"
-     style="width: 5px; z-index: 2; cursor: default; position: absolute; top: 0px; left: 194px; height: 331px; opacity: 0;">
-    <div
+<!-- <div id="ascrail2000" class="nicescroll-railsx"
+     style="width: 5px; z-index: 2; cursor: default; position: absolute; top: 0px; left: 194px; height: 331px; opacity: 0;"> -->
+    <!-- <div
 	style="position: relative; top: 0px; float: right; width: 5px; height: 481px; border: 0px; border-radius: 5px; background-color: rgb(22, 174, 159); background-clip: padding-box;"></div>
-</div>
+</div> -->
 </aside>
 <!-- Sidebar component with st-effect-1 (set on the toggle button within the navbar) -->
 
@@ -187,14 +187,13 @@
     </div>
 </aside>
 
-<!-- content push wrapper -->
 <div class="st-pusher grid-list-container">
-
 	<!-- this is the wrapper for the content -->
 	<div class="st-content">
 
 		<!-- extra div for emulating position:fixed of the menu -->
-		<div class="st-content-inner padding-top-none" id="content" tabindex="2">
+		<div class="st-content-inner padding-top-none" id="content"
+			data-scrollable="" tabindex="2">
 			<!-- style="overflow-y: hidden; outline: none;"> -->
 
 			<!-- Change view - sort by -->
@@ -244,30 +243,30 @@
 					<div class="media">
 						<div class="media-left listing-media-left">
 							<div class="cover hover overlay margin-none">
-								<img ng-src="{{game.iconUrl}}"/>
-								<a ng-click="playGame(game.playUrl, game.id, false, false)" class="overlay overlay-full overlay-bg-black overlay-hover" style="height: 110px;">
-									<span class="v-center"><span class="btn btn-play btn-lg"><i class="fa fa-play"></i></span></span>
+								<a ng-click="playGame(game.playUrl, game.id, false, false)"   style="height: 110px;">
+									<img ng-src="{{game.iconUrl}}"/>	 
 								</a>
-							</div>
-							<div class="listing-buttons">
-								<button class="btn btn-primary btn-playnow" ng-click="playGame(game.playUrl, game.id, false, false)">Play</button>
-								<button class="btn btn-primary btn-practiceplay" ng-click="playGame(game.playForFunUrl, game.id, true, false)">Practice</button>
-							</div>
+							</div> 
 						</div>
 						<div class="media-body media-body-list">
 							<a ng-click="playGame(game.playUrl, game.id, false, false)">
 								<h4 class="media-heading">{{game.name}}</h4>
 							</a>
-							<p class="margin-none">{{game.description}}</p>
-							<div>
+							<p class="margin-none game-description">{{game.description}}</p>
+							<div class="list-other">
 								<span class="label label-grey-100">{{game.providerName}}</span>&nbsp;
 								<i class="fa fa-btc" style="color: grey;" popover="Bitcoin" popover-trigger="mouseenter"></i>&nbsp;
 								<i class="fa fa-thumbs-o-up" style="color: grey;" popover="Provably Fair" popover-trigger="mouseenter"></i>&nbsp;
 								<!-- <i class="fa fa-star" ng-if="isAuth()" ng-click="toggleFavorite(game)" ng-style="{'color': game.isFavorite ? '#fcaf3e' : '#fff'}"></i> -->
+								<div class="listing-buttons">
+								<button class="btn btn-primary btn-playnow" ng-click="playGame(game.playUrl, game.id, false, false)">Play</button>
+								<button class="btn btn-primary btn-practiceplay" ng-click="playGame(game.playForFunUrl, game.id, true, false)">Practice</button>
+							</div>
 							</div>
 						</div>
 					</div>
 				</div>
+			 
 				<!-- END/ Master Listing -->
 
 				<div class="row" ng-if="displayType == 'grid'">
@@ -303,7 +302,11 @@
 					<li ng-repeat="i in pages track by $index" ng-class="{ 'active': currentPage == $index}"><a ng-click="paginate($index)">{{$index+1}}</a></li>
 					<li ng-class="{ 'disabled': !hasNextPage }"><a ng-click="paginate(currentPage+1)">»</a></li>
 				</ul>
-			</div>
+</div>
+
+			<!-- END / Grid View -->
+
+
 		</div>
 		<!-- /st-content-inner -->
 	</div>
