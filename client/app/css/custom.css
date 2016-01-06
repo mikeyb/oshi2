@@ -77,3 +77,23 @@ hr {
 .page-container h2 {
     font-size: 30px;
 }
+
+.game-list {
+    min-height: 250px;
+}
+
+.game-icon {
+    width: 100%;
+}
+
+.game-grid {
+	min-height: 250px;
+}
+
+.game-list {
+    min-height: 150px;
+}
+
+.game-icon {
+    width: 100%;
+}
