@@ -6,7 +6,7 @@ angular.module('oshi2App')
 	$scope.contactus = function(contact) {
 		  
 		$scope.contactResponse = {};
-		  ContactUs.post(contact).then(function (res) {
+		  ContactUs.post(contact).$promise.then(function (res) {
 		  $scope.contactResponse = res;
 		  console.log('D> Res: ', res);
 		  $scope.contact = {};

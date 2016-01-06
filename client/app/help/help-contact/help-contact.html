@@ -8,6 +8,13 @@
 			<p>Need some assistance? Something not working for you? Either
 				chat to our Live Help guys or fill in the form below and we'll get
 				back to you as soon as possible!</p>
+				
+			<div ng-show="responseSuccess" class="alert alert-success">
+			    <span class="has-success">Your message has been submitted and we'll get back to you shortly!</span>
+			</div>
+            <div ng-show="responseError" class="alert alert-warning">
+                <span class="has-warning">Unfortunately something went wrong submitted your message. Please try again later or use our Live Help.</span>
+            </div>
 
 			<form name="contactForm" class="css-form" novalidate>
 				<table class="table table-bordered">
