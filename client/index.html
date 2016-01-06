@@ -91,8 +91,8 @@
                     <button id="single-button" type="button" class="" uib-dropdown-toggle ng-disabled="disabled">
                         Providers  <span class="caret"></span>
                     </button>
-                    <ul class="uib-dropdown-menu dropdown-menu" aria-labelledby="simple-dropdown">
-                      <li role="menuitem" ng-class="{ 'active': $state.is('page.1') }" ng-repeat="provider in providers" ng-click="navCollapsed=true">
+                    <ul class="uib-dropdown-menu dropdown-menu" aria-labelledby="simple-dropdown" ng-click="navCollapsed=true">
+                      <li role="menuitem" ng-class="{ 'active': $state.is('page.1') }" ng-repeat="provider in providers">
                         <a ui-sref="list({category:null,display:provider.displayName,provider:provider.name})"><span class="badge pull-right">{{provider.gameCount}}</span>{{provider.displayName}}</a>
                       </li>
                     </ul>
@@ -106,7 +106,7 @@
                             <button id="single-button" type="button" class="" uib-dropdown-toggle ng-disabled="disabled">
                                 Bonuses <span class="caret"></span>
                             </button>
-                            <ul class="uib-dropdown-menu dropdown-menu" aria-labelledby="simple-dropdown">
+                            <ul class="uib-dropdown-menu dropdown-menu" aria-labelledby="simple-dropdown" ng-click="navCollapsed=true">
                                 <li role="menuitem" ng-class="{ 'active': $state.is('bonus-work') }"><a ui-sref="bonus-work"><span>How Bonuses Work</span></a></li>
 			                    <li role="menuitem" ng-class="{ 'active': $state.is('bonus-latest') }"><a ui-sref="bonus-latest"><span>Latest Bouses!</span></a></li>
                                 <li role="menuitem" ng-class="{ 'active': $state.is('event-promotions') }"><a ui-sref="event-promotions"><span>Event Promotions</span></a></li>
@@ -122,7 +122,7 @@
                             <button id="single-button" type="button" class="" uib-dropdown-toggle ng-disabled="disabled">
                                 Help <span class="caret"></span>
                             </button>
-                            <ul class="uib-dropdown-menu dropdown-menu" aria-labelledby="simple-dropdown">
+                            <ul class="uib-dropdown-menu dropdown-menu" aria-labelledby="simple-dropdown" ng-click="navCollapsed=true">
 			                    <li role="menuitem" ng-class="{ 'active': $state.is('help-contact') }"><a ui-sref="help-contact"><span>Support/Contact</span></a></li>
 			                    <li role="menuitem" ng-class="{ 'active': $state.is('help-payment') }"><a ui-sref="help-payment"><span>Payment Methods</span></a></li>
 			                    <li role="menuitem" ng-class="{ 'active': $state.is('help-bitcoin') }"><a ui-sref="help-bitcoin"><span>Bitcoin Gambling Guide</span></a></li>
@@ -141,7 +141,7 @@
                             <button id="single-button" type="button" class="" uib-dropdown-toggle ng-disabled="disabled">
                                 About <span class="caret"></span>
                             </button>
-                            <ul class="uib-dropdown-menu dropdown-menu" aria-labelledby="simple-dropdown">
+                            <ul class="uib-dropdown-menu dropdown-menu" aria-labelledby="simple-dropdown" ng-click="navCollapsed=true">
 			                    <li role="menuitem" ng-class="{ 'active': $state.is('about-licence') }"><a ui-sref="about-licence"><span>Gambling Licence</span></a></li>
 			                    <li role="menuitem" ng-class="{ 'active': $state.is('about-fair') }"><a ui-sref="about-fair"><span>Provably Fair</span></a></li>
 			                    <li role="menuitem" ng-class="{ 'active': $state.is('about-founders') }"><a ui-sref="about-founders"><span>Founders</span></a></li>
