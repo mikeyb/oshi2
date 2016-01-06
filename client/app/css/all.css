@@ -3481,12 +3481,12 @@ a.thumbnail:hover,a.thumbnail:focus,a.thumbnail.active{border-color:#26a69a;}
 .media-bottom {
 	vertical-align: bottom;
 }
-
+/*
 .media-heading {
 	margin-top: 0;
 	margin-bottom: 5px;
 }
-
+*/
 .media-list {
 	padding-left: 0;
 	list-style: none;
@@ -10399,12 +10399,12 @@ to {
 .media-bottom {
 	vertical-align: bottom;
 }
-
+/*
 .media-heading {
 	margin-top: 0;
 	margin-bottom: 5px;
 }
-
+*/
 .media-list {
 	padding-left: 0;
 	list-style: none;
@@ -12715,7 +12715,7 @@ g, path, circle, rect {
 }
 
 .media-heading {
-	margin-bottom: 10px;
+	margin: 0 0 10px 0;
 	cursor: pointer;
 }
 
@@ -18956,7 +18956,7 @@ label {
 }
 iframe {
 	display: block;
-	background: #000;
+	background: #141414;
 	border: none;
 	 
 }  
