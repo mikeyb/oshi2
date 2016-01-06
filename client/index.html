@@ -67,19 +67,18 @@
                     <span class="icon-bar"></span>
                 </button>	
 		      </div>
-			  <div class="collapse navbar-collapse" id="main-nav" ng-class="!navCollapsed && 'in'" ng-click="navCollapsed=true">
+			  <div class="navbar-collapse nav-collapse" uib-collapse="navCollapsed" id="main-nav" ng-class="{!navCollapsed && 'in', collapse: navCollapsed}">
 			    <!-- Left Nav -->
 			    <ul class="nav navbar-nav">
-
 				    <!--Games-->
             <li class="dropdown main-nav-dropdown-menu">
                 <div uib-dropdown>
                     <button id="single-button" type="button" class="dropdown-toggle" uib-dropdown-toggle>
                         Games <span class="caret"></span>
                     </button>
-                    <ul class="uib-dropdown-menu dropdown-menu">
+                    <ul class="uib-dropdown-menu dropdown-menu" ng-click="navCollapsed=true">
                       <li role="menuitem" ng-class="{ 'active': $state.is('list') }" ng-repeat="category in categories">
-                        <a ui-sref="list({category:category.name,display:category.displayName,provider:null})"><span class="badge pull-right">{{category.gameCount}}</span>{{category.displayName}}</a>
+                        <a ui-sref="list({category:category.name,display:category.displayName,provider:null})" ng-click="navCollapsed=true"><span class="badge pull-right">{{category.gameCount}}</span>{{category.displayName}}</a>
                       </li>
                     </ul>
                 </div>
@@ -93,7 +92,7 @@
                         Providers  <span class="caret"></span>
                     </button>
                     <ul class="uib-dropdown-menu dropdown-menu" aria-labelledby="simple-dropdown">
-                      <li role="menuitem" ng-class="{ 'active': $state.is('page.1') }" ng-repeat="provider in providers">
+                      <li role="menuitem" ng-class="{ 'active': $state.is('page.1') }" ng-repeat="provider in providers" ng-click="navCollapsed=true">
                         <a ui-sref="list({category:null,display:provider.displayName,provider:provider.name})"><span class="badge pull-right">{{provider.gameCount}}</span>{{provider.displayName}}</a>
                       </li>
                     </ul>
