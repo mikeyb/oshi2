@@ -99,7 +99,7 @@
 		    <div class="winners-box-sidebar" ng-repeat="game in lastPlayedGames">
 			<div class="winners-image">
 			    <div class="cover hover overlay margin-none">
-				<img src="{{game.iconUrl}}" alt="location" class="media-object">
+				<img ng-src="{{game.iconUrl}}" alt="location" class="media-object">
 				<a ng-click="playGame(game.gameUrl, game.id, false, false, game.aspectRatio)" class="overlay overlay-full overlay-bg-black overlay-hover">
 				    <span class="v-center"> <span class="btn btn-play"><i class="fa fa-play"></i> </span>
 				    </span>
@@ -125,7 +125,7 @@
 		    <div class="winners-box-sidebar" ng-repeat="winner in topWinners">
 			<div class="winners-image">
 			    <div class="cover hover overlay margin-none">
-				<img src="{{winner.game.iconUrl}}" alt="location" class="media-object">
+				<img ng-src="{{winner.game.iconUrl}}" alt="location" class="media-object">
 				<a ng-click="playGame(winner.game.gameUrl, winner.game.id, false, false, game.aspectRatio)" class="overlay overlay-full overlay-bg-black overlay-hover">
 				    <span class="v-center"> <span class="btn btn-play"><i class="fa fa-play"></i> </span>
 				    </span>
@@ -200,9 +200,14 @@
       <div>
         <nav class="navbar-default navbar-static-top">
           <div class="container-fluid">
-            <div class="navbar-header">
-              <a class="toggle pull-right margin-none visible-xs" data-toggle="collapse" href="#navbar">
-                <i class="fa fa-sliders fa-rotate-90"></i>
+            <div ng-if="displayType == 'grid'" class="navbar-header">
+              <a class="toggle pull-right margin-none visible-xs" data-toggle="collapse" href="" ng-click="setDisplayType('list')">
+                <i class="fa fa-sliders fa-rotate-90"></i> Switch to List
+              </a>
+            </div>
+            <div ng-if="displayType == 'list'" class="navbar-header">
+              <a class="toggle pull-right margin-none visible-xs" data-toggle="collapse" href="" ng-click="setDisplayType('grid')">
+                <i class="fa fa-sliders fa-rotate-90"></i> Switch to Grid
               </a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
