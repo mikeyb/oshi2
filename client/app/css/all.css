@@ -367,6 +367,12 @@ img {
 	display:none;
 }
 }
+@media (min-width: 992px) {
+.img-homepage-main-banner {
+margin-top:10px;
+}
+}
+
 
 .img-rounded {
 	border-radius: 6px;
@@ -11860,12 +11866,15 @@ button.close {
 
 /* Slider */
 /*.slick-slider { position: relative; display: block; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; -ms-touch-action: pan-y; touch-action: pan-y; -webkit-tap-highlight-color: transparent; }*/
-.slick-list {
+/* .slick-list {
 	position: relative;
 	overflow: hidden;
 	display: block;
 	margin: 0;
 	padding: 0;
+} */
+.slick-list {
+	padding-bottom: 35px;
 }
 
 @media ( max-width :479px) and (min-width : 1px ) {
@@ -16844,7 +16853,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	font-family: 'Ubuntu', "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-weight: 500;
 	line-height: 1.1;
-	color: inherit;
+	color: #cccccc;
 }
 
 .home-page-navbar-width {
@@ -18272,6 +18281,7 @@ label {
 	color: #757575;
 	max-height: 90px;
 	overflow: hidden;
+	font-size:16px;
 	text-overflow: "…" "…";
 }
 
@@ -18707,8 +18717,9 @@ label {
 
 @media ( max-width : 1999px) {
 	.panel-headline h1 {
-		font-size: 46px;
+		font-size: 50px;
 		margin: 10px 0 4px 0;
+		font-weight:600;
 	}
 }
 

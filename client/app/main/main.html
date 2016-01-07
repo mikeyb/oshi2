@@ -8,7 +8,7 @@
           <!--  Call to Action Row -->
           <div class="panel-headline">
             <h1>Bitcoin Casino Just Got Un-LasVegas!</h1>
-            <h2>World's Best Bitcoin Casino Platform, Provably Fair, 100's of Games, Amazing Customer Service.</h2>
+            <h2>Find and Play Bitcoin Casino Games You Love...On Mobile or Desktop. Fast.</h2>
           </div>
           <div class="row">
             <div class="col-md-8">
@@ -123,12 +123,9 @@
                 <div class="media media-home-page">
                   <div class="media-body media-home-page-body">
                     <h3>
-                      <i class="fa fa-star">&nbsp;</i>header text
+                      <i class="fa fa-star">&nbsp;</i>Find it Fast
                     </h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing
-                      elit. Placeat, quoLorem ipsum dolor sit amet, consectetur
-                      adipisicing elit. Placeat, quoLorem ipsum dolor sit amet,
-                      consectetur adipisicing elit.</p>
+                    <p>You've hundreds of games to choose from, so we've made navigation, filtering and sorting the priority.</p>
                   </div>
                 </div>
               </div>
@@ -136,12 +133,9 @@
                 <div class="media media-home-page">
                   <div class="media-body media-home-page-body">
                     <h3>
-                      <i class="fa fa-star">&nbsp;</i>header text
+                      <i class="fa fa-star">&nbsp;</i>Un-LasVegas
                     </h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing
-                      elit. Placeat, quoLorem ipsum dolor sit amet, consectetur
-                      adipisicing elit. Placeat, quoLorem ipsum dolor sit amet,
-                      consectetur adipisicing elit.</p>
+                    <p>Have you noticed...? We've toned down the 'noise' and 'bling', so the games take centre stage.</p>
                   </div>
                 </div>
               </div>
@@ -149,12 +143,9 @@
                 <div class="media media-home-page">
                   <div class="media-body media-home-page-body">
                     <h3>
-                      <i class="fa fa-star">&nbsp;</i>header text
+                      <i class="fa fa-star">&nbsp;</i>Worlds Best
                     </h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing
-                      elit. Placeat, quoLorem ipsum dolor sit amet, consectetur
-                      adipisicing elit. Placeat, quoLorem ipsum dolor sit amet,
-                      consectetur adipisicing elit.</p>
+                    <p>You're on world's best Bitcoin Casino platform, that's provably fair, quick and reliable.</p>
                   </div>
                 </div>
               </div>
@@ -164,7 +155,6 @@
           <!-- END / Expand collapse  -->
         </div>
       </div>
-
 
       <!-- Page section 1 -->
 			<div class="home-page-section" ng-repeat="category in categories">
@@ -176,10 +166,9 @@
 					<!-- Master grid panel -->
 					<div class="item" ng-repeat="game in category.games | limitTo:10">
 						<div class="panel panel-default relative">
-							 	<a ng-click="playGame(game.playUrl, game.id, false, false, game.aspectRatio)"  >
-								<img ng-src="{{game.iconUrl}}" class="img-responsive" style="width: 100%"/>
-								<a ng-click="playGame(game.playUrl, game.id, false, false, game.aspectRatio)"  >
-								</a>
+						 	<a ng-click="playGame(game.playUrl, game.id, false, false, game.aspectRatio)">
+								<img ng-src="{{game.iconUrl}}" class="img-responsive game-icon"/>
+							</a>
 
 							<div class="panel-body">
 								<h4 class="margin-v-0-5">{{game.name}}</h4>
@@ -187,7 +176,8 @@
 									<span class="label label-grey-100">{{game.providerName}}</span>
 									<i class="fa fa-btc" style="color: grey;" uib-popover="Bitcoin" popover-trigger="mouseenter"></i>
 									<i class="fa fa-thumbs-o-up" style="color: grey;" uib-popover="Provably Fair" popover-trigger="mouseenter"></i>
-									<i class="fa fa-info-circle" popover-trigger="mouseenter" uib-popover="{{game.description}}"></i>
+									<i ng-if="$index > 0" class="fa fa-info-circle" popover-trigger="mouseenter" uib-popover="{{game.description}}"></i>
+                                    <i ng-if="$index === 0" class="fa fa-info-circle" popover-trigger="mouseenter" uib-popover="{{game.description}}" popover-placement="right"></i>
 									<!-- <i class="fa fa-star" ng-if="isAuth()" ng-click="toggleFavorite(game)" ng-style="{'color': game.isFavorite ? '#fcaf3e' : '#fff'}"></i> -->
 								</div>
 							</div>
