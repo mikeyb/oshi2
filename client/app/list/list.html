@@ -43,48 +43,48 @@
     <div tabindex="1">
 	<uib-Accordion close-others="true" class="sidebar-menu sm-bordered sm-icons-block sm-icons-right">
 	    <uib-Accordion-Group class="hasSubmenu" ng-class="{ 'open active': $state.includes('discover') }">
-		<uib-Accordion-Heading>
-		    <a href="#discover" class="accordion-link" ng-click="resetResult()">
-			<i class="fa fa-sliders fa-rotate-90"></i><span>Show as...</span>
-		    </a>
-		</uib-Accordion-Heading>
+        <uib-Accordion-Heading>
+            <a data-toggle="collapse"  ng-click="resetResult()" class="accordion-link">
+                <i class="fa fa-sliders fa-rotate-90"></i><span>Show As...</span>
+            </a>
+        </uib-Accordion-Heading>
 		<ul id="discover" ng-class="{ 'in': $state.includes('discover') }">
-		    <li ng-class="{ 'active': $state.is('discover.listing') }">
-			<a ui-sref="discover.listing"><i class="fa fa-list"></i>
-			    <span>Listing - List</span>
-			</a>
+		    <li ng-class="{ 'active': displayType == 'list' }">
+			    <a href="" ng-click="setDisplayType('list')"><i class="fa fa-list"></i>
+			        <span>Listing - List</span>
+			    </a>
 		    </li>
-		    <li ng-class="{ 'active': $state.is('discover.listing-grid') }">
-			<a ui-sref="discover.listing-grid"><i class="fa fa-th"></i>
-			    <span>Listing - Grid</span></a>
+		    <li ng-class="{ 'active': displayType == 'grid' }">
+			    <a href="" ng-click="setDisplayType('grid')"><i class="fa fa-th"></i>
+			        <span>Listing - Grid</span>
+			    </a>
 		    </li>
 		</ul>
 	    </uib-accordion-group>
-
 	    <uib-Accordion-Group class="hasSubmenu" ng-class="{ 'open active': $state.includes('pages') }">
-		<uib-Accordion-Heading>
-		    <a href="#pages" class="accordion-link" ng-click="resetResult()"><i class="fa fa-file-o"></i>
-			<span>Pages</span>
-		    </a>
-		</uib-Accordion-Heading>
+        <uib-Accordion-Heading>
+            <a data-toggle="collapse"  ng-click="resetResult()" class="accordion-link">
+            <i class="fa fa-file-o"></i><span>Pages</span>
+            </a>
+        </uib-Accordion-Heading>
 		<ul id="pages" ng-class="{ 'in': $state.includes('pages') }">
-		    <li ng-class="{ 'active': $state.is('page.1') }">
-			<a ui-sref="page.1"><span>Home</span></a>
+		    <li ng-class="{ 'active': $state.is('main') }">
+			<a ui-sref="main"><span>Home</span></a>
 		    </li>
-		    <li ng-class="{ 'active': $state.is('page.2') }">
-			<a ui-sref="page.2"><span>Casino Games</span></a>
+		    <li ng-class="{ 'active': $state.is('list') }">
+			<a ui-sref="list"><span>Casino Games</span></a>
 		    </li>
-		    <li ng-class="{ 'active': $state.is('page.3') }">
-			<a ui-sref="page.3"><span>Bonuses</span></a>
+		    <li ng-class="{ 'active': $state.is('bonus-latest') }">
+			<a ui-sref="bonus-latest"><span>Bonuses</span></a>
 		    </li>
-		    <li ng-class="{ 'active': $state.is('page.4') }">
-			<a ui-sref="page.4"><span>About</span></a>
+		    <li ng-class="{ 'active': $state.is('about-oshi') }">
+			<a ui-sref="about-oshi"><span>About</span></a>
 		    </li>
-		    <li ng-class="{ 'active': $state.is('page.5') }">
-			<a ui-sref="page.5"><span>Help</span></a>
+		    <li ng-class="{ 'active': $state.is('help-contact') }">
+			<a ui-sref="help-contact"><span>Help</span></a>
 		    </li>
-		    <li ng-class="{ 'active': $state.is('page.6') }">
-			<a ui-sref="page.6"><span>Blog</span></a>
+		    <li>
+			<a href="http://blog.oshi.io/" target="_new"><span>Blog</span></a>
 		    </li>
 		</ul>
 	    </uib-accordion-group>
@@ -119,7 +119,7 @@
 	    <uib-Accordion-Group class="hasSubmenu" ng-class="{ 'open active': topWinnersMenuOpen }">
 		<uib-Accordion-Heading>
 		    <a data-toggle="collapse" ng-class="{ 'collapsed': topWinnersMenuOpen }" ng-click="toggleTopWinnersMenu()" class="accordion-link">
-			<i class="fa fa-question"></i><span>Top Winners</span>
+			<i class="fa fa-trophy"></i><span>Top Winners</span>
 		    </a>
 		</uib-Accordion-Heading>
 		<div><span us-spinner="{color:'#FFFFFF', radius:10, width:3, length: 6, position:'relative', class:'spinner'}" spinner-key="top-winner-spinner"></span></div>
