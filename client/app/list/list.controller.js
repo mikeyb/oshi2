@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('oshi2App')
-  .controller('ListCtrl', function ($rootScope, $scope, $stateParams, Games, Categories, Providers, TopWinners, LatestWinners, usSpinnerService) {
+  .controller('ListCtrl', function ($rootScope, $scope, $stateParams, $window, Games, Categories, Providers, TopWinners, LatestWinners) {
 
     $scope.categories = [{displayName: 'Loading...'}];
     Categories.getMenuCategories().then(function (categories) {
@@ -15,8 +15,24 @@ angular.module('oshi2App')
 
     // set on root to keep type across selection changes - TODO persist to survive page refresh
     if (!$rootScope.displayType) {
-      $rootScope.displayType = 'grid';
+      $rootScope.displayType = 'list';
     }
+  
+    $scope.$watch('displayType', function() {
+    	// This is a bit of a hack to calculate the number of columns
+    	// Would be much better to calculate this dynamically somehow
+    	$scope.columns = 6;
+    	if ($window.innerWidth >= 992 && $window.innerWidth < 1200) {
+    		$scope.columns = 4;
+    	} else if ($window.innerWidth >= 768 && $window.innerWidth < 992) {
+    		$scope.columns = 3;
+    	} else if ($window.innerWidth >= 480 && $window.innerWidth < 768) {
+    		$scope.columns = 2;
+    	} else if ($window.innerWidth < 480){
+    		$scope.columns = 1;   
+    	}  
+    	
+    });
 
     $scope.games = [];
     $scope.gamesPage = [];
@@ -59,6 +75,7 @@ angular.module('oshi2App')
 
     $scope.setDisplayType = function(displayType) {
       $rootScope.displayType = displayType;
+      console.log('DisplayType change to: ', $rootScope.displayType);
       $scope.paginate(0);
     };
 
@@ -81,73 +98,33 @@ angular.module('oshi2App')
 
     // TODO check why animation is not working (original realstate site seams to be using a jquery plugin to toggle the menu)
     // TODO add 'loading...' visual feedback
-    
-    $scope.resetResult = function() {
-      $scope.lastPlayedGamesMenuOpen = false;
-      $scope.topWinnersMenuOpen = false;
-      $scope.latestWinnersMenuOpen = false;
-      
-      $scope.lastPlayedGames = null;
-      $scope.topWinners = null;
-      $scope.latestWinners = null;
-    };
-    
     $scope.lastPlayedGamesMenuOpen = false;
     $scope.toggleLastPlayedMenu = function() {
-      $scope.topWinnersMenuOpen = false;
-      $scope.latestWinnersMenuOpen = false;
-      
-      $scope.topWinners = null;
-      $scope.lastPlayedGames = null;
-      $scope.latestWinners = null;
-      
       $scope.lastPlayedGamesMenuOpen = !$scope.lastPlayedGamesMenuOpen;
       if ($scope.lastPlayedGamesMenuOpen) {
-	usSpinnerService.spin('last-played-spinner');
         Games.getLastPlayed().$promise.then(function(games) {
           $scope.lastPlayedGames = games;
-	  usSpinnerService.stop('last-played-spinner');
         });
-      } 
+      }
     };
-    
+
     $scope.topWinnersMenuOpen = false;
     $scope.toggleTopWinnersMenu = function() {
-      $scope.lastPlayedGamesMenuOpen = false;
-      $scope.latestWinnersMenuOpen = false;
-      
-      $scope.lastPlayedGames = null;
-      $scope.topWinners = null;
-      $scope.latestWinners = null;
-	    
-      $scope.topWinnersMenuOpen = !$scope.topWinnersMenuOpen; 
+      $scope.topWinnersMenuOpen = !$scope.topWinnersMenuOpen;
       if ($scope.topWinnersMenuOpen) {
-	usSpinnerService.spin('top-winner-spinner');  
-	TopWinners.query({size:5}).$promise.then(function(topWinners) {
-	  $scope.topWinners = topWinners;
-	  usSpinnerService.stop('top-winner-spinner');
+        TopWinners.query({size:5}).$promise.then(function(topWinners) {
+          $scope.topWinners = topWinners;
         });
-      } 
+      }
     };
-    
+
     $scope.latestWinnersMenuOpen = false;
     $scope.toggleLatestWinnersMenu = function() {
-      $scope.lastPlayedGamesMenuOpen = false;
-      $scope.topWinnersMenuOpen = false;
-      
-      $scope.lastPlayedGames = null;
-      $scope.topWinners = null;
-      $scope.latestWinners = null;
-      
       $scope.latestWinnersMenuOpen = !$scope.latestWinnersMenuOpen;
       if ($scope.latestWinnersMenuOpen) {
-	usSpinnerService.spin('latest-winner-spinner');
-	LatestWinners.query({size:5}).$promise.then(function(latestWinners) {
+        LatestWinners.query({size:5}).$promise.then(function(latestWinners) {
           $scope.latestWinners = latestWinners;
-	  usSpinnerService.stop('latest-winner-spinner');
         });
-      } 
+      }
     };
-    
-    
   });
