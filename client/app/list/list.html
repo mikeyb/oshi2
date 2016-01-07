@@ -44,7 +44,7 @@
 	<uib-Accordion close-others="true" class="sidebar-menu sm-bordered sm-icons-block sm-icons-right">
 	    <uib-Accordion-Group class="hasSubmenu" ng-class="{ 'open active': $state.includes('discover') }">
 		<uib-Accordion-Heading>
-		    <a href="#discover" class="accordion-link">
+		    <a href="#discover" class="accordion-link" ng-click="resetResult()">
 			<i class="fa fa-sliders fa-rotate-90"></i><span>Show as...</span>
 		    </a>
 		</uib-Accordion-Heading>
@@ -63,7 +63,7 @@
 
 	    <uib-Accordion-Group class="hasSubmenu" ng-class="{ 'open active': $state.includes('pages') }">
 		<uib-Accordion-Heading>
-		    <a href="#pages" class="accordion-link"><i class="fa fa-file-o"></i>
+		    <a href="#pages" class="accordion-link" ng-click="resetResult()"><i class="fa fa-file-o"></i>
 			<span>Pages</span>
 		    </a>
 		</uib-Accordion-Heading>
@@ -95,7 +95,8 @@
 			<i class="fa fa-question"></i><span>Last Played</span>
 		    </a>
 		</uib-Accordion-Heading>
-		<ul id="last-played" ng-class="{ 'in': lastPlayedGamesMenuOpen }" class="winners no-main ng-isolate-scope collapse in" name="last-played" template="latest_winners_game" limit="8">
+		<div><span us-spinner="{color:'#FFFFFF', radius:10, width:3, length: 6, position:'relative', class:'spinner'}" spinner-key="last-played-spinner"></span></div>
+		<ul id="last-played" ng-class="{ 'in': lastPlayedGamesMenuOpen }" class="winners no-main ng-isolate-scope" name="last-played" template="latest_winners_game" limit="8">
 		    <div class="winners-box-sidebar" ng-repeat="game in lastPlayedGames">
 			<div class="winners-image">
 			    <div class="cover hover overlay margin-none">
@@ -121,8 +122,9 @@
 			<i class="fa fa-question"></i><span>Top Winners</span>
 		    </a>
 		</uib-Accordion-Heading>
-		<ul id="topwinners" ng-class="{ 'in': topWinnersMenuOpen }" class="winners no-main ng-isolate-scope collapse in" name="last-played" template="latest_winners_game" limit="8">
-		    <div class="winners-box-sidebar" ng-repeat="winner in topWinners">
+		<div><span us-spinner="{color:'#FFFFFF', radius:10, width:3, length: 6, position:'relative', class:'spinner'}" spinner-key="top-winner-spinner"></span></div>
+		<ul id="topwinners" ng-class="{ 'in': topWinnersMenuOpen }" class="winners no-main ng-isolate-scope" name="last-played" template="latest_winners_game" limit="8">
+		    <div class="winners-box-sidebar" ng-repeat="winner in topWinners" ng-cloak>
 			<div class="winners-image">
 			    <div class="cover hover overlay margin-none">
 				<img ng-src="{{winner.game.iconUrl}}" alt="location" class="media-object">
@@ -153,8 +155,9 @@
 			<i class="fa fa-btc"></i><span>Latest Winners</span>
 		    </a>
 		</uib-Accordion-Heading>
-		<ul id="latestwinners" ng-class="{ 'in': latestWinnersMenuOpen }" class="winners no-main ng-isolate-scope collapse in" name="last-played" template="latest_winners_game" limit="8">
-		    <div class="winners-box-sidebar" ng-repeat="winner in latestWinners">
+		<div><span us-spinner="{color:'#FFFFFF', radius:10, width:3, length: 6, position:'relative', class:'spinner'}" spinner-key="latest-winner-spinner"></span></div>
+		<ul id="latestwinners" ng-class="{ 'in': latestWinnersMenuOpen }" class="winners no-main ng-isolate-scope" name="last-played" template="latest_winners_game" limit="8">
+		    <div class="winners-box-sidebar" ng-repeat="winner in latestWinners" ng-cloak>
 			<div class="winners-image">
 			    <div class="cover hover overlay margin-none">
 				<img src="{{winner.game.iconUrl}}" alt="location" class="media-object">

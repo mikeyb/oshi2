@@ -9,7 +9,8 @@ angular.module('oshi2App', [
   'slick',
   'LocalStorageModule',
   'ngAnimate',
-  'ngScrollbars'
+  'ngScrollbars',
+  'angularSpinner'
 ])
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
     $urlRouterProvider
@@ -33,7 +34,7 @@ angular.module('oshi2App', [
     ScrollBarsProvider.defaults = {
         scrollButtons: {
             scrollAmount: 'auto', // scroll amount when button pressed
-            enable: true // enable scrolling buttons by default
+            enable: false // enable scrolling buttons by default
         },
         scrollInertia: 200, // adjust however you want
         axis: 'yx', // enable 2 axis scrollbars by default,

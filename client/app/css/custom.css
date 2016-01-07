@@ -42,20 +42,6 @@ hr {
   height: 100%;
 }
 /* Custom CSS - start */
-.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
-    background-color: rgb(22, 174, 159) !important;
-}
-.sidebar-menu .hasSubmenu a.accordion-link:before {
-    font-family: 'FontAwesome';
-    content: "\f067";
-    position: absolute;
-    right: 40px;
-    display: block;
-}
-.sidebar-menu .hasSubmenu.panel-open a.accordion-link:before {
-    content: "\f068";
-}
-
 .page-container {
     border-radius: 6px;
     max-width: 800px;
@@ -96,4 +82,91 @@ hr {
 
 .game-icon {
     width: 100%;
+}
+
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    background-color: rgb(204, 204, 204) !important
+}
+.sidebar-menu .hasSubmenu a.accordion-link:before {
+    font-family: 'FontAwesome';
+    content: "\f067";
+    position: absolute;
+    right: 56px;
+    display: block;
+}
+.sidebar-menu .hasSubmenu.panel-open a.accordion-link:before {
+    content: "\f068";
+}
+.sidebar.sidebar-skin-dark .panel-default {
+    border-bottom: 1px solid #333;
+}
+.sidebar.sidebar-skin-dark .panel-default > .panel-heading, .sidebar.sidebar-skin-dark .panel-default {
+    background-color: #141414;
+}
+.panel-group .panel-heading {
+    padding: 10px 15px;;
+}
+.fa-sliders span:after {
+    content: "\f1de";
+}
+.accordion-link i {
+    position: absolute;
+    right: 16px;
+    margin-right: 0;
+    background: #141414;
+    color: #757575;
+}
+.mCSB_container_wrapper > .mCSB_container, .mCSB_container_wrapper {
+    margin-right: 0; 
+    padding-right: 0;
+}
+.sidebar.sidebar-skin-dark .sidebar-menu i {
+    color: #757575;
+}
+.swifttagcontainer6vsj9f9wsu {
+    display: none;
+}
+.sidebar-menu a.accordion-link {
+    display: block;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+}
+.sidebar-menu a:hover {
+    text-decoration: none;
+}
+.sidebar-menu .panel-collapse ul li a {
+    font-size: 16px;
+    line-height: 32px;
+    padding-left: 16px;
+}
+.sidebar.sidebar-skin-dark .sidebar-menu.sm-icons-block li > a i {
+    background: #141414;
+    color: #757575;
+    position: absolute;
+    right: 19.05px;
+    top: 6px;
+    margin-right: 0;
+    height: 20px;
+    width: 20px;
+    line-height: 20px;
+    text-align: center;
+    display: inline-block;
+    font-size: 14px;
+}
+.panel-default > .panel-heading+.panel-collapse > .panel-body {
+    border-top: 0px;
+}
+.winners-box-sidebar {
+    padding: 0 20px 30px 10px;
+}
+#sidebar-menu .hasSubmenu .panel-heading {
+    padding: 10px 7px;
+}
+.spinner {
+    height: 15px;
+    margin: 25px 0;   
+}
+.sidebar.left .sidebar-menu .panel-group {
+    margin-top: 50px;
 }
