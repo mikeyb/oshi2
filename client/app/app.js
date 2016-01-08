@@ -36,6 +36,9 @@ angular.module('oshi2App', [
             scrollAmount: 'auto', // scroll amount when button pressed
             enable: false // enable scrolling buttons by default
         },
+	advanced:{
+	  updateOnContentResize: true
+	},
         scrollInertia: 200, // adjust however you want
         axis: 'yx', // enable 2 axis scrollbars by default,
         theme: 'light-3',
