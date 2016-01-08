@@ -11252,7 +11252,9 @@ p {
     "Helvetica Neue",
     Helvetica,
     Arial,
-    sans-serif
+    sans-serif; 
+    font-size: 16px;
+    
 }
 li {
     -webkit-transition:ease-in .3s
@@ -11909,9 +11911,6 @@ ul.icon-list li a {
 .st-content {
     background:#141414
 }
-.media-body-list {
-    max-width:500px
-}
 .navbar-nav .dropdown-menu>li.active>a,
 .navbar-nav .dropdown-menu>li a:hover {
     background:#757575
@@ -12311,7 +12310,8 @@ label {
     color:#757575;
     background-color:#333;
     border:1px solid #333;
-    margin-left:-1px
+    margin-left:-1px;
+    margin-top:4px;
 }
 .pagination>li>a:hover,
 .pagination>li>span:hover,
@@ -12938,7 +12938,9 @@ table, th, td {
 	color: #555555;
     background-color: #eeeeee;
 }
-
+.winners-box-sidebar img, a{
+	cursor:pointer;
+	}
 
 
 

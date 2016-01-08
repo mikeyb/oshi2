@@ -99,11 +99,9 @@
 		<ul id="last-played" ng-class="{ 'in': lastPlayedGamesMenuOpen }" class="winners no-main ng-isolate-scope" name="last-played" template="latest_winners_game" limit="8">
 		    <div class="winners-box-sidebar" ng-repeat="game in lastPlayedGames">
 			<div class="winners-image">
-			    <div class="cover hover overlay margin-none">
-				<img ng-src="{{game.iconUrl}}" alt="location" class="media-object">
-				<a ng-click="playGame(game.gameUrl, game.id, false, false, game.aspectRatio)" class="overlay overlay-full overlay-bg-black overlay-hover">
-				    <span class="v-center"> <span class="btn btn-play"><i class="fa fa-play"></i> </span>
-				    </span>
+			    <div class="  margin-none">
+				<a ng-click="playGame(winner.game.gameUrl, winner.game.id, false, false, game.aspectRatio)" class="overlay overlay-full overlay-bg-black overlay-hover">
+				  <img ng-src="{{winner.game.iconUrl}}" alt="location" class="media-object">  
 				</a>
 			    </div>
 			</div>
@@ -126,11 +124,9 @@
 		<ul id="topwinners" ng-class="{ 'in': topWinnersMenuOpen }" class="winners no-main ng-isolate-scope" name="last-played" template="latest_winners_game" limit="8">
 		    <div class="winners-box-sidebar" ng-repeat="winner in topWinners" ng-cloak>
 			<div class="winners-image">
-			    <div class="cover hover overlay margin-none">
-				<img ng-src="{{winner.game.iconUrl}}" alt="location" class="media-object">
+			    <div class="  margin-none">
 				<a ng-click="playGame(winner.game.gameUrl, winner.game.id, false, false, game.aspectRatio)" class="overlay overlay-full overlay-bg-black overlay-hover">
-				    <span class="v-center"> <span class="btn btn-play"><i class="fa fa-play"></i> </span>
-				    </span>
+				  <img ng-src="{{winner.game.iconUrl}}" alt="location" class="media-object">  
 				</a>
 			    </div>
 			</div>
@@ -159,11 +155,9 @@
 		<ul id="latestwinners" ng-class="{ 'in': latestWinnersMenuOpen }" class="winners no-main ng-isolate-scope" name="last-played" template="latest_winners_game" limit="8">
 		    <div class="winners-box-sidebar" ng-repeat="winner in latestWinners" ng-cloak>
 			<div class="winners-image">
-			    <div class="cover hover overlay margin-none">
-				<img src="{{winner.game.iconUrl}}" alt="location" class="media-object">
+			    <div class="  margin-none">
 				<a ng-click="playGame(winner.game.gameUrl, winner.game.id, false, false, game.aspectRatio)" class="overlay overlay-full overlay-bg-black overlay-hover">
-				    <span class="v-center"> <span class="btn btn-play"><i class="fa fa-play"></i> </span>
-				    </span>
+				  <img ng-src="{{winner.game.iconUrl}}" alt="location" class="media-object">  
 				</a>
 			    </div>
 			</div>
