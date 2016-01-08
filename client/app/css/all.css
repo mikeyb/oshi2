@@ -18194,6 +18194,8 @@ label {
 
 .navbar-default .navbar-nav > li > a, .navbar-default .navbar-nav > li > div > button  {
 	color: #757575;
+	cursor: pointer;
+	cursor: hand;
 }
 
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus,
