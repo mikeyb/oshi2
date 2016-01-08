@@ -39,7 +39,7 @@ angular.module('oshi2App', [
 	advanced:{
 	  updateOnContentResize: true
 	},
-        scrollInertia: 200, // adjust however you want
+        scrollInertia: 400, // adjust however you want
         axis: 'yx', // enable 2 axis scrollbars by default,
         theme: 'light-3',
         autoHideScrollbar: true
