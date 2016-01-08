@@ -209,11 +209,12 @@
                 <ul class="nav navbar-nav navbar-nav-right">
                   <li class="dropdown" uib-dropdown>
                     <a class="dropdown-toggle" uib-dropdown-toggle>
-                      {{selectedOrder}}<span class="caret"></span><span class="sr-only">(current)</span>
+                      {{selectedOrderByOption.name}}<span class="caret"></span><span class="sr-only">(current)</span>
                     </a>
                     <ul class="uib-dropdown-menu" role="menu">
-                      <li role="menuitem" ng-class="{'active':selectedOrder === 'Most Popular'}"><a ng-click="orderBy('Most Popular')">Most Popular</a></li>
-                      <li role="menuitem" ng-class="{'active':selectedOrder === 'Name'}"><a ng-click="orderBy('Name')">Name</a></li>
+                      <li ng-repeat="orderByOption in orderByOptions" role="menuitem" ng-class="{'active':selectedOrderByOption.name === orderByOption.name}">
+												<a ng-click="orderBy(orderByOption)">{{orderByOption.name}}</a>
+											</li>
                     </ul>
                   </li>
                 </ul>

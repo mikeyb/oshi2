@@ -17,7 +17,7 @@ angular.module('oshi2App')
     if (!$rootScope.displayType) {
       $rootScope.displayType = 'list';
     }
-  
+
     $scope.$watch('displayType', function() {
     	// This is a bit of a hack to calculate the number of columns
     	// Would be much better to calculate this dynamically somehow
@@ -29,10 +29,22 @@ angular.module('oshi2App')
     	} else if ($window.innerWidth >= 480 && $window.innerWidth < 768) {
     		$scope.columns = 2;
     	} else if ($window.innerWidth < 480){
-    		$scope.columns = 1;   
-    	}  
-    	
+    		$scope.columns = 1;
+    	}
+
     });
+
+    $scope.orderByOptions = [
+      {name: 'Most Popular', properties: ['popularity'], orders: ['asc']},
+      {name: 'Name (A-Z)', properties: ['name'], orders: ['asc']},
+      {name: 'Name (Z-A)', properties: ['name'], orders: ['desc']}
+    ];
+    $scope.selectedOrderByOption = $scope.orderByOptions[0];
+    $scope.orderBy = function (orderByOption) {
+      $scope.selectedOrderByOption = orderByOption;
+      $scope.games = _.sortByOrder($scope.games, orderByOption.properties, orderByOption.orders);
+      $scope.paginate(0);
+    };
 
     $scope.games = [];
     $scope.gamesPage = [];
@@ -40,38 +52,23 @@ angular.module('oshi2App')
       $scope.listTitle = $stateParams.display;
       Games.getByCategory($stateParams.category).then(function (games) {
         $scope.games = games;
-        $scope.orderBy($scope.selectedOrder);
+        $scope.orderBy($scope.selectedOrderByOption);
       });
     }
     else if ($stateParams.provider) {
       $scope.listTitle = $stateParams.display;
       Games.getByProvider($stateParams.provider).then(function (games) {
         $scope.games = games;
-        $scope.orderBy($scope.selectedOrder);
+        $scope.orderBy($scope.selectedOrderByOption);
       });
     }
     else {
       $scope.listTitle = 'All Games';
       Games.getByCategory($stateParams.category).then(function (games) {
         $scope.games = games;
-        $scope.orderBy($scope.selectedOrder);
+        $scope.orderBy($scope.selectedOrderByOption);
       });
     }
-
-    $scope.selectedOrder = 'Most Popular';
-    $scope.orderBy = function (orderBy) {
-      $scope.selectedOrder = orderBy;
-
-      var sortByFunction;
-      if ($scope.selectedOrder === 'Most Popular') {
-        sortByFunction = function (game) { return game.popularity; };
-      }
-      else if ($scope.selectedOrder === 'Name') {
-        sortByFunction = function (game) { return game.name; };
-      }
-      $scope.games = _.sortBy($scope.games, sortByFunction);
-      $scope.paginate(0);
-    };
 
     $scope.setDisplayType = function(displayType) {
       $rootScope.displayType = displayType;
@@ -94,76 +91,76 @@ angular.module('oshi2App')
       $scope.hasPreviousPage = pageNumber > 0;
       $scope.pages = new Array($scope.numberOfPages); // to overcome ng-repeat limitation
     };
-    
-      $scope.resetResult = function() {		
-	$scope.lastPlayedGamesMenuOpen = false;		
-	$scope.topWinnersMenuOpen = false;		
-	$scope.latestWinnersMenuOpen = false;		
 
-	$scope.lastPlayedGames = null;		
-	$scope.topWinners = null;		
-	$scope.latestWinners = null;		
-       };
+    $scope.resetResult = function () {
+      $scope.lastPlayedGamesMenuOpen = false;
+      $scope.topWinnersMenuOpen = false;
+      $scope.latestWinnersMenuOpen = false;
+
+      $scope.lastPlayedGames = null;
+      $scope.topWinners = null;
+      $scope.latestWinners = null;
+    };
 
 
     // TODO check why animation is not working (original realstate site seams to be using a jquery plugin to toggle the menu)
     // TODO add 'loading...' visual feedback
     $scope.lastPlayedGamesMenuOpen = false;
-    $scope.toggleLastPlayedMenu = function() {
-      $scope.topWinnersMenuOpen = false;		
-      $scope.latestWinnersMenuOpen = false;		
-       		
-      $scope.topWinners = null;		
-      $scope.lastPlayedGames = null;		
+    $scope.toggleLastPlayedMenu = function () {
+      $scope.topWinnersMenuOpen = false;
+      $scope.latestWinnersMenuOpen = false;
+
+      $scope.topWinners = null;
+      $scope.lastPlayedGames = null;
       $scope.latestWinners = null;
- 
+
       $scope.lastPlayedGamesMenuOpen = !$scope.lastPlayedGamesMenuOpen;
       if ($scope.lastPlayedGamesMenuOpen) {
-	usSpinnerService.spin('last-played-spinner');
-        Games.getLastPlayed().$promise.then(function(games) {
+        usSpinnerService.spin('last-played-spinner');
+        Games.getLastPlayed().$promise.then(function (games) {
           $scope.lastPlayedGames = games;
-	  usSpinnerService.stop('last-played-spinner');
-	  angular.element('sidebar.left.sidebar-skin-dark').mCustomScrollbar('update');
+          usSpinnerService.stop('last-played-spinner');
+          angular.element('sidebar.left.sidebar-skin-dark').mCustomScrollbar('update');
         });
       }
     };
-    
+
     $scope.topWinnersMenuOpen = false;
-    $scope.toggleTopWinnersMenu = function() {
+    $scope.toggleTopWinnersMenu = function () {
       $scope.lastPlayedGamesMenuOpen = false;
-      $scope.latestWinnersMenuOpen = false;		
-      		
-      $scope.lastPlayedGames = null;		
-      $scope.topWinners = null;		
+      $scope.latestWinnersMenuOpen = false;
+
+      $scope.lastPlayedGames = null;
+      $scope.topWinners = null;
       $scope.latestWinners = null;
- 
+
       $scope.topWinnersMenuOpen = !$scope.topWinnersMenuOpen;
       if ($scope.topWinnersMenuOpen) {
-	usSpinnerService.spin('top-winner-spinner');  
-        TopWinners.query({size:5}).$promise.then(function(topWinners) {
+        usSpinnerService.spin('top-winner-spinner');
+        TopWinners.query({size: 5}).$promise.then(function (topWinners) {
           $scope.topWinners = topWinners;
-	  usSpinnerService.stop('top-winner-spinner');
-	  angular.element('sidebar.left.sidebar-skin-dark').mCustomScrollbar('update');
+          usSpinnerService.stop('top-winner-spinner');
+          angular.element('sidebar.left.sidebar-skin-dark').mCustomScrollbar('update');
         });
       }
     };
 
     $scope.latestWinnersMenuOpen = false;
-    $scope.toggleLatestWinnersMenu = function() {
-      $scope.lastPlayedGamesMenuOpen = false;		
-      $scope.topWinnersMenuOpen = false;		
+    $scope.toggleLatestWinnersMenu = function () {
+      $scope.lastPlayedGamesMenuOpen = false;
+      $scope.topWinnersMenuOpen = false;
 
-      $scope.lastPlayedGames = null;		
-      $scope.topWinners = null;		
+      $scope.lastPlayedGames = null;
+      $scope.topWinners = null;
       $scope.latestWinners = null;
 
       $scope.latestWinnersMenuOpen = !$scope.latestWinnersMenuOpen;
       if ($scope.latestWinnersMenuOpen) {
-	usSpinnerService.spin('latest-winner-spinner');
-        LatestWinners.query({size:5}).$promise.then(function(latestWinners) {
+        usSpinnerService.spin('latest-winner-spinner');
+        LatestWinners.query({size: 5}).$promise.then(function (latestWinners) {
           $scope.latestWinners = latestWinners;
-	  usSpinnerService.stop('latest-winner-spinner');
-	  angular.element('sidebar.left.sidebar-skin-dark').mCustomScrollbar('update');
+          usSpinnerService.stop('latest-winner-spinner');
+          angular.element('sidebar.left.sidebar-skin-dark').mCustomScrollbar('update');
         });
       }
     };
