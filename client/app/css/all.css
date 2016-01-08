@@ -2930,6 +2930,10 @@ a.list-group-item-danger.active:focus {
     width: 100%;
     border: 0
 }
+
+iframe{	
+border: none;
+}
 .embed-responsive-16by9 {
     padding-bottom: 56.25%
 }
