@@ -174,5 +174,7 @@ angular.module('oshi2App')
       $log.error('Failed removing favorite', err);
     });
   };
+  
+  $scope.currentYear = new Date().getFullYear();
 
 });
