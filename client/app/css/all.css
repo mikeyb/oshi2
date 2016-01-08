@@ -2906,7 +2906,7 @@ nav > li > div > button:hover, nav > li > div > button:focus {
 	background-color: #f4f4f4;
 }
 
-.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover,
+/* .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover,
 	.navbar-default .navbar-nav > .active > a:focus,
     .navbar-default .navbar-nav > .active > div > button, .navbar-default .navbar-nav > .active > div > button:hover,
     .navbar-default .navbar-nav > .active > div > button:focus {
@@ -2920,7 +2920,7 @@ nav > li > div > button:hover, nav > li > div > button:focus {
     .navbar-default .navbar-nav > .disabled > div > button:focus {
 	color: #cccccc;
 	background-color: transparent;
-}
+} */
 
 .navbar-default .navbar-toggle {
 	border-color: #dddddd;
@@ -18270,6 +18270,11 @@ label {
 .panel-body {
 	padding: 0;
 	font-size: 15px;
+}
+
+#discover > .active > a, #discover > .active > a:hover, #discover > .active > a:focus {
+	color: #555555;
+    background-color: #eeeeee;
 }
 
 @media ( min-width : 1px) and (max-width: 320px) {	 
