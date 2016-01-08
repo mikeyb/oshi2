@@ -1,32 +1,57 @@
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Open+Sans:400,600,300|Arapey|Varela+Round);
 @import https: //fonts.googleapis.com/css?family=Ubuntu;figure{margin:0}
-.custom_scrollbar {
-    margin: 20px auto;
-    height: 300px;
-    width: 500px;
-    overflow: scroll;
-    padding: 0 20px 0 0
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
 }
-.custom_scrollbar::-webkit-scrollbar {
-    width: 8px;
-    height: 10px
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
 }
-.custom_scrollbar::-webkit-scrollbar-track {
-    background-color: rgba(113, 112, 107, 0.1);
-    -webkit-border-radius: 5px
+::-webkit-scrollbar-thumb {
+  background: #e1e1e1;
+  border: 0px none #141414;
+  border-radius: 50px;
 }
-.custom_scrollbar::-webkit-scrollbar-thumb:vertical {
-    background-color: rgba(0, 0, 0, .2);
-    -webkit-border-radius: 4px
+::-webkit-scrollbar-thumb:hover {
+  background: #cccccc;
 }
-.custom_scrollbar::-webkit-scrollbar-thumb:vertical:hover,
-.custom_scrollbar::-webkit-scrollbar-thumb:horizontal:hover {
-    background: red
+::-webkit-scrollbar-thumb:active {
+   background: #cccccc;
 }
-.custom_scrollbar::-webkit-scrollbar-thumb:horizontal {
-    background-color: rgba(0, 0, 0, .2);
-    -webkit-border-radius: 4px
+::-webkit-scrollbar-track {
+  background: #141414;
+  border: 0px none #757575;
+  border-radius: 50px;
 }
+::-webkit-scrollbar-track:hover {
+  background: #141414;
+}
+::-webkit-scrollbar-track:active {
+ background: #141414;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 img {
     vertical-align: middle
 }
@@ -9913,7 +9938,7 @@ html.st-layout .st-content {
     margin-top:50px
 }
 #content-home {
-    background-color:#EAEAEA;
+    background-color:#FFF;
     height:100%;
     width:100%;
     top:0;
@@ -12297,7 +12322,7 @@ label {
 .navbar-default .navbar-nav>li>div>button:hover,
 .navbar-default .navbar-nav>li>div>button:focus {
     color:#FFF;
-    background-color:#141414
+    background-color:#141414;
 }
 .navbar-default .navbar-nav>.open>a,
 .navbar-default .navbar-nav>.open>a:hover,
@@ -12941,6 +12966,12 @@ table, th, td {
 .winners-box-sidebar img, a{
 	cursor:pointer;
 	}
-
+.game-description {
+	max-width: 500px
+}
+.navbar-left-m ul, a:active {
+	#141414;
+	
+}
 
 
