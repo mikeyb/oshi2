@@ -123,7 +123,7 @@ angular.module('oshi2App')
         Games.getLastPlayed().$promise.then(function(games) {
           $scope.lastPlayedGames = games;
 	  usSpinnerService.stop('last-played-spinner');
-	  angular.element('sidebar.left.sidebar-skin-dark').mCustomScrollbar("update");
+	  angular.element('sidebar.left.sidebar-skin-dark').mCustomScrollbar('update');
         });
       }
     };
@@ -143,7 +143,7 @@ angular.module('oshi2App')
         TopWinners.query({size:5}).$promise.then(function(topWinners) {
           $scope.topWinners = topWinners;
 	  usSpinnerService.stop('top-winner-spinner');
-	  angular.element('sidebar.left.sidebar-skin-dark').mCustomScrollbar("update");
+	  angular.element('sidebar.left.sidebar-skin-dark').mCustomScrollbar('update');
         });
       }
     };
@@ -163,7 +163,7 @@ angular.module('oshi2App')
         LatestWinners.query({size:5}).$promise.then(function(latestWinners) {
           $scope.latestWinners = latestWinners;
 	  usSpinnerService.stop('latest-winner-spinner');
-	  angular.element('sidebar.left.sidebar-skin-dark').mCustomScrollbar("update");
+	  angular.element('sidebar.left.sidebar-skin-dark').mCustomScrollbar('update');
         });
       }
     };
